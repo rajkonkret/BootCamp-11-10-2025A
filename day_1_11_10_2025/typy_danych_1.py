@@ -24,6 +24,10 @@ print(f"Wiek do potęgi rok: {wynik:,}")
 # print(f"Długość: {len(wynik)}") # TypeError: object of type 'int' has no len()
 print(f"Długość: {len(str(wynik))}")  # Długość: 3386
 
-print(wynik ** 2)
+# print(wynik ** 2)
 # ValueError: Exceeds the limit (4300 digits) for integer string conversion;
 # use sys.set_int_max_str_digits() to increase the limit
+
+print(74 - 8 * 45 + 8 / 2 + 8 / 2)  # -278.0
+print(74 - (8 * 45) + 8 / 2 + 8 / 2)  # -278.0
+print(74 - (8 * 45) + (8 / 2 + 8) / 2)  # -280.0
