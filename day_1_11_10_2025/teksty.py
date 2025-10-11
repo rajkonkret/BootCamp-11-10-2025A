@@ -47,3 +47,20 @@ print(my_str)  # "   Hello Everyone   "
 print(my_str.strip())  # "Hello Everyone" - usunięcie białych znaków (spacji) - wiodącę i końcowe
 print(my_str.rstrip())  # "   Hello Everyone" - usunięcie z prawej strony
 print(my_str.lstrip())  # "Hello Everyone   " - usunięcie z lewej strony
+
+my_str2 = "***Hello****World***"
+print(my_str2.strip("*"))  # Hello****World
+print(my_str2.rstrip("*"))  # ***Hello****World
+print(my_str2.lstrip("*"))  # Hello****World***
+
+print(my_str)  # "   Hello Everyone   "
+print(my_str2)  # "***Hello****World***"
+
+print(tekst)  # Witaj Świecie
+# Witaj Świecie
+# 0123456789012
+
+print(tekst.removeprefix("Witaj"))  # " Świecie"
+print(tekst.removesuffix("Świecie"))  # "Witaj "
+
+
