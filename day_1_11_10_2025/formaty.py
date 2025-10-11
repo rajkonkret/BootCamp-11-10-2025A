@@ -62,4 +62,7 @@ print(f"Nasza duża liczba: {liczba:_}")  # Nasza duża liczba: 890_789_678_567_
 print(f"Nasza duża liczba: {liczba:,}".replace(",", "."))  # Nasza duża liczba: 890.789.678.567.456
 print(f"Nasza duża liczba: {liczba:_}".replace("_", " "))  # Nasza duża liczba: 890 789 678 567 456
 
-
+parametr = 1500000000000
+parametr = 1_500_000_000_000  # ułatwienie dla programisty
+print(parametr)  # 1500000000000
+print(type(parametr))  # <class 'int'>
