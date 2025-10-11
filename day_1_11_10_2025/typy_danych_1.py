@@ -62,3 +62,8 @@ print(f'''
     {temp}''')
 # "    47
 #      36.6"
+
+print(type(4 / 2))  # <class 'float'>
+print(4 / 2)  # 2.0
+
+
