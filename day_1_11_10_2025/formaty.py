@@ -71,3 +71,14 @@ print(f"{user:>10}")  # "     Tomek" wyrówna do prawej do długośći 10 znakó
 print(f"{user:<15}")  # "Tomek          " wyrówna do lewej do długośći 15 znaków
 print(f"{user:^20}")  # "       Tomek        "
 print(f"{user:_>20}")  # "_______________Tomek"
+
+tekst = "jeden dwa trzy cztery"
+# znak podziału - spacja - " "
+print(tekst.split())  # ['jeden', 'dwa', 'trzy', 'cztery']
+
+tekst2 = "jeden, dwa, trzy, cztery"
+# poział wg wskazanego znaku
+print(tekst2.split(","))
+# ['jeden', ' dwa', ' trzy', ' cztery']
+print(tekst2.split(", "))
+# ['jeden', 'dwa', 'trzy', 'cztery']
