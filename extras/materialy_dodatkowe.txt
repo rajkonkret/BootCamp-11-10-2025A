@@ -116,3 +116,9 @@ spam -= 1    spam = spam - 1
 spam *= 1    spam = spam * 1
 spam /= 1    spam = spam / 1
 spam %= 1    spam = spam % 1
+
+
+https://naukajava.online/
+https://naukapythona.com.pl/
+https://www.hackerrank.com/
+https://pl.altapps.net/soft/hackerrank-com
