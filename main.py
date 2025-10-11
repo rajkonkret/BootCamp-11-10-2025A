@@ -16,3 +16,5 @@ if __name__ == '__main__':
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 # wheel, theme
 # 2x shift - wyszukiwarka
+# (.venv) radoslawjaniak@mac BootCamp-11-10-2025A % python main.py
+# Hi, PyCharm
