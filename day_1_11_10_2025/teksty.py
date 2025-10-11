@@ -37,4 +37,13 @@ print(name[2:4])  # de, tylko indeksy 2,3 z prawej strony otwarty(niewłącznie)
 print(name[:4])  # Rade 0,1,2,3 indeksy
 print(name[:])  # Radek
 
+str1 = "HELLO WORLD"
+# teksty są niemutowalne!!!
+# str1[0:5] = "HOLAA" # TypeError: 'str' object does not support item assignment
+print(str1)  # HELLO WORLD
 
+my_str = "   Hello Everyone   "
+print(my_str)  # "   Hello Everyone   "
+print(my_str.strip())  # "Hello Everyone" - usunięcie białych znaków (spacji) - wiodącę i końcowe
+print(my_str.rstrip())  # "   Hello Everyone" - usunięcie z prawej strony
+print(my_str.lstrip())  # "Hello Everyone   " - usunięcie z lewej strony
