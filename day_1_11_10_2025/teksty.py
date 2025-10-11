@@ -63,4 +63,12 @@ print(tekst)  # Witaj Świecie
 print(tekst.removeprefix("Witaj"))  # " Świecie"
 print(tekst.removesuffix("Świecie"))  # "Witaj "
 
+print(tekst.count("i"))  # występuje 3 razy
+print(tekst.count("i", 0, 4))  # występuje 1 raz
+print(tekst.count("j", 0, 4))  # występuje 0 razy, bo indeksy 0123
+
+# sprawdzenie indeksu dla danej literki
+print(tekst.index("j")) # indeks numer: 4
+
+
 
