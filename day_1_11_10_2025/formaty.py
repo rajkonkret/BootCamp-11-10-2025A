@@ -53,3 +53,13 @@ print(f"Używamy wersji pythona {wersja:.1f}")  # Używamy wersji pythona 3.9
 print(f"Używamy wersji pythona {wersja:.2f}")  # Używamy wersji pythona 3.90
 print(f"Używamy wersji pythona {wersja:.0f}")  # Używamy wersji pythona 4
 # print(f"Używamy wersji pythona {wersja:.f}")  # ValueError: Format specifier missing precision
+
+print(liczba)  # 890789678567456
+print(f"Nasza duża liczba: {liczba:,}")  # Nasza duża liczba: 890,789,678,567,456
+print(f"Nasza duża liczba: {liczba:_}")  # Nasza duża liczba: 890_789_678_567_456
+
+# zamiana na spacje, kropkę
+print(f"Nasza duża liczba: {liczba:,}".replace(",", "."))  # Nasza duża liczba: 890.789.678.567.456
+print(f"Nasza duża liczba: {liczba:_}".replace("_", " "))  # Nasza duża liczba: 890 789 678 567 456
+
+
