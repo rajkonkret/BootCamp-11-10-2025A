@@ -19,4 +19,22 @@ assert tekst_upper == "WITAJ ŚWIECIE"  # asercja, sprawdzenie czy zmmienna zawi
 print(tekst.lower())  # witaj świecie
 print(tekst.capitalize())  # Witaj świecie
 
+name = "Radek"
+#       01234 - indeksowannie od zera
+
+print(name[0])  # R
+print(name[1])  # a
+print(name[2])  # d
+print(name[3])  # e
+print(name[4])  # k
+
+# print(name[5])  # IndexError: string index out of range - zwraca bład
+
+print(len(name))  # len() - długość ciągu,5
+
+# slicowanie - fragment tekstu
+print(name[2:4])  # de, tylko indeksy 2,3 z prawej strony otwarty(niewłącznie)
+print(name[:4])  # Rade 0,1,2,3 indeksy
+print(name[:])  # Radek
+
 
