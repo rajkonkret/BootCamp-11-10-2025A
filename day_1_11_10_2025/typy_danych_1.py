@@ -104,3 +104,32 @@ print(f'Wynik porównania {a} <= {b} = {a <= b}')  # Wynik porównania 14 <= 3 =
 print(f'Wynik porównania {a} >= {b} = {a >= b}')  # Wynik porównania 14 >= 3 = True
 print(f'Wynik porównania {a} == {b} = {a == b}')  # == porównanie(czy równe) Wynik porównania 14 == 3 = False
 print(f'Wynik porównania {a} != {b} = {a != b}')  # czy różne, Wynik porównania 14 != 3 = True
+
+# operacje logiczne
+
+# and - i
+# jedna i druga strona wyrażenia musi być True by wynik wyrażenia był True
+print(True and True)  # True
+print(True and False)  # False
+print(False and True)  # False
+print(False and False)  # False
+
+# or - lub
+# jeden z elementów musi byc True by wyrażenie było True
+print(True or True)  # True
+print(True or False)  # True
+print(False or True)  # True
+print(False or False)  # False
+
+# not - negacja
+print(not True)  # False
+print(not False)  # True
+
+# operatory bitowe
+a = 5  # 0b0101
+b = 3  # 0b0011
+
+print(a & b)  # 1 -> 0b0001 and
+print(a | b)  # 7 -> 0b0111 or
+
+print(~a)  # -6 -> 0b1010 not
