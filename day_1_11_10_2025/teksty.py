@@ -106,3 +106,26 @@ print(starszy % name)  # Witaj Radek!
 
 print(starszy % 7)  # Witaj 7!
 # print("Liczba: %i" % "Radek")  # TypeError: %i format: a real number is required, not str
+
+print('Name:', name)  # Name: Radek
+
+print("Witaj {}!".format(imie))  # Witaj Radek!
+
+print("""Tekst
+    wielolinijkowy""")
+# "Tekst
+#     wielolinijkowy"
+# WYSWIG
+
+# taki komentarz jest traktowana jako dokumentacja
+"""komentarz
+    wielolinijkowy"""
+
+# kodowanie znaków
+encoded_s = tekst.encode("utf-8")
+print(encoded_s)  # b'Witaj \xc5\x9awiecie'
+# b - typ bajtowy
+# \xhh - Znak o wartości szesnastkowej (np. \x0A reprezentuje znak nowej linii)
+# \xc5\x9a - Ś
+print(type(encoded_s))  # <class 'bytes'>, typ bajtowy
+print(encoded_s.decode('utf-8'))  # Witaj Świecie
