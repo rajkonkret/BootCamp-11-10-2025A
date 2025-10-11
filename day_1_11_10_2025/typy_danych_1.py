@@ -133,3 +133,36 @@ print(a & b)  # 1 -> 0b0001 and
 print(a | b)  # 7 -> 0b0111 or
 
 print(~a)  # -6 -> 0b1010 not
+
+my_str = '123456789'
+# A string is numeric if all characters in the string are numeric
+print(my_str.isnumeric())  # True
+
+# A string is alpha-numeric if all characters in the string are alpha-numeric
+print(my_str.isalnum())  # True
+
+#  A string is a decimal string if all characters in the string are decimal
+print(my_str.isdecimal())  # True
+
+# A string is alphabetic if all characters in the string are alphabetic
+print(my_str.isalpha())  # False
+
+print(10 * "-")  # ----------
+
+my_str = "abcdefghijkl"
+print(my_str.isalpha())  # True
+print(my_str.isalnum())  # True
+print(my_str.isdecimal())  # False
+print(my_str.isnumeric())  # False
+print(my_str.islower())  # True
+print(my_str.isupper())  # False
+
+print(10 * "-")  # ----------
+
+my_str = "Radek12345"
+print(my_str.isalpha())  # False
+print(my_str.isalnum())  # True
+print(my_str.isdecimal())  # False
+print(my_str.isnumeric())  # False
+print(my_str.islower())  # False
+print(my_str.isupper())  # False
