@@ -70,3 +70,11 @@ print(4 / 2)  # 2.0
 
 # typ logiczny - boolean, bool
 # prawda, fałsz -> True, False
+# 1 - prawda, 0 - fałsz
+
+czy_znasz_pythona = True
+print(czy_znasz_pythona)  # True
+print(type(czy_znasz_pythona))  # <class 'bool'>, typ logiczny
+
+print(int(czy_znasz_pythona))  # 1
+print(int(False))  # 0
