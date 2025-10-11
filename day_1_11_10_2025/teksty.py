@@ -81,4 +81,28 @@ print(my_str.center(40))  # wycentrowanie tekstu podczas wypisywania
 
 print("Mój ulubiony serial \"Alternatywy 4\"")  # Mój ulubiony serial "Alternatywy 4"
 print('Mój ulubiony serial "Alternatywy 4"')  # Mój ulubiony serial "Alternatywy 4"
-# \ - w stringach znak ucieczzki, nie interpretuj kolejnoga znaku tylko po prostu wyświetl
+# \ - w stringach znak ucieczzki, nie interpretuj kolejnoga znaku tylko po prostu wyświetli
+
+imie = "Radek"
+# f-string - string sformatowany
+formatted_text = f"Mam na imię: {imie} i lubię Pythona."
+print(formatted_text)  # Mam na imię: Radek i lubię Pythona.
+
+formatted_text_2 = f"\tMam na imię {imie}\n i lubię Pythona.\b"
+print(formatted_text_2)
+# "	 Mam na imię Radek
+#  i lubię Pythona"
+# \n - Nowa linia
+# \r - Powrót karetki
+# \t - Tabulacja pozioma
+# \b - Powrót kursora (usuwa poprzedni znak) - backspace
+
+# starszy sposób wstrzykiwania zmiennej do tekstu
+starszy = "Witaj %s!"  # W miejsce %s podstawi wartość zmiennej str
+print(starszy % name)  # Witaj Radek!
+# %s - łańcuch znaków (string)
+# %d - liczba całkowita (integer)
+# %i - liczba całkowita (integer)
+
+print(starszy % 7)  # Witaj 7!
+# print("Liczba: %i" % "Radek")  # TypeError: %i format: a real number is required, not str
