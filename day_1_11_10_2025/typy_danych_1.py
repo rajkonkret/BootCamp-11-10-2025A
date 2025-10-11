@@ -78,3 +78,16 @@ print(type(czy_znasz_pythona))  # <class 'bool'>, typ logiczny
 
 print(int(czy_znasz_pythona))  # 1
 print(int(False))  # 0
+
+# rzutowanie na bool
+print(bool(1))  # True
+print(bool(100))  # True
+print(bool(-100))  # True
+print(bool("radek"))  # True
+
+print(bool(0))  # False
+print(bool(""))  # False
+
+x = None  # nic, stan nieokreślony, nie wiem, odowiednik null
+print(x)
+print(bool(x))  # False
