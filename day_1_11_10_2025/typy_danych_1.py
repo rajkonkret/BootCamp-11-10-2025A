@@ -91,3 +91,16 @@ print(bool(""))  # False
 x = None  # nic, stan nieokreślony, nie wiem, odowiednik null
 print(x)
 print(bool(x))  # False
+
+a = 14
+b = 3
+
+print(f"{a=}")  # a=14
+print(f"{b=}")  # b=3
+print(f'Wynik porównania {a} > {b} = {a > b}')  # Wynik porównania 14 > 3 = True
+print(f'Wynik porównania {a} < {b} = {a < b}')  # Wynik porównania 14 < 3 = False
+print(f'Wynik porównania {a < b = }')  # Wynik porównania a < b = False
+print(f'Wynik porównania {a} <= {b} = {a <= b}')  # Wynik porównania 14 <= 3 = False
+print(f'Wynik porównania {a} >= {b} = {a >= b}')  # Wynik porównania 14 >= 3 = True
+print(f'Wynik porównania {a} == {b} = {a == b}')  # == porównanie(czy równe) Wynik porównania 14 == 3 = False
+print(f'Wynik porównania {a} != {b} = {a != b}')  # czy różne, Wynik porównania 14 != 3 = True
