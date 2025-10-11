@@ -78,3 +78,7 @@ print(my_str)  # "   Hello Everyone   "
 print(my_str.replace(" ", ""))  # HelloEveryone
 print(my_str.center(40))  # wycentrowanie tekstu podczas wypisywania
 # "             Hello Everyone             "
+
+print("Mój ulubiony serial \"Alternatywy 4\"")  # Mój ulubiony serial "Alternatywy 4"
+print('Mój ulubiony serial "Alternatywy 4"')  # Mój ulubiony serial "Alternatywy 4"
+# \ - w stringach znak ucieczzki, nie interpretuj kolejnoga znaku tylko po prostu wyświetl
