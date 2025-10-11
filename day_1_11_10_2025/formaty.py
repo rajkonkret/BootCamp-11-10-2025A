@@ -66,3 +66,8 @@ parametr = 1500000000000
 parametr = 1_500_000_000_000  # ułatwienie dla programisty
 print(parametr)  # 1500000000000
 print(type(parametr))  # <class 'int'>
+
+print(f"{user:>10}")  # "     Tomek" wyrówna do prawej do długośći 10 znaków
+print(f"{user:<15}")  # "Tomek          " wyrówna do lewej do długośći 15 znaków
+print(f"{user:^20}")  # "       Tomek        "
+print(f"{user:_>20}")  # "_______________Tomek"
