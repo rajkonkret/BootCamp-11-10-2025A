@@ -68,7 +68,13 @@ print(tekst.count("i", 0, 4))  # występuje 1 raz
 print(tekst.count("j", 0, 4))  # występuje 0 razy, bo indeksy 0123
 
 # sprawdzenie indeksu dla danej literki
-print(tekst.index("j")) # indeks numer: 4
+print(tekst.index("j"))  # indeks numer: 4
 
+print(my_str2)  # ***Hello****World***
+# zamiana tekstu
+print(my_str2.replace("He", "Ho"))  # ***Hollo****World***
 
-
+print(my_str)  # "   Hello Everyone   "
+print(my_str.replace(" ", ""))  # HelloEveryone
+print(my_str.center(40))  # wycentrowanie tekstu podczas wypisywania
+# "             Hello Everyone             "
