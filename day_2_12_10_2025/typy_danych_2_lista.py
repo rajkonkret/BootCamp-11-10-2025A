@@ -56,8 +56,17 @@ print(lista[5])  # Anna
 # len(lista) - 1 - indeks ostatniego elementu
 print(lista[len(lista) - 1])  # Anna, ostatni element
 print(lista[-1])  # Anna
-print(lista[-2])
-print(lista[-3])
-print(lista[-4])
-print(lista[-5])
-print(lista[-6])
+print(lista[-2])  # Marta
+print(lista[-3])  # Zenek
+print(lista[-4])  # Tomek
+print(lista[-5])  # Maciek
+print(lista[-6])  # Radek
+
+# ctrl c
+# kólko myszy dla wszystkich wierszy
+# wstawiamy #
+# stawiamy kursor w dowolnym miejscu
+# column selection mode on
+# ctrl v
+# column selection mode off
+# ctrl alt l
