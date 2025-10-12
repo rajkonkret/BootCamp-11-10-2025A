@@ -47,6 +47,7 @@ print(len(lista))  # długość 6 elementów
 
 # ['Radek', 'Maciek', 'Tomek', 'Zenek', 'Marta', 'Anna']
 #     0         1         2       3         4       5
+#     -6        -5        -4      -3       -2       -1
 
 # wypisanie elementów po indeksie
 print(lista[1])  # Maciek
@@ -55,7 +56,7 @@ print(lista[5])  # Anna
 
 # len(lista) - 1 - indeks ostatniego elementu
 print(lista[len(lista) - 1])  # Anna, ostatni element
-print(lista[-1])  # Anna
+print(lista[-1])  # Anna, ostatni
 print(lista[-2])  # Marta
 print(lista[-3])  # Zenek
 print(lista[-4])  # Tomek
@@ -70,3 +71,11 @@ print(lista[-6])  # Radek
 # ctrl v
 # column selection mode off
 # ctrl alt l
+
+# ['Radek', 'Maciek', 'Tomek', 'Zenek', 'Marta', 'Anna']
+#     0         1         2       3         4       5
+#     -6        -5        -4      -3       -2       -1
+# print(lista[10])  # IndexError: list index out of range
+
+# slicowanie
+print(lista)
