@@ -83,7 +83,7 @@ print(wynik)  # 5
 wynik = len(lista) - 8
 print(wynik)  # -2
 
-# slicowanie
+# slicowanie - zwraca listę
 print(lista[0:3])  # ['Radek', 'Maciek', 'Tomek'] 012
 print(lista[:3])  # ['Radek', 'Maciek', 'Tomek']
 
@@ -93,5 +93,10 @@ print(lista[-3:])  # ['Zenek', 'Marta', 'Anna'] włącznie z ostatnim
 print(lista[-2:])  # ['Marta', 'Anna']
 print(lista[-1:])  # ['Anna'] - lista z jednym elementem
 print(lista[-1:][0])  # Anna - element listy, indeks 0 -> Anna, str
-print(lista[-1])  # Anna
+print(lista[-1])  # Anna element nie lista
 print(lista[-1][0])  # A
+
+print(lista[:])  # ['Radek', 'Maciek', 'Tomek', 'Zenek', 'Marta', 'Anna']
+
+print(lista[2:5])  # indeksy 234, ['Tomek', 'Zenek', 'Marta']
+print(lista[2:])  # indeksy 2345, ['Tomek', 'Zenek', 'Marta', 'Anna'] z ostatnim włącznie
