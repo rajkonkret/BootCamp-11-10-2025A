@@ -117,3 +117,18 @@ print(f"{b=}")  # b={2, 3, 4}
 a.intersection_update(b)
 print(f"{a=}")  # a={2, 3} - zostało zmienione, zawiera tylko część wspólną
 print(f"{b=}")  # b={2, 3, 4}
+
+# frozenset() - zbiór niemutowalny
+frozen = frozenset([1, 2, 3])
+print(frozen)  # frozenset({1, 2, 3})
+print(type(frozen))  # <class 'frozenset'>
+
+lista_temp = [[2, 3], [4, 5]]
+# lista w liście, nie ma Array w pythonie
+print(lista_temp)  # [[2, 3], [4, 5]]
+
+# nie można zrobić zagnieżdzonych zbiorów
+# nested_set = {1, {2, 3}}  # TypeError: unhashable type: 'set'
+
+nested_set = {1, frozenset({2, 3})}
+print(nested_set)  # {1, frozenset({2, 3})}
