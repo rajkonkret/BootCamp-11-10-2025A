@@ -139,3 +139,16 @@ print(lista)  # ['Karolina', 'Maciek', 'Tomek', 'Marta', 'Anna', 'Zenek']
 
 print(lista.pop())  # Zenek, usunie ostatni element
 print(lista)  # ['Karolina', 'Maciek', 'Tomek', 'Marta', 'Anna']
+
+# usnięcie po elemencie
+lista.append("Maciek")  # dodanie elementu do listy
+print(lista)
+# remove nie zwraca elementu, który usunie
+lista.remove("Maciek")  # usunie pierwsze wystąpienie lementu "Maciek"
+print(lista)  # ['Karolina', 'Tomek', 'Marta', 'Anna', 'Maciek']
+
+# lista.remove("Filip")  # ValueError: list.remove(x): x not in list
+
+# sprawdzenie czy element istnieje w liście
+print("Marta" in lista)  # True
+print("Filip" in lista)  # False
