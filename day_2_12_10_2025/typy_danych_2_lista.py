@@ -112,6 +112,10 @@ print(lista[2:3])  # ['Tomek'] indeks2, bez trzeciego
 print(lista[4:10])  # ['Marta', 'Anna'] - zwróci elementy do ostatniego włacznie
 print(lista[10:20])  # []
 
+# nadpisanie elementu listy we wskazanym indeksie
+lista[1] = "Magda"
+print(lista)  # ['Radek', 'Magda', 'Tomek', 'Zenek', 'Marta', 'Anna']
+
 # ['Radek', 'Maciek', 'Tomek', 'Zenek', 'Marta', 'Anna']
 # rozszerzenie listy, wstawieni elementu we wskazanym indeksie
 lista.insert(1, "Karolina")
@@ -264,3 +268,7 @@ print(liczby)  # [999, 687, 45, 13.34]
 print(liczby[::-1])  # bez zmiany oryginalnej listy, [13.34, 45, 687, 999]
 liczby.reverse()  # ze zmianą oryginalnej listy
 print(liczby)
+
+# ndpisanie elementu listy
+liczby[3] = 666  # w miejsce o indeksie 3 wstawiamy nową wartość
+print(liczby)  # [13.34, 45, 687, 666]
