@@ -165,3 +165,34 @@ print(lista)
 
 # odczyta indeks dla pierwszego napotkanego elementu
 print(lista.index("Marta"))  # indeks numer 4
+
+a = 1
+b = 3
+print(f"{a=}, {b=}")  # a=1, b=3
+a = b
+print(f"{a=}, {b=}")  # a=3, b=3
+b = 7
+print(f"{a=}, {b=}")  # a=3, b=7
+
+lista_4 = lista  # -> a = b, kopiowianie adresu w pamięci, kopia referencji
+print("Lista:", lista)
+print("Lista_4:", lista_4)
+# Lista: ['Karolina', 'Tomek', 'Anna', 'Maciek', 'Marta', 'Marta', 'Marcin']
+# Lista_4: ['Karolina', 'Tomek', 'Anna', 'Maciek', 'Marta', 'Marta', 'Marcin']
+
+lista_copy = lista.copy()  # przekopiowanie wszystkich elementów listy do nowej listy
+lista.clear()  # usunięcie eleemntów z listy: lista
+print("Lista:", lista)
+print("Lista_4:", lista_4)
+# Lista: []
+# Lista_4: []
+print("Lista copy:", lista_copy)
+# Lista copy: ['Karolina', 'Tomek', 'Anna', 'Maciek', 'Marta', 'Marta', 'Marcin']
+
+# id() - wskazuje adres w pamięci, gdzie znajduje sie element
+print(f"adres: {id(lista)=}")
+print(f"adres: {id(lista_4)=}")
+print(f"adres: {id(lista_copy)=}")
+# adres: id(lista)=4346345024
+# adres: id(lista_4)=4346345024
+# adres: id(lista_copy)=4348487360
