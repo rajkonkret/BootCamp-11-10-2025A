@@ -100,3 +100,14 @@ print(lista[:])  # ['Radek', 'Maciek', 'Tomek', 'Zenek', 'Marta', 'Anna']
 
 print(lista[2:5])  # indeksy 234, ['Tomek', 'Zenek', 'Marta']
 print(lista[2:])  # indeksy 2345, ['Tomek', 'Zenek', 'Marta', 'Anna'] z ostatnim włącznie
+
+# ['Radek', 'Maciek', 'Tomek', 'Zenek', 'Marta', 'Anna']
+#     0         1         2       3         4       5
+#     -6        -5        -4      -3       -2       -1
+print(lista[-3:0])  # [] -> [3:0]
+print(lista[0:-3])  # ['Radek', 'Maciek', 'Tomek']
+
+print(lista[2:2])  # []
+print(lista[2:3])  # ['Tomek'] indeks2, bez trzeciego
+print(lista[4:10])  # ['Marta', 'Anna'] - zwróci elementy do ostatniego włacznie
+print(lista[10:20])  # []
