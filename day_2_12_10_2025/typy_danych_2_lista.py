@@ -248,9 +248,19 @@ print(lista_osoby)
 # ['Zenek', 'Tomek', 'Radek', 'Magda', 'Karolina', 'Ania']
 
 print(liczby)  # [999, 687, 45, 34, 22, 13.34]
-# nadpisac 4 element w tej liście
 # wypisac ostatni element po indeksie dodatnim i ujenmnym
 # zrobić slice(wycinanie) jedno dodatnie, jedno ujemne
 # usunąć z listy po indeksie i wypisać usunięty
 # usunąć z listy po elemencie
 # wyswietlić listę odwróconą bez zmiany sortowania
+print(liczby[-1])  # 13.34
+print(liczby[len(liczby) - 1])  # 13.34
+print(liczby[1:3])  # [687, 45]
+print(liczby[-5:-2])  # [687, 45, 34]
+print(liczby.pop(3))  # 34
+print(liczby)  # [999, 687, 45, 22, 13.34]
+liczby.remove(22)  # usunięcie eleemntu o wartości 22, nie o indeksie
+print(liczby)  # [999, 687, 45, 13.34]
+print(liczby[::-1])  # bez zmiany oryginalnej listy, [13.34, 45, 687, 999]
+liczby.reverse()  # ze zmianą oryginalnej listy
+print(liczby)
