@@ -45,4 +45,10 @@ del temp  # <class 'tuple'>
 # tupli nie ma. można usunąć
 # print(temp)  # NameError: name 'temp' is not defined
 
-print(tupla_liczby)
+print(tupla_liczby)  # (43, 55, 22.34, 11, 200)
+
+# slicowanie tupli
+print(tupla_liczby[:3])  # (43, 55, 22.34)
+print(tupla_liczby[0:3])  # (43, 55, 22.34)
+print(tupla_liczby[1:3])  # (55, 22.34)
+print(tupla_liczby[2:])  # (22.34, 11, 200)
