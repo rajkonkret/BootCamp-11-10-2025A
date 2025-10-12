@@ -28,4 +28,16 @@ lista_mieszane = [10, 5.2, "Oko", "Radek"]
 print(type(lista_mieszane))  # <class 'list'>
 print(lista_mieszane)  # [10, 5.2, 'Oko', 'Radek']
 
+# sprawdzenie ile eleemntów znajduje się w kolekcji
+print(len(lista_mieszane))  # długość 4
+# [10, 5.2, 'Oko', 'Radek']
+#   0   1     2       3    indeksowanie od 0
 
+# dodawanie elementów do listy
+lista.append("Radek")  # dodaje na końcu listy
+lista.append("Maciek")  # dodaje na końcu listy
+lista.append("Tomek")  # dodaje na końcu listy
+lista.append("Zenek")  # dodaje na końcu listy
+lista.append("Marta")  # dodaje na końcu listy
+lista.append("Anna")  # dodaje na końcu listy
+print(lista)  # ['Radek', 'Maciek', 'Tomek', 'Zenek', 'Marta', 'Anna']
