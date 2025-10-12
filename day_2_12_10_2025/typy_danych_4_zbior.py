@@ -65,3 +65,21 @@ print(type(zbior2))  # <class 'set'>
 
 zbior3 = {667, 11, 44, 18, 667, 62, 999}
 print(zbior3)  # {18, 999, 11, 44, 667, 62}
+
+# suma zbiorów
+# wszystkie elementy pierwszego i drugiego zbioru
+# nie ma duplikatów!!!
+# tworzy nowy zbiór
+print(zbior | zbior3)  # {999, 11, 44, 18, 22, 667, 62}
+print(zbior.union(zbior3))  # {999, 11, 44, 18, 22, 667, 62}
+
+# zbiory bazowe nie zmieniły się
+print(zbior)  # {44, 22}
+print(zbior3)  # {18, 999, 11, 44, 667, 62}
+
+print(zbior2 | zbior3)  # {999, 11, 44, 18, 52, 22, 667, 62}
+print(zbior2.union(zbior3))  # {999, 11, 44, 18, 52, 22, 667, 62}
+
+# zbiory bazowe nie zmieniły się
+print(zbior2)  # {999, 11, 44, 18, 52, 22, 667, 62}
+print(zbior3)  # {18, 999, 11, 44, 667, 62}
