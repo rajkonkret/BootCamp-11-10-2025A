@@ -100,3 +100,16 @@ print(zbior2.difference(zbior3))  # {52, 22}
 print(zbior3.difference(zbior2))  # set() - pusty zbiór
 print(zbior3.difference(zbior))  # {999, 11, 18, 667, 62}
 print(zbior.difference(zbior3))  # {22}
+
+# suma zbiorów
+# zmienia zbiór bazowy!!!
+# wynik pojawi się w zbiorze a
+a = {1, 2}
+b = {2, 3}
+a.update(b)
+print(f"Zmieniło zbiór bazowy a: {a=}")  # Zmieniło zbiór bazowy a: a={1, 2, 3}
+
+a = {1, 2, 3}
+b = {2, 3, 4}
+print(f"{a=}")  # a={1, 2, 3}
+print(f"{b=}")  # b={2, 3, 4}
