@@ -93,3 +93,10 @@ print(zbior | zbior3 | zbior4)
 # część wspólna - zwraca nowy zbiór
 print(zbior2 & zbior3)  # {999, 11, 44, 18, 667, 62}
 print(zbior2.intersection(zbior3))  # {999, 11, 44, 18, 667, 62}
+
+# różnica zbiorów - zwróci nowy zbiór
+print(zbior2 - zbior3)  # {52, 22}
+print(zbior2.difference(zbior3))  # {52, 22}
+print(zbior3.difference(zbior2))  # set() - pusty zbiór
+print(zbior3.difference(zbior))  # {999, 11, 18, 667, 62}
+print(zbior.difference(zbior3))  # {22}
