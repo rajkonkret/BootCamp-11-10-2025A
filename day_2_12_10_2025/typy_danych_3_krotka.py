@@ -64,3 +64,22 @@ print(tupla_names)  # ('Radek', 'tomek', 'Zenek', 'Bartek')
 # sprawdzenie czy element istnieje w krotce
 print("Radek" in tupla_names)  # True oznacza, że element jest w kolekcji
 
+# count() - zlicza ile razy eleemnt wystąpi w tupli (krotka)
+print(tupla_names.count("tomek"))  # występuje 1 raz
+
+# index() - sprawdzenie na którym indeksie znajduje się element
+print(tupla_names.index("Radek"))  # index numer 0
+
+# sorted() - sortowanie kolekcji
+# zwrócił listę posortowaną
+print(sorted(tupla_names))
+# ['Bartek', 'Radek', 'Zenek', 'tomek']
+# nie zmienił oryginalnej tupli!!!
+print(tupla_names)  # ('Radek', 'tomek', 'Zenek', 'Bartek')
+
+# sortowanie z odwróćeniem
+print(sorted(tupla_names, reverse=True))  # zwraa listę!!!
+# ['tomek', 'Zenek', 'Radek', 'Bartek']
+
+# nie zmienia krotki
+print(tupla_names)  # ('Radek', 'tomek', 'Zenek', 'Bartek')
