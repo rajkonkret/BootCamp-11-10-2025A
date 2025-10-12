@@ -119,4 +119,23 @@ print(lista)
 # ['Radek', 'Karolina', 'Maciek', 'Tomek', 'Zenek', 'Marta', 'Anna']
 print(len(lista))  # długośc 7
 
+# usunięcie elementu z listy
+# 1. usunięcie po indeksie -> pop()
+# 2. usunięcie po elemenecie -> remove()
 
+# po indeksie pop(), zwraca eleemnt usunięty
+print(lista.pop(0))  # Radek
+print(lista)  # ['Karolina', 'Maciek', 'Tomek', 'Zenek', 'Marta', 'Anna']
+ind = lista.index("Zenek")
+print("Numer indeksu dla Zenka:", ind)  # Numer indeksu dla Zenka: 3
+lista.append("Zenek")
+print(lista)
+# ['Karolina', 'Maciek', 'Tomek', 'Zenek', 'Marta', 'Anna', 'Zenek']
+# zwraca pierwszy napotkany
+ind = lista.index("Zenek")
+print("Numer indeksu dla Zenka:", ind)  # Numer indeksu dla Zenka: 3
+print(lista.pop(ind))  # Zenek
+print(lista)  # ['Karolina', 'Maciek', 'Tomek', 'Marta', 'Anna', 'Zenek']
+
+print(lista.pop())  # Zenek, usunie ostatni element
+print(lista)  # ['Karolina', 'Maciek', 'Tomek', 'Marta', 'Anna']
