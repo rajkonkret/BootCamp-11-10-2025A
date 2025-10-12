@@ -128,5 +128,29 @@ print(f"{name1=}, {name2=}, {name3=}")
 tupla_names_2 = "OLA", "Ania", "Ada", "Gabi", "Kasia", "Paulina"
 i1, i2, *i3, i4 = tupla_names_2
 print(i1, i2, i3, i4)  # OLA Ania ['Ada', 'Gabi', 'Kasia'] Paulina
+"""
+Prints the values to a stream, or to sys.stdout by default.
 
+  sep
+    string inserted between values, default a space.
+  end
+    string appended after the last value, default a newline.
+  file
+    a file-like object (stream); defaults to the current sys.stdout.
+  flush
+    whether to forcibly flush the stream.
+"""
+print("Jeden", "Dwa", "Trzy")  # Jeden Dwa Trzy
+print("Jeden", "Dwa", "Trzy", sep="")  # JedenDwaTrzy, sep="" - pusty separator
+print("Jeden", "Dwa", "Trzy", sep="=>")  # Jeden=>Dwa=>Trzy
+print("Jeden", "Dwa", "Trzy", sep=":")  # Jeden:Dwa:Trzy
+print("Jeden", "Dwa", "Trzy", sep=":", end="")  # end="" - pusty znak końca linii -> Jeden:Dwa:TrzyDalszy tekst
+print("Dalszy tekst")  # Jeden:Dwa:TrzyDalszy tekst - tekst wpisany w poprzedniej linii,
+# dopiero ta linia zmienia znak końca linia na standartowy end="\n"
+print('Kolejna linia')
+# wypisze się w nowej linii
+# Jeden:Dwa:TrzyDalszy tekst
+# Kolejna linia
 
+# sep: znak oddzielający eleemnty przy wypisywaniu po przecinku (domyslnie spackja " ")
+# end: znak końca linii (domyślnie "\n" - nowa linia
