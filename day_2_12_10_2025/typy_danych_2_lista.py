@@ -272,3 +272,33 @@ print(liczby)
 # ndpisanie elementu listy
 liczby[3] = 666  # w miejsce o indeksie 3 wstawiamy nową wartość
 print(liczby)  # [13.34, 45, 687, 666]
+
+# łączenie list, dostajemy nową kolekcję
+print(liczby + liczby_3)
+# [13.34, 45, 687, 666, 1, 12, 5, 8, 3]
+liczby_4 = liczby + liczby_3
+print(liczby_4)  # [13.34, 45, 687, 666, 1, 12, 5, 8, 3]
+
+liczby_5 = [1, 2, 3, 4, 5]
+liczby_6 = [6, 7, 8, 9]
+
+# nie tworzy nowej listy, zmiany w lista_5
+liczby_5.extend(liczby_6)
+print(liczby_5)  # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# rozpakowanie sekwencji
+tekst = "Pyth on."
+lista_str = list(tekst)
+print(lista_str)  # ['P', 'y', 't', 'h', ' ', 'o', 'n', '.']
+
+lista_str_pusta = []
+lista_str_pusta.extend(tekst)
+print(lista_str_pusta)  # ['P', 'y', 't', 'h', ' ', 'o', 'n', '.']
+
+# stworzy listę jednoelementową z elementem
+lista_str2 = [tekst]
+print(lista_str2)  # ['Pyth on.']
+
+lista_str2_pusta = []
+lista_str2_pusta.append(tekst)
+print(lista_str2_pusta)  # ['Pyth on.']
