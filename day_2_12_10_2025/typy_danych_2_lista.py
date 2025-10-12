@@ -247,4 +247,10 @@ lista_osoby.reverse()
 print(lista_osoby)
 # ['Zenek', 'Tomek', 'Radek', 'Magda', 'Karolina', 'Ania']
 
-print(liczby) # [999, 687, 45, 34, 22, 13.34]
+print(liczby)  # [999, 687, 45, 34, 22, 13.34]
+# nadpisac 4 element w tej liście
+# wypisac ostatni element po indeksie dodatnim i ujenmnym
+# zrobić slice(wycinanie) jedno dodatnie, jedno ujemne
+# usunąć z listy po indeksie i wypisać usunięty
+# usunąć z listy po elemencie
+# wyswietlić listę odwróconą bez zmiany sortowania
