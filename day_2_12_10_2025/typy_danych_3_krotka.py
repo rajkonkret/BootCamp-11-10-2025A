@@ -83,3 +83,31 @@ print(sorted(tupla_names, reverse=True))  # zwraa listę!!!
 
 # nie zmienia krotki
 print(tupla_names)  # ('Radek', 'tomek', 'Zenek', 'Bartek')
+
+# rozpakowanie tupli
+a, b = 1, 2  # wg kolejności trafia do zmiennych
+print(f"{a=}, {b=}")  # a=1, b=2
+
+# zamiana wartości zmiennych miedzy sobą
+b, a = a, b
+print(f"{a=}, {b=}")  # a=2, b=1
+
+print(type((1, 2)))  # <class 'tuple'>
+
+tup1 = 1, 2
+print(type(tup1))  # <class 'tuple'>
+
+a, b = tup1
+print(f"{a=}, {b=}")
+# a=1, b=2
+
+tup2 = 1, 2, 3
+print(type(tup2))  # <class 'tuple'>
+# a, b = tup2  # ValueError: too many values to unpack (expected 2)
+# zwykła zmienna przyjmuje jeden element
+a, *b = tup2  # * worek na pozostałe dane
+print(f'{a=}, {b=}')  # a=1, b=[2, 3]
+
+print(tupla_names)  # ('Radek', 'tomek', 'Zenek', 'Bartek')
+# name1, name2, name3
+# rozpakować tupla_names na trzy zmienne
