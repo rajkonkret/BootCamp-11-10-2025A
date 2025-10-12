@@ -196,3 +196,55 @@ print(f"adres: {id(lista_copy)=}")
 # adres: id(lista)=4346345024
 # adres: id(lista_4)=4346345024
 # adres: id(lista_copy)=4348487360
+
+liczby = [45, 999, 34, 22, 13.34, 687]
+print(liczby)  # [45, 999, 34, 22, 13.34, 687]
+print(type(liczby))  # <class 'list'>
+
+liczby.sort()  # sortowanie listy, zmienia oryginał
+print(liczby)  # [13.34, 22, 34, 45, 687, 999]
+
+liczby_a = [45, 999, 34, 22, 13.34, 687, "A"]
+print(liczby_a)  # [45, 999, 34, 22, 13.34, 687, 'A']
+print(type(liczby_a))  # <class 'list'>
+
+# liczby_a.sort()
+# TypeError: '<' not supported between instances of 'str' and 'int'
+
+lista_osoby = ["Radek", "Tomek", "Zenek", "Ania", "Karolina", "Magda"]
+lista_osoby.sort()
+print(lista_osoby)  # ['Ania', 'Karolina', 'Magda', 'Radek', 'Tomek', 'Zenek']
+
+lista_alfabet = ["a", 'z', "p", 'd']
+lista_alfabet.sort()
+print(lista_alfabet)  # ['a', 'd', 'p', 'z']
+
+lista_alfabet_pol = ['a', 'z', "ą", "p", "ń", "d"]
+lista_alfabet_pol.sort()
+print(lista_alfabet_pol)  # ['a', 'd', 'p', 'z', 'ą', 'ń']
+print(ord("z"))  # kod znaku: 122, ord() - wypisuje kod ascii znaku
+print(ord("ą"))  # kod znaku: 261
+
+# sortowanie i odwrócenie w jednym kroku, zmiana listy
+liczby.sort(reverse=True)
+print(liczby)  # [999, 687, 45, 34, 22, 13.34]
+
+# # wypisanie w odwrotnej kolejności, bez zmiany oryginalnej listy
+# slicowanie - wypisanie fragmentu listy
+print(liczby[::-1])  # [13.34, 22, 34, 45, 687, 999] krok -1, [start:stop:krok] - odwrócona kolejność
+print(liczby[0:4:2])  # [999, 45]
+
+print(liczby)
+print(liczby[-3:0:1])  # []
+print(liczby[-3:0:-1])  # [34, 45, 687], działa bo krok -1
+
+# odwrócenie kolekcji, bez sortowania
+liczby_3 = [3, 8, 5, 12, 1]
+liczby_3.reverse()
+print(liczby_3)  # [1, 12, 5, 8, 3]
+
+lista_osoby.reverse()
+print(lista_osoby)
+# ['Zenek', 'Tomek', 'Radek', 'Magda', 'Karolina', 'Ania']
+
+print(liczby) # [999, 687, 45, 34, 22, 13.34]
