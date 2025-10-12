@@ -33,3 +33,16 @@ print(tupla_liczby)
 print(type(tupla_liczby))
 # (43, 55, 22.34, 11, 200)
 # <class 'tuple'>
+
+# tupla (krotka) jest niemutowalna - nie można dokonać w niej zmian
+# temp[0] = 1  # TypeError: 'tuple' object does not support item assignment
+
+# nie da się usunąć elementu z krotki
+# del temp[0]  # TypeError: 'tuple' object doesn't support item deletion
+
+# można usunąć całą krotkę z pamięci
+del temp  # <class 'tuple'>
+# tupli nie ma. można usunąć
+# print(temp)  # NameError: name 'temp' is not defined
+
+print(tupla_liczby)
