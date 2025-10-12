@@ -41,3 +41,6 @@ lista.append("Zenek")  # dodaje na końcu listy
 lista.append("Marta")  # dodaje na końcu listy
 lista.append("Anna")  # dodaje na końcu listy
 print(lista)  # ['Radek', 'Maciek', 'Tomek', 'Zenek', 'Marta', 'Anna']
+
+print(type(lista))  # <class 'list'>
+print(len(lista))  # długość 6 elementów
