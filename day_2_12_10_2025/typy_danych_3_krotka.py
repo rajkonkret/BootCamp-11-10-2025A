@@ -57,3 +57,10 @@ print(tupla_liczby[-1])  # 200
 print(tupla_liczby[::-1])  # (200, 11, 22.34, 55, 43)
 print(tupla_liczby[-1::-1])  # (200, 11, 22.34, 55, 43)
 # [start:stop:krok] krok -1 oznacza krok wstecz
+print(tupla_liczby[1:4:2])  # (55, 11)
+print(tupla_liczby[:])  # (43, 55, 22.34, 11, 200) - cała tupla w normalnej kolejności
+
+print(tupla_names)  # ('Radek', 'tomek', 'Zenek', 'Bartek')
+# sprawdzenie czy element istnieje w krotce
+print("Radek" in tupla_names)  # True oznacza, że element jest w kolekcji
+
