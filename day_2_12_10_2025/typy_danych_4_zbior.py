@@ -145,3 +145,11 @@ a = {1, 2, 3}
 b = {1, 2}
 print(b.issubset(a))  # True
 
+krotka = tuple(zb3)
+lista = list(zb3)
+
+print(krotka)  # (1, 2, 3, 4, 5, 6, 7, 8, 9)
+print(9 in krotka)  # True
+
+print(lista)  # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(10 in lista)  # False
