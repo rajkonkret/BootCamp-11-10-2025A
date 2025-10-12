@@ -90,3 +90,6 @@ print(zbior.union(zbior3, zbior4))
 print(zbior | zbior3 | zbior4)
 # {999, 8, 9, 10, 11, 44, 18, 22, 667, 62}
 
+# część wspólna - zwraca nowy zbiór
+print(zbior2 & zbior3)  # {999, 11, 44, 18, 667, 62}
+print(zbior2.intersection(zbior3))  # {999, 11, 44, 18, 667, 62}
