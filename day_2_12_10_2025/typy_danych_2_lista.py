@@ -112,6 +112,7 @@ print(lista[2:3])  # ['Tomek'] indeks2, bez trzeciego
 print(lista[4:10])  # ['Marta', 'Anna'] - zwróci elementy do ostatniego włacznie
 print(lista[10:20])  # []
 
+# ['Radek', 'Maciek', 'Tomek', 'Zenek', 'Marta', 'Anna']
 # rozszerzenie listy, wstawieni elementu we wskazanym indeksie
 lista.insert(1, "Karolina")
 print(lista)
