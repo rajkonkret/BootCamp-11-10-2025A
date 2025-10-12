@@ -154,3 +154,8 @@ print('Kolejna linia')
 
 # sep: znak oddzielający eleemnty przy wypisywaniu po przecinku (domyslnie spackja " ")
 # end: znak końca linii (domyślnie "\n" - nowa linia
+
+lista = list(tupla_names)
+print(lista)  # ['Radek', 'tomek', 'Zenek', 'Bartek']
+print(type(lista))  # <class 'list'>
+print(len(lista))  # długość: 4
