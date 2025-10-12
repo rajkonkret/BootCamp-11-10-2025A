@@ -302,3 +302,8 @@ print(lista_str2)  # ['Pyth on.']
 lista_str2_pusta = []
 lista_str2_pusta.append(tekst)
 print(lista_str2_pusta)  # ['Pyth on.']
+
+# zamiana listy na krotkę (tuple)
+krotka = tuple(liczby)
+print(krotka)  # (13.34, 45, 687, 666)
+print(type(krotka))  # <class 'tuple'>
