@@ -38,3 +38,30 @@ zbior.add(18)
 zbior.add(22)
 print(zbior)  # 33, 66, 777, 11, 44, 18, 22, 55}
 # zamienił kolejność
+
+# pop() - usunięcie pierwszego eleemntu
+print(zbior.pop())  # 33
+print(zbior)  # {66, 777, 11, 44, 18, 22, 55}
+
+print(zbior.pop())  # 66
+zbior.pop()
+zbior.pop()
+print(zbior)  # {44, 18, 22, 55}
+
+# użycie sorted() na zbiorze
+# zwróci nam listę posortowanych elementów
+print(sorted(zbior))  # [18, 22, 44, 55]
+
+# usunięcie elementu ze zbioru po wskazanym elemencie
+zbior.remove(55)
+zbior.remove(18)
+print(f"Zbiór po usunięciu: {zbior=}")  # Zbiór po usunięciu: zbior={44, 22}
+print(f"Zbiór po usunięciu: {zbior}")  # Zbiór po usunięciu: {44, 22}
+
+# tworzenie zbioru z konkretnymi wartościami
+zbior2 = {667, 11, 44, 18, 52, 22, 667, 62, 999}
+print(zbior2)  # {999, 11, 44, 18, 52, 22, 667, 62}
+print(type(zbior2))  # <class 'set'>
+
+zbior3 = {667, 11, 44, 18, 667, 62, 999}
+print(zbior3)  # {18, 999, 11, 44, 667, 62}
