@@ -139,3 +139,9 @@ print(max(zb3))  # 9, wartość maksymalna
 print(min(zb3))  # 1, wartość minimalna
 print(len(zb3))  # 9, długość zbioru
 print(sorted(zb3))  # [1, 2, 3, 4, 5, 6, 7, 8, 9] - lista posortowana
+
+# Sprawdzenie, czy zbiór b jest podzbiorem zbioru a
+a = {1, 2, 3}
+b = {1, 2}
+print(b.issubset(a))  # True
+
