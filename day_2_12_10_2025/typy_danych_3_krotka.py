@@ -107,7 +107,16 @@ print(type(tup2))  # <class 'tuple'>
 # zwykła zmienna przyjmuje jeden element
 a, *b = tup2  # * worek na pozostałe dane
 print(f'{a=}, {b=}')  # a=1, b=[2, 3]
+print(type(b))  # <class 'list'>
 
 print(tupla_names)  # ('Radek', 'tomek', 'Zenek', 'Bartek')
 # name1, name2, name3
 # rozpakować tupla_names na trzy zmienne
+*name1, name2, name3 = tupla_names
+print(name1, name2, name3)  # ['Radek', 'tomek'] Zenek Bartek
+
+name1, *name2, name3 = tupla_names
+print(name1, name2, name3)  # Radek ['tomek', 'Zenek'] Bartek
+
+name1, name2, *name3 = tupla_names
+print(name1, name2, name3)  # Radek tomek ['Zenek', 'Bartek']
