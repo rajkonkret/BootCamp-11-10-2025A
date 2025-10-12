@@ -156,3 +156,12 @@ print("Filip" in lista)  # False
 print(lista.remove("Marta"))  # None
 # element został usunięty z listy
 print(lista)  # ['Karolina', 'Tomek', 'Anna', 'Maciek']
+
+lista.append("Marta")
+lista.append("Marta")
+lista.append("Marcin")
+print(lista)
+# ['Karolina', 'Tomek', 'Anna', 'Maciek', 'Marta', 'Marta', 'Marcin']
+
+# odczyta indeks dla pierwszego napotkanego elementu
+print(lista.index("Marta"))  # indeks numer 4
