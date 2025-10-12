@@ -113,3 +113,7 @@ a = {1, 2, 3}
 b = {2, 3, 4}
 print(f"{a=}")  # a={1, 2, 3}
 print(f"{b=}")  # b={2, 3, 4}
+# Część wspólna zbiorów trafia do zbioru a
+a.intersection_update(b)
+print(f"{a=}")  # a={2, 3} - zostało zmienione, zawiera tylko część wspólną
+print(f"{b=}")  # b={2, 3, 4}
