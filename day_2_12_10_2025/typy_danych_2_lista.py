@@ -77,5 +77,21 @@ print(lista[-6])  # Radek
 #     -6        -5        -4      -3       -2       -1
 # print(lista[10])  # IndexError: list index out of range
 
+# print(lista[-7])  # IndexError: list index out of range
+wynik = len(lista) - 1
+print(wynik)  # 5
+wynik = len(lista) - 8
+print(wynik)  # -2
+
 # slicowanie
-print(lista)
+print(lista[0:3])  # ['Radek', 'Maciek', 'Tomek'] 012
+print(lista[:3])  # ['Radek', 'Maciek', 'Tomek']
+
+print(lista[1:3])  # ['Maciek', 'Tomek']
+print(lista[:2])  # ['Radek', 'Maciek']
+print(lista[-3:])  # ['Zenek', 'Marta', 'Anna'] włącznie z ostatnim
+print(lista[-2:])  # ['Marta', 'Anna']
+print(lista[-1:])  # ['Anna'] - lista z jednym elementem
+print(lista[-1:][0])  # Anna - element listy, indeks 0 -> Anna, str
+print(lista[-1])  # Anna
+print(lista[-1][0])  # A
