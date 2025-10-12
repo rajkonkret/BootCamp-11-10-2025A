@@ -120,3 +120,9 @@ print(name1, name2, name3)  # Radek ['tomek', 'Zenek'] Bartek
 
 name1, name2, *name3 = tupla_names
 print(name1, name2, name3)  # Radek tomek ['Zenek', 'Bartek']
+
+name1, name2, *name3 = tupla_names
+print(f"{name1=}, {name2=}, {name3=}")
+# name1='Radek', name2='tomek', name3=['Zenek', 'Bartek']
+
+tupla_names_2 = "OLA", "Ania", "Ada", "Gabi", "Kasia", "Paulina"
