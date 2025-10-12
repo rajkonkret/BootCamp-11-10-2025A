@@ -14,6 +14,7 @@ print(tekst)  # Witaj Świecie
 tekst_upper = tekst.upper()
 print(tekst_upper)  # WITAJ ŚWIECIE
 
+# zwraca bład gdy warunek się nie zgadza
 assert tekst_upper == "WITAJ ŚWIECIE"  # asercja, sprawdzenie czy zmmienna zawiera wskazaną wartość
 
 print(tekst.lower())  # witaj świecie
