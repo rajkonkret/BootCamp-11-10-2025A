@@ -152,3 +152,7 @@ print(lista)  # ['Karolina', 'Tomek', 'Marta', 'Anna', 'Maciek']
 # sprawdzenie czy element istnieje w liście
 print("Marta" in lista)  # True
 print("Filip" in lista)  # False
+
+print(lista.remove("Marta"))  # None
+# element został usunięty z listy
+print(lista)  # ['Karolina', 'Tomek', 'Anna', 'Maciek']
