@@ -44,3 +44,20 @@ print(lista)  # ['Radek', 'Maciek', 'Tomek', 'Zenek', 'Marta', 'Anna']
 
 print(type(lista))  # <class 'list'>
 print(len(lista))  # długość 6 elementów
+
+# ['Radek', 'Maciek', 'Tomek', 'Zenek', 'Marta', 'Anna']
+#     0         1         2       3         4       5
+
+# wypisanie elementów po indeksie
+print(lista[1])  # Maciek
+print(lista[3])  # Zenek
+print(lista[5])  # Anna
+
+# len(lista) - 1 - indeks ostatniego elementu
+print(lista[len(lista) - 1])  # Anna, ostatni element
+print(lista[-1])  # Anna
+print(lista[-2])
+print(lista[-3])
+print(lista[-4])
+print(lista[-5])
+print(lista[-6])
