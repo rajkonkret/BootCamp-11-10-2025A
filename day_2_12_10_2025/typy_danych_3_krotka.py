@@ -52,3 +52,8 @@ print(tupla_liczby[:3])  # (43, 55, 22.34)
 print(tupla_liczby[0:3])  # (43, 55, 22.34)
 print(tupla_liczby[1:3])  # (55, 22.34)
 print(tupla_liczby[2:])  # (22.34, 11, 200)
+
+print(tupla_liczby[-1])  # 200
+print(tupla_liczby[::-1])  # (200, 11, 22.34, 55, 43)
+print(tupla_liczby[-1::-1])  # (200, 11, 22.34, 55, 43)
+# [start:stop:krok] krok -1 oznacza krok wstecz
