@@ -21,8 +21,9 @@
 # # Java to kawa
 # # Lista z odpowiedziami: ['Java']
 
-dane = [1, 2, 3]
-# dane = {"nazwa": "Radek", "wiek": 45}
+# dane = [1, 2, 3]
+# dane = [1, 2]
+dane = {"nazwa": "Radek", "wiek": 45}
 
 match dane:
     case [a, b, c]:
