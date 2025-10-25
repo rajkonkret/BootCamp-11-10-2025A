@@ -113,3 +113,24 @@ print(my_dict_4.get('e'))  # None, oznacza brak klucza w słowniku
 # mozemy ustawić wartośc domyślną, jaka będzie zwracana gdy nie ma klucza w słowniku
 print(my_dict_4.get('e', "Nie ma"))  # Nie ma - gdy brak klucza
 print(my_dict_4.get('a', "Nie ma"))  # [10, 20, 30]
+
+# nadpisanie wartoścci dla klucza
+my_dict5 = {"Name": "Radek", "ID": 12345, "DDB": 1991, "Address": "Warsaw"}
+print(my_dict5)
+print(my_dict5['DDB'])  # 1991
+print(my_dict5.get("DDB"))  # 1991
+
+my_dict5["DDB"] = '1980'
+print(my_dict5)  # {'Name': 'Radek', 'ID': 12345, 'DDB': '1980', 'Address': 'Warsaw'}
+print(type(my_dict5['DDB']))  # <class 'str'>
+
+my_dict5["Address"] = "Warsaw Centre"
+print(my_dict5)  # {'Name': 'Radek', 'ID': 12345, 'DDB': '1980', 'Address': 'Warsaw Centre'}
+
+dict1 = {"DDB": 1995}
+print(dict1)  # {'DDB': 1995}
+
+# update słownika innym słownikiem
+my_dict5.update(dict1)
+print(my_dict5)
+# {'Name': 'Radek', 'ID': 12345, 'DDB': 1995, 'Address': 'Warsaw Centre'}
