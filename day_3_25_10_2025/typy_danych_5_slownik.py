@@ -7,3 +7,4 @@
 my_dict = {"A": "one", "B": "two", "C": "three", "D": "four"}
 print(my_dict)  # {'A': 'one', 'B': 'two', 'C': 'three', 'D': 'four'}
 # ctrl alt l - formatowanie wg PEP8
+
