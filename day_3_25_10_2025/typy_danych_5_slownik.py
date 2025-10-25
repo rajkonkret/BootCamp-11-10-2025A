@@ -192,3 +192,27 @@ dict_small = {"x": 3}
 dict_small.update([('y', 3), ("z", 3)])
 print(dict_small)  # {'x': 3, 'y': 3, 'z': 3}
 print(dict_small.items())  # dict_items([('x', 3), ('y', 3), ('z', 3)])
+
+# input() - pobiera dane od użytkownika
+# odp = input("Podaj imię\n")
+# print(odp)
+# Podaj imięRadek
+# Radek
+# Podaj imię
+# Radek
+# Radek
+
+# napisać program, który będzie działał jak słownik angielsko polski
+
+# słownik
+# wyswietlic słowka, które potrafi przetłumaczyć
+# pobrać dane od użykownika
+# wyswietlic tłumaczenie
+
+ang_pol = {"name": "imie", "cat": "kot", "water": "woda"}
+print('-----Słownik ang-pol------')
+print("Mamy takie słówka w słownika:", ang_pol.keys())
+odp = input("Podaj słowko do przetłumaczenia:")
+# print(f"{odp} to {ang_pol[odp]}")
+# print(f"{odp} to {ang_pol.get(odp)}")
+print(f"{odp.strip().lower()} to {ang_pol.get(odp.strip().lower())}")
