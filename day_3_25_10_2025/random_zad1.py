@@ -23,3 +23,13 @@ print("-" * 20)
 # losowanie kul -> random.choice
 # usunięcei kuli z bębna -> remove
 # wypisanie liczby -> print
+lista_kule = list(range(1, 50))  # od 1 do 49
+# print(lista_kule)
+
+wyn = random.choice(lista_kule)
+print(wyn)
+lista_kule.remove(wyn)
+
+print(random.choices(lista_kule, k=6))  # [14, 22, 8, 8, 40, 30], losuje z powtórzeniami
+print(random.sample(lista_kule, k=6))  # [33, 7, 45, 39, 35, 40], losowanie bez powtórzeń, [13, 44, 24, 25, 18, 9]
+print(random.sample(lista_kule, 6))  # [20, 6, 25, 31, 18, 35], losowanie bez powtórzeń
