@@ -240,3 +240,7 @@ print(f"{odp.strip().casefold()} to {ang_pol.get(odp.strip().casefold(), "Nia ma
 # True
 # bat to None
 # bat to Nia mam słówka w słowniku
+
+# Porgram kalkulator
+# pobieramy dwie liczby
+# wynik działania (+)
