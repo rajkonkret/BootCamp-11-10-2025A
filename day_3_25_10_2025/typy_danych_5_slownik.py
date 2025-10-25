@@ -43,4 +43,28 @@ dict_with_list_and_tuple = {
 print(dict_with_list_and_tuple)
 # {1: 'one', 2: 'two', 'A': ['arek', 'jhon', 'maria']}
 
+dict_with_all = {
+    1: 'one',
+    2: 'two',
+    "A": ['asif', 'jhon', 'maria'],
+    "B": ("bat", 'cat', 'hat'),
+    "C": {"Name", "age", 10}  # zbiór
+}
 
+print(dict_with_all)
+# {1: 'one', 2: 'two', 'A': ['asif', 'jhon', 'maria'], 'B': ('bat', 'cat', 'hat'), 'C': {10, 'Name', 'age'}}
+
+dict_with_dict = {
+    1: 'one',
+    2: 'two',
+    "A": ['asif', 'jhon', 'maria'],
+    "B": ("bat", 'cat', 'hat'),
+    "C": {"Name", "age", 10},  # zbiór,
+    "D": {"Name": "Radek", "age": 76}
+}
+print(dict_with_dict)
+# {1: 'one', 2: 'two',
+# 'A': ['asif', 'jhon', 'maria'],
+# 'B': ('bat', 'cat', 'hat'),
+# 'C': {10, 'Name', 'age'},
+# 'D': {'Name': 'Radek', 'age': 76}}
