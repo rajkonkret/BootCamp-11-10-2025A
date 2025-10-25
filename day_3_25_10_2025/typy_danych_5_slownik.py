@@ -131,6 +131,16 @@ dict1 = {"DDB": 1995}
 print(dict1)  # {'DDB': 1995}
 
 # update słownika innym słownikiem
+# jesli klucz istnieje, wartość zostanie nadpisana
 my_dict5.update(dict1)
 print(my_dict5)
 # {'Name': 'Radek', 'ID': 12345, 'DDB': 1995, 'Address': 'Warsaw Centre'}
+
+dict2 = {'cpi': 3.41}
+print(dict2)  # {'cpi': 3.41}
+
+# update słownika
+# jesli klucz nie istnieje zostanie dopisany do słownika
+my_dict5.update(dict2)
+print(my_dict5)
+# {'Name': 'Radek', 'ID': 12345, 'DDB': 1995, 'Address': 'Warsaw Centre', 'cpi': 3.41}
