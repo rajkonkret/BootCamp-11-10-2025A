@@ -70,3 +70,34 @@ print(f"Rabat wynosi: {rabacik}")  # Rabat wynosi: 25
 # operator warunkowy
 rabat = 25 if suma_zam > 150 else 0
 print(f"Rabat wynosi: {rabat}")  # Rabat wynosi: 25
+
+# zasymuluj system zbierania logów
+# w zmiennej otrzymamy typ systemu: console, email, inny
+# w zależności od wartości zmiennej:
+# console -> "Stało się coś strasznego"
+# email -> "Sytem email"
+# jeżleli będzie to system: email, to należy do listy błedów dodac opis błedu
+# druga zmienna: przechowuje typ błędu
+# error, medium, inny
+# "Krytyczny"
+
+alert_system = "email"
+error_level = "medium"
+lista_b = []
+
+if alert_system == "console":
+    print("Stało się coś strasznego")
+elif alert_system == "email":
+    print("System email")
+    if error_level == "error":
+        lista_b.append("Krytyczny")
+    elif error_level == "medium":
+        lista_b.append("Ostrzeżenie")
+    else:
+        lista_b.append("Inny")
+else:
+    print("Inny system")
+
+print(lista_b)
+# System email
+# ['Ostrzeżenie']
