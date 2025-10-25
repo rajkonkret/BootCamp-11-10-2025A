@@ -187,3 +187,8 @@ print(my_dict5_copy)  # {'Name': 'Radek', 'ID': 12345, 'DDB': 1991, 'Address': '
 print(id(my_dict5_copy_ref))  # 4336744320
 print(id(my_dict5))  # 4336744320
 print(id(my_dict5_copy))  # 4336744384
+
+dict_small = {"x": 3}
+dict_small.update([('y', 3), ("z", 3)])
+print(dict_small)  # {'x': 3, 'y': 3, 'z': 3}
+print(dict_small.items())  # dict_items([('x', 3), ('y', 3), ('z', 3)])
