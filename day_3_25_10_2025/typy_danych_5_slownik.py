@@ -144,3 +144,46 @@ print(dict2)  # {'cpi': 3.41}
 my_dict5.update(dict2)
 print(my_dict5)
 # {'Name': 'Radek', 'ID': 12345, 'DDB': 1995, 'Address': 'Warsaw Centre', 'cpi': 3.41}
+
+# usunięcie elementu ze słownika
+print(my_dict5.pop('cpi'))  # 3.41
+print(my_dict5)
+# {'Name': 'Radek', 'ID': 12345, 'DDB': 1995, 'Address': 'Warsaw Centre'}
+
+# usunięcie ostatniego eleemntu ze słownika
+print(my_dict5.popitem())  # ('Address', 'Warsaw Centre')
+
+# usunięcie
+del my_dict5['ID']
+print(my_dict5)  # {'Name': 'Radek', 'DDB': 1995}
+
+# usunięcie wszystkich elementów ze słownika
+my_dict5.clear()
+print(my_dict5)  # {}, został pusty słownik
+
+# usnięcie z pamięci
+del my_dict5  # słownik juz nie istnieje
+# print(my_dict5)  # NameError: name 'my_dict5' is not defined. Did you mean: 'my_dict'?
+
+# zmiana klucza w słowniku
+slownik = {"stary_klucz": "wartość"}
+slownik['nowy_klucz'] = slownik.pop('stary_klucz')
+print(slownik)  # {'nowy_klucz': 'wartość'}
+
+# kopiowanie słownika
+my_dict5 = {"Name": "Radek", "ID": 12345, "DDB": 1991, "Address": "Warsaw"}
+
+# kopia referencji
+my_dict5_copy_ref = my_dict5
+print(id(my_dict5_copy_ref))  # 4340053888
+print(id(my_dict5))  # 4340053888
+
+my_dict5_copy = my_dict5.copy()  # kopia eleemntów słownika, nowe id
+my_dict5.clear()
+print(my_dict5)  # {}
+print(my_dict5_copy_ref)  # {}
+print(my_dict5_copy)  # {'Name': 'Radek', 'ID': 12345, 'DDB': 1991, 'Address': 'Warsaw'}
+
+print(id(my_dict5_copy_ref))  # 4336744320
+print(id(my_dict5))  # 4336744320
+print(id(my_dict5_copy))  # 4336744384
