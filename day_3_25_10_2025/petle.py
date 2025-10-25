@@ -125,3 +125,4 @@ for i, o in enumerate(imiona, start=1):
 # https://www.hackerrank.com/auth/signup
 # https://pl.altapps.net/soft/hackerrank-com
 # https://www.w3schools.com/python/
+# https://naukapythona.com.pl/
