@@ -30,3 +30,17 @@ print(dict_mixed.values())  # dict_values(['one', 'two', 'three']) - wartości
 print(dict_mixed.items())  # dict_items([(1, 'one'), (2, 'two'), ('A', 'three')]) - pary
 
 print(data_with_integer.keys())  # dict_keys([1, 2, 3]) - lista kluczy
+
+dict_with_list = {1: "one", 2: "two", "A": ["arek", 'jhon', 'maria']}
+print(dict_with_list)  # {1: 'one', 2: 'two', 'A': ['arek', 'jhon', 'maria']}
+
+dict_with_list_and_tuple = {
+    1: 'one',
+    2: 'two',
+    "A": ['asif', 'jhon', 'maria'],
+    "B": ("bat", 'cat', 'hat')
+}
+print(dict_with_list_and_tuple)
+# {1: 'one', 2: 'two', 'A': ['arek', 'jhon', 'maria']}
+
+
