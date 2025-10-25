@@ -101,3 +101,29 @@ else:
 print(lista_b)
 # System email
 # ['Ostrzeżenie']
+
+# zrobić program: Test z....
+punkty = 0
+odp = input("Podaj data Chrztu Polski")
+if odp.casefold() == '966'.casefold():
+    print("odpowiedź prawidłowa")
+    # punkty = punkty + 1
+    punkty += 1
+else:
+    print("Błąd")
+
+odp = input("Na jakim kontynencie leży Nepal?")
+if odp.casefold() == 'Azja'.casefold():
+    print("odpowiedź prawidłowa")
+    punkty += 1
+else:
+    print("Błąd")
+
+odp = input("Jaka jest najsłynniejsza rzeka w Polsce")
+if odp.casefold() == 'Wisła'.casefold():
+    print("odpowiedź prawidłowa")
+    punkty += 1
+else:
+    print("Błąd")
+
+print(f"Wynik: {punkty}")
