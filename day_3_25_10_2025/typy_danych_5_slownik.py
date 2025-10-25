@@ -208,39 +208,71 @@ print(dict_small.items())  # dict_items([('x', 3), ('y', 3), ('z', 3)])
 # wyswietlic słowka, które potrafi przetłumaczyć
 # pobrać dane od użykownika
 # wyswietlic tłumaczenie
-
-ang_pol = {"name": "imie", "cat": "kot", "water": "woda"}
-print('-----Słownik ang-pol------')
-print("Mamy takie słówka w słownika:", ang_pol.keys())
-odp = input("Podaj słowko do przetłumaczenia:")
-# print(f"{odp} to {ang_pol[odp]}")
-# print(f"{odp} to {ang_pol.get(odp)}")
-print(f"{odp.strip().lower()} to {ang_pol.get(odp.strip().lower())}")
-
-# ß
-word1 = "GROSS"
-word2 = "groß"
-
-print(word1.lower() == word2.lower())  # False
-""" Return a version of the string suitable for caseless comparisons. """
-# https://www.unicode.org/Public/12.1.0/ucd/CaseFolding.txt
-print(word1.casefold() == word2.casefold())  # True
-
-# dla naszego słownika
-print(f"{odp.strip().casefold()} to {ang_pol.get(odp.strip().casefold())}")
-# Podaj słowko do przetłumaczenia:Cat
-# cat to kot
-# False
-# True
-# cat to kot
-print(f"{odp.strip().casefold()} to {ang_pol.get(odp.strip().casefold(), "Nia mam słówka w słowniku")}")
-# Podaj słowko do przetłumaczenia:Bat
-# bat to None
-# False
-# True
-# bat to None
-# bat to Nia mam słówka w słowniku
+#
+# ang_pol = {"name": "imie", "cat": "kot", "water": "woda"}
+# print('-----Słownik ang-pol------')
+# print("Mamy takie słówka w słownika:", ang_pol.keys())
+# odp = input("Podaj słowko do przetłumaczenia:")
+# # print(f"{odp} to {ang_pol[odp]}")
+# # print(f"{odp} to {ang_pol.get(odp)}")
+# print(f"{odp.strip().lower()} to {ang_pol.get(odp.strip().lower())}")
+#
+# # ß
+# word1 = "GROSS"
+# word2 = "groß"
+#
+# print(word1.lower() == word2.lower())  # False
+# """ Return a version of the string suitable for caseless comparisons. """
+# # https://www.unicode.org/Public/12.1.0/ucd/CaseFolding.txt
+# print(word1.casefold() == word2.casefold())  # True
+#
+# # dla naszego słownika
+# print(f"{odp.strip().casefold()} to {ang_pol.get(odp.strip().casefold())}")
+# # Podaj słowko do przetłumaczenia:Cat
+# # cat to kot
+# # False
+# # True
+# # cat to kot
+# print(f"{odp.strip().casefold()} to {ang_pol.get(odp.strip().casefold(), "Nia mam słówka w słowniku")}")
+# # Podaj słowko do przetłumaczenia:Bat
+# # bat to None
+# # False
+# # True
+# # bat to None
+# # bat to Nia mam słówka w słowniku
 
 # Porgram kalkulator
 # pobieramy dwie liczby
 # wynik działania (+)
+#
+# # rzutowanie
+# a = input("Podaj lizbę a:")  # -> str
+# b = input("Podaj lizbę b:")
+# print(a + b)  # konkatenacja, łączenie stringów
+# # Podaj lizbę a:5
+# # Podaj lizbę b:6
+# # 56
+#
+# a = int(input("Podaj lizbę a:"))  # -> str
+# b = float(input("Podaj lizbę b:"))
+# print(a + b)
+# # Podaj lizbę a:5
+# # Podaj lizbę b:6
+# # 11.0
+# a = int(input("Podaj lizbę a:"))  # -> str
+# b = float(input("Podaj lizbę b:"))
+# print(int(a) + float(b))
+# # Podaj lizbę a:5
+# # Podaj lizbę b:6
+# # 11.0
+
+print(my_dict5_copy)
+# sprawdzenie czy eleemnt istnieje w słowniku
+print("Name" in my_dict5_copy)  # True
+print("Temat" in my_dict5_copy)  # False
+
+#  Return True if bool(x) is True for all values x in the iterable.
+print(all(my_dict5_copy))  # True
+
+# Return True if bool(x) is True for any x in the iterable.
+print(any(my_dict5_copy))  # True
