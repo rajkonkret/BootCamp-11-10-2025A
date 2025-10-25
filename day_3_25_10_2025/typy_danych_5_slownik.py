@@ -216,3 +216,27 @@ odp = input("Podaj słowko do przetłumaczenia:")
 # print(f"{odp} to {ang_pol[odp]}")
 # print(f"{odp} to {ang_pol.get(odp)}")
 print(f"{odp.strip().lower()} to {ang_pol.get(odp.strip().lower())}")
+
+# ß
+word1 = "GROSS"
+word2 = "groß"
+
+print(word1.lower() == word2.lower())  # False
+""" Return a version of the string suitable for caseless comparisons. """
+# https://www.unicode.org/Public/12.1.0/ucd/CaseFolding.txt
+print(word1.casefold() == word2.casefold())  # True
+
+# dla naszego słownika
+print(f"{odp.strip().casefold()} to {ang_pol.get(odp.strip().casefold())}")
+# Podaj słowko do przetłumaczenia:Cat
+# cat to kot
+# False
+# True
+# cat to kot
+print(f"{odp.strip().casefold()} to {ang_pol.get(odp.strip().casefold(), "Nia mam słówka w słowniku")}")
+# Podaj słowko do przetłumaczenia:Bat
+# bat to None
+# False
+# True
+# bat to None
+# bat to Nia mam słówka w słowniku
