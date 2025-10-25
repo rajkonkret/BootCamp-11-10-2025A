@@ -122,3 +122,6 @@ for i, o in enumerate(imiona, start=1):
     # 2 Tomek
     # 3 Zenek
     # 4 Zbyszek
+# https://www.hackerrank.com/auth/signup
+# https://pl.altapps.net/soft/hackerrank-com
+# https://www.w3schools.com/python/
