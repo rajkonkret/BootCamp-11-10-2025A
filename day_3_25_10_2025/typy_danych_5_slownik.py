@@ -68,3 +68,14 @@ print(dict_with_dict)
 # 'B': ('bat', 'cat', 'hat'),
 # 'C': {10, 'Name', 'age'},
 # 'D': {'Name': 'Radek', 'age': 76}}
+
+# tworzenie słownika z selwencji kluczy
+keys = {"a", 'b', "c", "d"}
+my_dict_from_keys = dict.fromkeys(keys)
+print(my_dict_from_keys)  # {'d': None, 'a': None, 'c': None, 'b': None}
+# domyślnie wartośi jako None
+
+value = 10
+my_dict_3 = dict.fromkeys(keys, value)
+print(my_dict_3)  # {'b': 10, 'c': 10, 'd': 10, 'a': 10}
+# jako wartość podstwi wartośc zadaną
