@@ -79,3 +79,8 @@ value = 10
 my_dict_3 = dict.fromkeys(keys, value)
 print(my_dict_3)  # {'b': 10, 'c': 10, 'd': 10, 'a': 10}
 # jako wartość podstwi wartośc zadaną
+
+value = [10, 20, 30]
+my_dict_4 = dict.fromkeys(keys, value)
+print(my_dict_4)
+# {'d': [10, 20, 30], 'b': [10, 20, 30], 'a': [10, 20, 30], 'c': [10, 20, 30]}
