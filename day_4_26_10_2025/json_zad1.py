@@ -32,3 +32,10 @@ with open('nasze_dane_sort.json', "w") as f:
 #     "czy_pali": null,
 #     "name": "Radek"
 # }
+
+# odczytanie danych json z pliku
+with open('nasze_dane.json', "r") as f:
+    data = json.load(f)
+
+print(data)  # {'name': 'Radek', 'age': 40, 'czy_pali': None}
+print(type(data))  # <class 'dict'>
