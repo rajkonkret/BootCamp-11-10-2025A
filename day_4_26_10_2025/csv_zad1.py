@@ -41,3 +41,11 @@ products = [
     {"sku": 4, 'exp_date': today, "price": 149.99},
     {"sku": 5, 'exp_date': today, "price": 75},
 ]
+
+# wyciągnięcie kluczy ze słownika, umieszczonego w liście
+fields_product = [k for k in products[0]]
+
+with open("dane/records_discount.csv", "w", newline="") as f:
+    csv_dict_writer = csv.DictWriter(f, fieldnames=fields_product)
+    csv_dict_writer.writeheader()  # zapisz nazwy kolumn
+    csv_dict_writer.writerows(products)  # writerows - zapis listy
