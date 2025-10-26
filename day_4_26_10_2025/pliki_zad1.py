@@ -78,3 +78,32 @@ with open("linie.txt", "w") as f:
     f.write("Pierwsza linia\n")
     f.write("Druga linia\n")
     f.write("Trzecia linia\n")
+
+with open("linie.txt", "r") as fh:
+    tekst = fh.read()
+
+print(tekst)
+# Pierwsza linia
+# Druga linia
+# Trzecia linia
+print(repr(tekst))  # 'Pierwsza linia\nDruga linia\nTrzecia linia\n'
+
+print(50 * "-")
+with open('linie.txt', "r") as fh:
+    linie = fh.readlines()
+
+print(linie)  # ['Pierwsza linia\n', 'Druga linia\n', 'Trzecia linia\n']
+
+print(50 * "-")
+with open("linie.txt", "r") as f:
+    jedna_linia = f.readline()
+print(jedna_linia)  # Pierwsza linia
+
+print(50 * "-")
+with open('linie.txt', "r") as file:
+    for linia in file:
+        print(linia.strip())
+# --------------------------------------------------
+# Pierwsza linia
+# Druga linia
+# Trzecia linia
