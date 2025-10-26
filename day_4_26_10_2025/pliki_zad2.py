@@ -1,3 +1,5 @@
+import chardet
+# pip install chardet
 with open("test.log", "r") as file:
     lines = file.read()
 print(lines)
