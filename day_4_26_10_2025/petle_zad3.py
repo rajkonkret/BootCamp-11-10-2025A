@@ -58,3 +58,10 @@ print(lista_int)
 # Podaj liczbęa
 # ['1', '2', '3', '4', '5'] str
 # [1, 2, 3, 4, 5] int
+
+my_list = [1, 5, 2, 3, 5, 4, 5, 6, 5]
+element_to_remove = 5
+while element_to_remove in my_list:
+    my_list.remove(element_to_remove)
+
+print(my_list)  # [1, 2, 3, 4, 6], usunęło zduplikowane elementy nie zmieniająć kolejności
