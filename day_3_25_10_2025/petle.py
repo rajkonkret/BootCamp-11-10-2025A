@@ -237,4 +237,13 @@ for i in range(10, 0, -2):  # krok ujemny, w dół
 parzysta = [i for i in range(0, 10, 2)]
 print(parzysta)  # [0, 2, 4, 6, 8]
 
+ang_pol = {"name": "imie", "cat": "kot", "water": "woda"}
+# pol-ang
 
+pol_ang = {}
+for k, v in ang_pol.items():
+    pol_ang[v] = k  # zamieniamy klucz z wartością
+print(pol_ang)  # {'imie': 'name', 'kot': 'cat', 'woda': 'water'}
+
+print({v: k for k, v in ang_pol.items()})
+# {'imie': 'name', 'kot': 'cat', 'woda': 'water'}
