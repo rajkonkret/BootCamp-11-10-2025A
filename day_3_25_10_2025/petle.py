@@ -116,7 +116,7 @@ for i, o in enumerate(imiona):
 # 2 Zenek
 # 3 Zbyszek
 
-for i, o in enumerate(imiona, start=1):
+for i, o in enumerate(imiona, start=1):  # numeruje od 1
     print(i, o)
     # 1 Radek
     # 2 Tomek
@@ -126,3 +126,63 @@ for i, o in enumerate(imiona, start=1):
 # https://pl.altapps.net/soft/hackerrank-com
 # https://www.w3schools.com/python/
 # https://naukapythona.com.pl/
+
+ludzie = ["Janek", "Radek", "Tomek", "Marek"]
+wiek = [45, 40, 18, 23]
+
+# Radek 40
+for i in range(len(ludzie)):
+    print(ludzie[i], wiek[i])
+# Janek 45
+# Radek 40
+# Tomek 18
+# Marek 23
+
+ludzie = ["Janek", "Radek", "Tomek", "Marek", "Ania"]
+wiek = [45, 40, 18, 23]
+# for i in range(len(ludzie)):
+#     print(ludzie[i], wiek[i])  # IndexError: list index out of range
+
+# zip() - łączy kolekcje
+for i in zip(ludzie, wiek):
+    print(i)
+# ('Janek', 45)
+# ('Radek', 40)
+# ('Tomek', 18)
+# ('Marek', 23)
+
+for l, w in zip(ludzie, wiek):
+    print(l, w)
+# Janek 45
+# Radek 40
+# Tomek 18
+# Marek 23
+
+# 0 Radek 40
+
+for i in enumerate(zip(ludzie, wiek)):
+    print(i)
+# (0, ('Janek', 45))
+# (1, ('Radek', 40))
+# (2, ('Tomek', 18))
+# (3, ('Marek', 23))
+a, b = (0, ('Janek', 45))
+print(a, b)
+# 0 ('Janek', 45)
+c, d = ('Janek', 45)
+print(c, d)  # Janek 45
+a, (c, d) = (0, ('Janek', 45))
+print(a, c, d)  # 0 Janek 45
+
+for i, (l, w) in enumerate(zip(ludzie, wiek)):
+    print(i, l, w)
+# 0 Janek 45
+# 1 Radek 40
+# 2 Tomek 18
+# 3 Marek 23
+for i, (l, w) in enumerate(zip(ludzie, wiek)):
+    print(f"Numer: {i}, Imię: {o}, Wiek: {w}")
+# Numer: 0, Imię: Zbyszek, Wiek: 45
+# Numer: 1, Imię: Zbyszek, Wiek: 40
+# Numer: 2, Imię: Zbyszek, Wiek: 18
+# Numer: 3, Imię: Zbyszek, Wiek: 23
