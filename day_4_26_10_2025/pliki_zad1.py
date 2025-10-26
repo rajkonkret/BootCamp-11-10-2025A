@@ -59,7 +59,7 @@ with open("test.log", "a", encoding="utf-8") as file:
     file.write("Nowe dane\n")
     file.write("Kolejna linia\n")
     file.write("Dopisane2\n")
-    file.write("Dośdane\n")
+    file.write("Dośąźdane\n")
 
 # r - odczytanie pliku
 with open("test.log", "r", encoding="utf-8") as f:
