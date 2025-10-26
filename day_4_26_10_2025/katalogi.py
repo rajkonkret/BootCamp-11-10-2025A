@@ -27,3 +27,10 @@ path_c.mkdir()
 for filename in ('ex1.txt', "ex2.txt", 'ex3.txt'):
     with open(path_b / filename, "w", encoding="utf-8") as stream:
         stream.write(f"Jakaś treść pliku: {filename}")
+
+# przeniesienie plików do innego katalogu
+# stworzył katalog D, usunął katalog B
+shutil.move(path_b, path_d)
+
+# kopiowanie pliku
+shutil.copy(path_d / 'ex1.txt', path_c / 'ex1.txt')
