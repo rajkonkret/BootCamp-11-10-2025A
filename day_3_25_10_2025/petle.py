@@ -189,9 +189,9 @@ for i, (l, w) in enumerate(zip(ludzie, wiek)):
 # Numer: 3, Imię: Marek, Wiek: 23
 
 zipped = zip_longest(ludzie, wiek, fillvalue=None)
-print(zipped) #<itertools.zip_longest object at 0x100b2fe70>, iterator
+print(zipped)  # <itertools.zip_longest object at 0x100b2fe70>, iterator
 # pozwala sekwencyjne odczytywac dane, oszczedzanie zużycia pamięci
-zipped_tuple = tuple(zipped) # dane z iteratira zostały zużyte
+zipped_tuple = tuple(zipped)  # dane z iteratira zostały zużyte
 for i in zipped:
     print(i)
 # ('Janek', 45)
@@ -214,3 +214,27 @@ for o, w in zipped_tuple:
 # Tomek 18
 # Marek 23
 # Ania None
+
+for i in range(0, 10, 2):  # (start, stop, krok)
+    print(i)
+# 0
+# 2
+# 4
+# 6
+# 8
+
+for i in range(-10, 0, 2):
+    print(i)
+
+for i in range(10, 0, -2):  # krok ujemny, w dół
+    print(i)
+# 10
+# 8
+# 6
+# 4
+# 2
+
+parzysta = [i for i in range(0, 10, 2)]
+print(parzysta)  # [0, 2, 4, 6, 8]
+
+
