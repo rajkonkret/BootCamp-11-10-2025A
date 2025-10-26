@@ -42,4 +42,40 @@ print(type(time_from_str))  # <class 'datetime.datetime'>
 tomorrow = today + timedelta(days=1)
 print("Jutro będzie:", tomorrow)  # Jutro będzie: 2025-10-27
 
+print("----- Discount -----")
+products = [
+    {"sku": 1, 'exp_date': tomorrow, "price": 100},
+    {"sku": 2, 'exp_date': today, "price": 200},
+    {"sku": 3, 'exp_date': tomorrow, "price": 50.00},
+    {"sku": 4, 'exp_date': today, "price": 149.99},
+    {"sku": 5, 'exp_date': today, "price": 75},
+]
 
+for product in products:
+    # print(product)  # {'sku': 1, 'exp_date': datetime.date(2025, 10, 26), 'price': 100}
+    # print(product['exp_date'])  # 2025-10-26
+
+    # if product['exp_date'] == today:
+    if product['exp_date'] != today:
+        continue
+        # kończy bieżące wykonanie pętli, nakazuje pobrać kolejny element
+    product['price'] *= 0.8  # price = price * 0.2
+    print(f"""Price for dku: {product['sku']}, date: {product['exp_date']}
+is now: {product['price']}""")
+# ----- Discount -----
+# Price for dku: 1, date: 2025-10-26
+# is now: 80.0
+# Price for dku: 2, date: 2025-10-26
+# is now: 160.0
+# Price for dku: 4, date: 2025-10-26
+# is now: 119.99200000000002
+# Price for dku: 5, date: 2025-10-26
+# is now: 60.0
+# Wariant 2
+# ----- Discount -----
+# Price for dku: 2, date: 2025-10-26
+# is now: 160.0
+# Price for dku: 4, date: 2025-10-26
+# is now: 119.99200000000002
+# Price for dku: 5, date: 2025-10-26
+# is now: 60.0
