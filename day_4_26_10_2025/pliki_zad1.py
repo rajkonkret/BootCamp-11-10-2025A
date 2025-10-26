@@ -109,6 +109,7 @@ with open('linie.txt', "r") as file:
 # Trzecia linia
 
 print(50 * "-")
+# plik musi istniec
 with open('linie.txt', "r+") as f:
     lines = f.readlines()
     f.seek(0)  # wracamy na początek pliku
@@ -116,3 +117,11 @@ with open('linie.txt', "r+") as f:
     f.writelines(lines[1:])  # pozostałe linia
     f.truncate()  # jeśli nowa linia ma mniej danych niż dotychczasowa, usunie zbędne dane
 print(lines)
+
+print(50 * "-")
+# w+ tworzy nowy plik i pozwala od razu odczytac z niego dane
+with open("plik.txt", "w+") as f:
+    f.write("Nowa linia\n")
+    f.seek(0)  # wraca na początek pliku
+    print(f.read())
+# Nowa linia
