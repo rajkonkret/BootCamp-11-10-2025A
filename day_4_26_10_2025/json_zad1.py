@@ -39,3 +39,4 @@ with open('nasze_dane.json', "r") as f:
 
 print(data)  # {'name': 'Radek', 'age': 40, 'czy_pali': None}
 print(type(data))  # <class 'dict'>
+print(data['name'])  # Radek
