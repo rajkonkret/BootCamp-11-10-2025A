@@ -107,3 +107,12 @@ with open('linie.txt', "r") as file:
 # Pierwsza linia
 # Druga linia
 # Trzecia linia
+
+print(50 * "-")
+with open('linie.txt', "r+") as f:
+    lines = f.readlines()
+    f.seek(0)  # wracamy na początek pliku
+    f.write("Nowa wiadomoc \n")
+    f.writelines(lines[1:])  # pozostałe linia
+    f.truncate()  # jeśli nowa linia ma mniej danych niż dotychczasowa, usunie zbędne dane
+print(lines)
