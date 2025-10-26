@@ -22,3 +22,8 @@ path_b.mkdir(parents=True)  # parents=True - tworzy wszystkie pośrednie katalog
 
 # zadziała bo katalog A już istnieje
 path_c.mkdir()
+
+# utworzenie plików w katalogu path_b
+for filename in ('ex1.txt', "ex2.txt", 'ex3.txt'):
+    with open(path_b / filename, "w", encoding="utf-8") as stream:
+        stream.write(f"Jakaś treść pliku: {filename}")
