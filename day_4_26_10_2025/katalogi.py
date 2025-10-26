@@ -44,3 +44,19 @@ print(base_path.absolute())  # ścierzka absolutna do pliku
 print(base_path.name)  # ops_example, nazwa katalogu
 # nadrzędny katalog
 print(base_path.parent.absolute())  # /Users/radoslawjaniak/PycharmProjects/BootCamp-11-10-2025A/day_4_26_10_2025
+
+print(10 * "-")
+print(base_path.suffix)
+print(ex1.suffix)  # .txt
+print(base_path.parts)  # ('ops_example',)
+print(base_path2.parts)  # ('ops_example', 'D')
+
+path_abs = "/Users/radoslawjaniak/PycharmProjects/BootCamp-11-10-2025A/day_4_26_10_2025/ops_example/A/D/ex1renamed.log"
+with open(path_abs, "r") as f:
+    lines = f.read()
+print(lines)  # Jakaś treść pliku: ex1.txt
+# windows
+# w kazde miejsce gdzie jest \ musimy wpisać \\
+# C:\\Users\\joach\\PycharmProjects\\BootCamp\\day_4_26_10_2025\\ops_example\\A\\D\\ex1renamed.log
+# lub jako raw data - r
+# r"C:\Users\joach\PycharmProjects\BootCamp\day_4_26_10_2025\ops_example\A\D\ex1renamed.log"
