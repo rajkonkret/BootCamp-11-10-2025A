@@ -34,3 +34,7 @@ shutil.move(path_b, path_d)
 
 # kopiowanie pliku
 shutil.copy(path_d / 'ex1.txt', path_c / 'ex1.txt')
+
+# zmiana nazwy pliku
+ex1 = path_d / 'ex1.txt'
+ex1.rename(ex1.parent / 'ex1renamed.log')
