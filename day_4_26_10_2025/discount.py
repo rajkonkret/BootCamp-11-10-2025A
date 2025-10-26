@@ -35,3 +35,11 @@ print("Aktualna godzina (sformatowana USA):", formated_time_usa)
 time_from_str = datetime.now().strptime("26/10/2025", "%d/%m/%Y")
 print("Data ze stringa:", time_from_str)  # Data ze stringa: 2025-10-26 00:00:00
 print(type(time_from_str))  # <class 'datetime.datetime'>
+
+# tomorrow = today + 1  # TypeError: unsupported operand type(s) for +: 'datetime.date' and 'int'
+# days=0, seconds=0, microseconds=0,
+#                 milliseconds=0, minutes=0, hours=0, weeks=0
+tomorrow = today + timedelta(days=1)
+print("Jutro będzie:", tomorrow)  # Jutro będzie: 2025-10-27
+
+
