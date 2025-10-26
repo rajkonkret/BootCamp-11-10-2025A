@@ -4,6 +4,7 @@
 # Nowak,Zenon,Szczecin
 # Brzęczyszczykiewicz,Grzegorz,Chrząszczyżewoszyce
 import csv  # biblioteka do działań z plikami csv
+from datetime import date, datetime, timedelta
 
 fields = ['name', 'branch', 'year', 'cgpa']
 row = ["Radek", "Coe", "3", 0]
@@ -27,3 +28,16 @@ with open("dane/records_3.csv", "w", newline="") as f:
     csv_dict_writer = csv.DictWriter(f, fieldnames=fields)
     csv_dict_writer.writeheader()  # zapisz nazwy kolumn
     csv_dict_writer.writerow(zipped_dict)
+
+print("----- Discount -----")
+
+today = date.today()
+tomorrow = today + timedelta(days=1)
+
+products = [
+    {"sku": 1, 'exp_date': tomorrow, "price": 100},
+    {"sku": 2, 'exp_date': today, "price": 200},
+    {"sku": 3, 'exp_date': tomorrow, "price": 50.00},
+    {"sku": 4, 'exp_date': today, "price": 149.99},
+    {"sku": 5, 'exp_date': today, "price": 75},
+]
