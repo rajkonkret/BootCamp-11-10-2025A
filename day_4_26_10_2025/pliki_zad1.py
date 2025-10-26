@@ -74,3 +74,7 @@ print(lines)
 # Dopisane2
 # encoding="utf-8" - wymuszenie kodowania utf-8
 
+with open("linie.txt", "w") as f:
+    f.write("Pierwsza linia\n")
+    f.write("Druga linia\n")
+    f.write("Trzecia linia\n")
