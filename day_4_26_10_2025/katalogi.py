@@ -14,3 +14,11 @@ base_path.mkdir()
 path_b = base_path / "A" / "B"
 path_c = base_path / "A" / "C"
 path_d = base_path / "A" / "D"
+
+# FileNotFoundError: [Errno 2] No such file or directory: 'ops_example/A/B'
+# nie ma katalogu A, nie może stworzyc katalogu B
+# path_b.mkdir()
+path_b.mkdir(parents=True)  # parents=True - tworzy wszystkie pośrednie katalogi w drzewie
+
+# zadziała bo katalog A już istnieje
+path_c.mkdir()
