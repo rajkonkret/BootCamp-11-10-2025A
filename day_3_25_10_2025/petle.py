@@ -1,6 +1,7 @@
 # pętla - możliwość wykonywania tego samego fragmentu kodu wielokrotnie
 # for - pętla iteracyjna
 import random
+from itertools import zip_longest
 
 for i in range(10):  # od 0 do 9
     print(i)
@@ -186,3 +187,7 @@ for i, (l, w) in enumerate(zip(ludzie, wiek)):
 # Numer: 1, Imię: Zbyszek, Wiek: 40
 # Numer: 2, Imię: Zbyszek, Wiek: 18
 # Numer: 3, Imię: Zbyszek, Wiek: 23
+
+zipped = zip_longest(ludzie, wiek, fillvalue=None)
+print(zipped) #<itertools.zip_longest object at 0x100b2fe70>, iterator
+# pozwala sekwencyjne odczytywac dane
