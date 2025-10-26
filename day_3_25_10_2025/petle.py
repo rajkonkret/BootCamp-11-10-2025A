@@ -182,12 +182,23 @@ for i, (l, w) in enumerate(zip(ludzie, wiek)):
 # 2 Tomek 18
 # 3 Marek 23
 for i, (l, w) in enumerate(zip(ludzie, wiek)):
-    print(f"Numer: {i}, Imię: {o}, Wiek: {w}")
-# Numer: 0, Imię: Zbyszek, Wiek: 45
-# Numer: 1, Imię: Zbyszek, Wiek: 40
-# Numer: 2, Imię: Zbyszek, Wiek: 18
-# Numer: 3, Imię: Zbyszek, Wiek: 23
+    print(f"Numer: {i}, Imię: {l}, Wiek: {w}")
+# Numer: 0, Imię: Janek, Wiek: 45
+# Numer: 1, Imię: Radek, Wiek: 40
+# Numer: 2, Imię: Tomek, Wiek: 18
+# Numer: 3, Imię: Marek, Wiek: 23
 
 zipped = zip_longest(ludzie, wiek, fillvalue=None)
 print(zipped) #<itertools.zip_longest object at 0x100b2fe70>, iterator
-# pozwala sekwencyjne odczytywac dane
+# pozwala sekwencyjne odczytywac dane, oszczedzanie zużycia pamięci
+for i in zipped:
+    print(i)
+# ('Janek', 45)
+# ('Radek', 40)
+# ('Tomek', 18)
+# ('Marek', 23)
+# ('Ania', None)
+
+print(30 * "-")
+for o, w in zipped:
+    print(o, w)
