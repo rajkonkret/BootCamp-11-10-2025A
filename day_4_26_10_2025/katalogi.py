@@ -38,3 +38,9 @@ shutil.copy(path_d / 'ex1.txt', path_c / 'ex1.txt')
 # zmiana nazwy pliku
 ex1 = path_d / 'ex1.txt'
 ex1.rename(ex1.parent / 'ex1renamed.log')
+
+print(base_path.absolute())  # ścierzka absolutna do pliku
+# /Users/radoslawjaniak/PycharmProjects/BootCamp-11-10-2025A/day_4_26_10_2025/ops_example
+print(base_path.name)  # ops_example, nazwa katalogu
+# nadrzędny katalog
+print(base_path.parent.absolute())  # /Users/radoslawjaniak/PycharmProjects/BootCamp-11-10-2025A/day_4_26_10_2025
