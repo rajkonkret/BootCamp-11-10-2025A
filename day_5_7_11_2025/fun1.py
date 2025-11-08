@@ -9,6 +9,7 @@ a = 6
 b = 8
 
 
+# te funkcje nie zwracają wyniku
 # deklaracja funkcji
 # PEP8 zaleca by funkcja była oddzielona dwoma liniami od reszty progrmau
 def dodaj():  # funkcja bezargumentowa
@@ -57,3 +58,12 @@ odejmij(1, c=2, b=9)  # -10
 # argumnty pozycyjne muszą byc przekazywane przed argumentami nazwanymi
 # SyntaxError: positional argument follows keyword argument
 # odejmij(c=90, 1, 2)
+
+print(10 * "-")
+print(dodaj())
+# 14
+# None
+
+# TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+# print(dodaj() + dodaj2(5, 90))
+# funkcja nie zwraca wyniku, nie możemy go użyc
