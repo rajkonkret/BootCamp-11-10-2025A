@@ -52,3 +52,10 @@ oblicz_vat = lambda cena, vat=8: cena * (100 + vat) / 100
 print(oblicz_vat(1000))  # 1080.0
 print(oblicz_vat(1000, 23))  # 1230.0
 print(oblicz_vat(vat=15, cena=1000))  # 1150.0
+
+wiek = lambda x: "dziecko" if x < 10 else ('nastolatek' if x < 18 else "dorosły")
+print(wiek(9))  # dziecko
+print(wiek(10))  # nastolatek
+print(wiek(17))  # nastolatek
+print(wiek(18))  # dorosły
+print(wiek(50))  # dorosły
