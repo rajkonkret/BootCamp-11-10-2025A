@@ -39,6 +39,16 @@ def my_func(n):
     return lambda a: a + n  # zwracamy funkcje (adres)
 
 
-add10 = my_func(10)
-add20 = my_func(20)
-add30 = my_func(30)
+add10 = my_func(10)  # 15
+add20 = my_func(20)  # 25
+add30 = my_func(30)  # 35
+
+print(add10(5))
+print(add20(5))
+print(add30(5))
+
+# oblicz_vat -> lambda
+oblicz_vat = lambda cena, vat=8: cena * (100 + vat) / 100
+print(oblicz_vat(1000))  # 1080.0
+print(oblicz_vat(1000, 23))  # 1230.0
+print(oblicz_vat(vat=15, cena=1000))  # 1150.0
