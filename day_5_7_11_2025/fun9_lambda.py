@@ -33,3 +33,12 @@ def product1(nums):
 
 res1 = lambda **kwargs: product1(kwargs.values())
 print(res1(a=10, b=90))  # 900
+
+
+def my_func(n):
+    return lambda a: a + n  # zwracamy funkcje (adres)
+
+
+add10 = my_func(10)
+add20 = my_func(20)
+add30 = my_func(30)
