@@ -88,3 +88,20 @@ for i in lista:
     lista_wynikyn_f.append(zmien(i))
 print(lista_wynikyn_f)
 # [2, 4, 6, 90, 134, 156, 200, 400, 600]
+
+# funkcja wyższego rzędu - przyjmuje inną funkcje jako argument
+# map() - mapowanie, zmienia dane wg zadanej funkcji
+print(f"Zastosowannie map(): {list(map(zmien, lista))}")
+# Zastosowannie map(): [2, 4, 6, 90, 134, 156, 200, 400, 600]
+
+# Lambda jako funkcja anonimowa - nie jest przypisana do zmiennej
+# możliwośc użycia w miejscu deklaracji
+print(f"Zastosowannie map(): {list(map(lambda x: x * 2, lista))}")
+# Zastosowannie map(): [2, 4, 6, 90, 134, 156, 200, 400, 600]
+print(f"Zastosowannie map(): {list(map(lambda x: x * 3, lista))}")
+# Zastosowannie map(): [3, 6, 9, 135, 201, 234, 300, 600, 900]
+print(f"Zastosowannie map(): {list(map(lambda x: x * 12, lista))}")
+print(f"Zastosowannie map(): {list(map(lambda x: x * 1.1, lista))}")
+# Zastosowannie map(): [12, 24, 36, 540, 804, 936, 1200, 2400, 3600]
+# Zastosowannie map(): [1.1, 2.2, 3.3000000000000003, 49.50000000000001,
+# 73.7, 85.80000000000001, 110.00000000000001, 220.00000000000003, 330.0]
