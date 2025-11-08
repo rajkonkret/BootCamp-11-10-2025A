@@ -2,6 +2,7 @@
 # skrocony zapis funkcji
 # lambda zwraca wynik - return
 # funkcja anonimowa - wykonanie w miejscu deklaracji
+from day_3_25_10_2025.petle import lista_wynik
 
 odejmij = lambda a, b: a - b
 print(odejmij(6, 8))  # -2
@@ -59,3 +60,31 @@ print(wiek(10))  # nastolatek
 print(wiek(17))  # nastolatek
 print(wiek(18))  # dorosły
 print(wiek(50))  # dorosły
+
+# mapowanie danych
+lista = [1, 2, 3, 45, 67, 78, 100, 200, 300]
+
+# stworzyc nową listę z wartości * 2
+lista_wyn = []
+for i in lista:
+    lista_wyn.append(i * 2)
+print(lista_wyn)
+# [2, 4, 6, 90, 134, 156, 200, 400, 600]
+
+print([i * 2 for i in lista])
+
+
+# [2, 4, 6, 90, 134, 156, 200, 400, 600]
+
+# print(lista * 2)
+# [1, 2, 3, 45, 67, 78, 100, 200, 300, 1, 2, 3, 45, 67, 78, 100, 200, 300]
+
+def zmien(x):
+    return x * 2
+
+
+lista_wynikyn_f = []
+for i in lista:
+    lista_wynikyn_f.append(zmien(i))
+print(lista_wynikyn_f)
+# [2, 4, 6, 90, 134, 156, 200, 400, 600]
