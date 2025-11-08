@@ -16,4 +16,18 @@ def connect(**opcje):  # ** - argumenty słownikowe, keywords
 connect()
 connect(a=9)  # {'a': 9}
 connect(a=9, name="Radek")
+
+
 # {'a': 9, 'name': 'Radek'}
+
+# funkcja przyjmuje wszystkie argumenty pozycyjne i nazwane
+def connect_all(*args, **kwargs):
+    print(args, kwargs)
+
+
+connect_all()  # () {}
+connect_all(1, 2, 3, 4, 5, 6, 7)  # (1, 2, 3, 4, 5, 6, 7) {}
+connect_all(1, 2, 3, 4, 5, 6, 7, "Zenek")  # ((1, 2, 3, 4, 5, 6, 7, 'Zenek') {}
+connect_all(a=0, b=9)  # () {'a': 0, 'b': 9}
+connect_all(1, 2, 3, 4, 5, 6, 7, "Zenek", a=9, b=9)  # (1, 2, 3, 4, 5, 6, 7, 'Zenek') {'a': 9, 'b': 9}
+# connect_all(c=9, 1, 2, 3, 4, 5, 6, 7, "Zenek", a=9, b=9)  # SyntaxError: positional argument follows keyword argument
