@@ -112,7 +112,7 @@ liczby_parzyste = []
 for i in lista:
     if i % 2 == 0:  # % - modulo - reszta z dzielenia
         liczby_parzyste.append(i)
-print(liczby_parzyste)
+print(liczby_parzyste)  # [2, 78, 100, 200, 300]
 
 # jako list comprehensions
 
@@ -121,3 +121,12 @@ print(f"Zastosowanie filter(): {list(filter(lambda x: x < 3, lista))}")
 # Zastosowanie filter(): [1, 2]
 print(f"Zastosowanie filter(): {list(filter(lambda x: x > 15, lista))}")
 # Zastosowanie filter(): [45, 67, 78, 100, 200, 300]
+
+# x > 5 i x < 200
+print(f"Zastosowanie filter(): {list(filter(lambda x: x > 5 and x < 200, lista))}")
+# Zastosowanie filter(): [45, 67, 78, 100]
+print(f"Zastosowanie filter(): {list(filter(lambda x: 5 < x < 200, lista))}")
+# Zastosowanie filter(): [45, 67, 78, 100, 200, 300]
+print(f"Zastosowanie filteR(): {list(filter(lambda x: x % 2 == 0, lista))}")
+# Zastosowanie filteR(): [2, 78, 100, 200, 300]
+
