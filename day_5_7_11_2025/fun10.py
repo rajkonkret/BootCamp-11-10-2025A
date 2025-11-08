@@ -1,3 +1,4 @@
+import operator
 from functools import reduce, lru_cache
 
 
@@ -24,3 +25,20 @@ l_1 = [i for i in lista if i % 2 == 0]
 l_2 = [i * 2 for i in l_1]
 sum_all = reduce(lambda a, b: a + b, l_2)
 print(sum_all)  # 1360
+
+product = reduce(operator.mul, l_2)
+print(f"oprator.mul: {product}")  # oprator.mul: 29952000000
+
+add = reduce(operator.add, l_2)
+print(f"operator.add: {add}")  # operator.add: 1360
+
+concat_str = reduce(operator.add, ['Python', " rocks"])
+print(concat_str)  # Python rocks
+
+min_num = reduce(lambda a, b: a if a < b else b, l_2)
+print(min_num)  # 4
+
+print(reduce(lambda a, b: bool(a and b), [0, 0, 1, 0, 0]))  # False
+print(reduce(lambda a, b: bool(a and b), [0, 0, 0, 0, 0]))  # False
+print(reduce(lambda a, b: bool(a or b), [0, 0, 0, 0, 0]))  # False
+print(reduce(lambda a, b: bool(a or b), [0, 0, 1, 0, 0]))  # True
