@@ -40,3 +40,20 @@ dodaj2(5, 9)  # 14, obowiązkowo dwa parametry do przekazania
 
 odejmij(1, 2)  # -1, c=0
 odejmij(1, 2, 3)  # -4, c=3
+
+# argumenty przekazane po pozycji
+odejmij(1, 2)
+dodaj2(3, 4)  # 7
+
+# argumenty przekazane po nazwie
+odejmij(c=9, b=90, a=87)  # -12
+odejmij(b=90, a=12)  # -78
+
+# mieszane
+odejmij(1, 2, c=9)  # -10
+odejmij(1, b=2, c=9)  # -10
+odejmij(1, c=2, b=9)  # -10
+
+# argumnty pozycyjne muszą byc przekazywane przed argumentami nazwanymi
+# SyntaxError: positional argument follows keyword argument
+# odejmij(c=90, 1, 2)
