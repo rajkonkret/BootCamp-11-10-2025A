@@ -105,3 +105,11 @@ print(f"Zastosowannie map(): {list(map(lambda x: x * 1.1, lista))}")
 # Zastosowannie map(): [12, 24, 36, 540, 804, 936, 1200, 2400, 3600]
 # Zastosowannie map(): [1.1, 2.2, 3.3000000000000003, 49.50000000000001,
 # 73.7, 85.80000000000001, 110.00000000000001, 220.00000000000003, 330.0]
+
+# filtrowanie danych
+
+liczby_parzyste = []
+for i in lista:
+    if i % 2 == 0:  # % - modulo - reszta z dzielenia
+        liczby_parzyste.append(i)
+print(liczby_parzyste)
