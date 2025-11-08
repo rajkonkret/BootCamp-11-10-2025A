@@ -22,6 +22,12 @@ def dodaj2(a, b):
     print(a + b)
 
 
+# argumetnty funkcji z domyslna wartością, c=0
+# pozwala zasymulować przeciążanie funkcji liczbą argumentó∑
+def odejmij(a, b, c=0):
+    print(a - b - c)
+
+
 # wywołanie funkcji
 print(dodaj)  # <function dodaj at 0x105ae19e0>
 print(type(dodaj))  # <class 'function'>
@@ -31,3 +37,6 @@ dodaj()  # 14
 
 # dodaj2()  # TypeError: dodaj2() missing 2 required positional arguments: 'a' and 'b'
 dodaj2(5, 9)  # 14, obowiązkowo dwa parametry do przekazania
+
+odejmij(1, 2)  # -1, c=0
+odejmij(1, 2, 3)  # -4, c=3
