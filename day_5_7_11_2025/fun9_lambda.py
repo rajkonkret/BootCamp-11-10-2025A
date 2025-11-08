@@ -113,3 +113,11 @@ for i in lista:
     if i % 2 == 0:  # % - modulo - reszta z dzielenia
         liczby_parzyste.append(i)
 print(liczby_parzyste)
+
+# jako list comprehensions
+
+# filter()
+print(f"Zastosowanie filter(): {list(filter(lambda x: x < 3, lista))}")
+# Zastosowanie filter(): [1, 2]
+print(f"Zastosowanie filter(): {list(filter(lambda x: x > 15, lista))}")
+# Zastosowanie filter(): [45, 67, 78, 100, 200, 300]
