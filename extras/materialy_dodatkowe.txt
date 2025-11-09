@@ -63,6 +63,7 @@ https://play.google.com/store/apps/details?id=pl.rajkonkret.testjava2&hl=pl&gl=U
 \N{name} - Znak Unicode o podanej nazwie
 The and Operator’s Truth Table:
 
+http://en.wikipedia.org/wiki/ANSI_escape_code
 \033[31m: Set text color to red
 \033[32m: Set text color to green
 \033[33m: Set text color to yellow
