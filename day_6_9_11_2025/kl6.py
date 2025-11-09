@@ -1,4 +1,4 @@
-# stworzyc kalse Pracownik
+# stworzyc klase Pracownik
 # imie, nazwisko, pensja
 # przedstaw_sie(), oblicz_pensje()
 # zrobic kalse Manager dziedziczącą po klasie Pracownik
