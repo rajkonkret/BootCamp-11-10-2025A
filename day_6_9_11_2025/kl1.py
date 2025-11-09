@@ -24,6 +24,10 @@ class Human:
         # print(f"Nazywam sie: {cz1.imie}")
         # print(f"Nazywam sie: {cz2.imie}")
 
+    # wypisz_wiek()
+    def wypisz_wiek(self):
+        print(f"Mam {self.wiek} lat.")
+
 
 print(Human.__doc__)  # Klasa Human opisująca człowieka w pythonie
 # print(print.__doc__)
@@ -69,3 +73,8 @@ cz1.powitanie()
 cz2.powitanie()
 # Nazywam sie: Radek
 # Nazywam sie: Anna
+
+cz1.wypisz_wiek()
+cz2.wypisz_wiek()
+# Mam 90 lat.
+# Mam 40 lat.
