@@ -34,5 +34,23 @@ sam.info()
 
 sam2 = Samochod("biały", "Mercedes")
 sam2.info()
+
+
 # Kolor: biały
 # Marka: Mercedes
+
+class Rower(Pojazd):
+    """
+    Klasa Rower dziedziczy po klasie Pojazd
+    """
+
+
+rower = Rower('Żółty')
+rower.info()  # Kolor: Żółty
+
+lista = [poj, sam, sam2, rower]
+print(lista)
+# [<__main__.Pojazd object at 0x105a8e270>,
+# <__main__.Samochod object at 0x105a8d550>,
+# <__main__.Samochod object at 0x105a37750>,
+# <__main__.Rower object at 0x105a8d2b0>]
