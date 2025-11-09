@@ -20,8 +20,12 @@ class Car:
         print("Zmiana biegu")
 
     def hamuj(self):
-        self.__predkosc -= 10
-        self.__zmien_bieg()
+        if self.__predkosc > 0:
+            self.__predkosc -= 10
+            self.__zmien_bieg()
+        else:
+            self.__predkosc = 0
+            print("Zatrzymałeś się")
 
 
 car = Car("Ferrari", 2025)
@@ -54,3 +58,7 @@ car.licznik()
 car.hamuj()
 car.licznik()
 # Prędkość wynosi -10 km/h.
+# -------
+# Prędkość wynosi 0 km/h.
+# Zatrzymałeś się
+# Prędkość wynosi 0 km/h.
