@@ -54,3 +54,20 @@ print(lista)
 # <__main__.Samochod object at 0x105a8d550>,
 # <__main__.Samochod object at 0x105a37750>,
 # <__main__.Rower object at 0x105a8d2b0>]
+
+# obiekty róznych klas
+# mają wspolne pole kolor i metode info()
+# polimorfizm - obiekty róznych klas traktoane są jak tej samej wspólnej klasy
+for i in lista:
+    print(i.__class__.__name__)
+    i.info()
+# Pojazd
+# Kolor: Czerwony
+# Samochod
+# Kolor: Zielony
+# Marka: Fiat
+# Samochod
+# Kolor: biały
+# Marka: Mercedes
+# Rower
+# Kolor: Żółty
