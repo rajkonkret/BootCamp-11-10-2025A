@@ -62,3 +62,4 @@ Stwórz listę kwadratów liczb parzystych z danej listy liczb przy użyciu wyra
 
 10. Zadanie: Stwórz Funkcję Formatującą Adresy Email
 Napisz funkcję, która przyjmuje listę imion i nazwisk, a zwraca sformatowane adresy email (np. Jan Kowalski -> jan.kowalski@example.com).
+boot
