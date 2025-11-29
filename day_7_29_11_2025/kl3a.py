@@ -1,5 +1,19 @@
+class ContactList(list['Contact']):
+    """
+    Lista z metodą search
+    """
+
+    def search(self, name):
+        matching_contacts = []
+        for c in self:
+            if name.casefold() in c.name.casefold():
+                matching_contacts.append(c)
+        return matching_contacts
+
+
 class Contact:
-    all_contacts = []  # pusta lista, wspólna dla wszystkich obiektów klasy
+    # all_contacts = []  # pusta lista, wspólna dla wszystkich obiektów klasy
+    all_contacts = ContactList()
 
     def __init__(self, name, email):
         self.name = name
