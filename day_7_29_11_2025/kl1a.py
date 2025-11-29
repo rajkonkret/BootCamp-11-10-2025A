@@ -42,6 +42,10 @@ class MyFirstClass:
     def __str__(self):
         return f"({self.x, self.y})"
 
+    # reprezentacja obiektu dla programisty
+    def __repr__(self):
+        return f"Point{self.x, self.y}"
+
 
 ob = MyFirstClass()
 print(ob)  # <__main__.MyFirstClass object at 0x1005f9550>
@@ -59,3 +63,17 @@ print(lista)  # ['((0, 0))']
 
 ob2 = MyFirstClass(7, 98)
 ob3 = MyFirstClass(43, 134)
+
+print(ob.calculate(ob2))  # 98.2496819333274
+print(ob.calculate(ob3))  # 140.73023839957068
+
+print(ob2)  # ((7, 98))
+print(ob3)  # ((43, 134))
+
+lista_ob = [ob, ob2, ob3]
+print(lista_ob)
+# [<__main__.MyFirstClass object at 0x109a51550>,
+# <__main__.MyFirstClass object at 0x1099fb750>,
+# <__main__.MyFirstClass object at 0x1099fb9d0>]
+# po nadpianiu metody __repr__ wynik:
+# [Point(0, 0), Point(7, 98), Point(43, 134)]
