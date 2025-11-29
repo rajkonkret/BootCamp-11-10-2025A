@@ -12,6 +12,13 @@ class Counter(ABC):
     def drukuj(self):
         pass
 
+    # pozwala ominąc brak przeciązania konstruktorów
+    @classmethod
+    def from_counter(cls, counter):
+        # Counter(bc.values)
+        # zwraca obiekt klasy Counter
+        return cls(counter.values)
+
 
 # TypeError: Can't instantiate abstract
 # class Counter without an implementation for abstract method 'drukuj'
@@ -48,4 +55,12 @@ bc1.drukuj()  # Drukuje... 1
 bc1.increment(5)
 bc1.drukuj()  # Drukuje... 6
 
+# bc2 = BoundedCounter(101)  # ValueError: Wartość nie może być większa od: 100
 
+bc2 = BoundedCounter(bc1.values)
+bc2.drukuj()  # Drukuje... 6
+
+bc3 = BoundedCounter.from_counter(bc2)
+bc3.drukuj()  # Drukuje... 6
+bc4 = bc2.from_counter(bc3)
+bc4.drukuj()  # Drukuje... 6
