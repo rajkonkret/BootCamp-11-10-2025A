@@ -21,8 +21,9 @@ class Contact:
         Contact.all_contacts.append(self)
 
     # __repr__ rownież zmienia __str__
+    # !r - dodaje cudzysłowia do stringów
     def __repr__(self):
-        return f"{self.name} {self.email}"
+        return f"{self.name!r} {self.email!r}"
 
 
 class Suplier(Contact):
@@ -32,6 +33,8 @@ class Suplier(Contact):
 
     def order(self, order):
         print(f"{order} zamówiono od {self.name}")
+
+# stworzyc klasę Friend dziedziczącą po  Suplier, ma dodakowo przyjmowac numer telefonu
 
 
 c1 = Contact("Adam", "adam@wp.pl")
@@ -58,3 +61,15 @@ s1.order("kawa")  # kawa zamówiono od Marek
 # wypisz kontak "Radek" z listy all_contacts
 # AttributeError: 'list' object has no attribute 'search'
 # c1.all_contacts.search("Radek")
+
+c_l = ContactList()
+print(c_l.search("Radek")) # []
+c_l.append(c1)
+c_l.append(c2)
+c_l.append(c3)
+c_l.append(s1)
+print(c_l)
+# [Adam adam@wp.pl, Radek radek@wp.pl, Tomek tomek@wp.pl, Marek marek@o2.pl]
+print(c_l.search("Radek")) # [Radek radek@wp.pl]
+print(Contact.all_contacts)
+# [Adam adam@wp.pl, Radek radek@wp.pl, Tomek tomek@wp.pl, Marek marek@o2.pl]
