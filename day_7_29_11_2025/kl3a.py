@@ -1,3 +1,5 @@
+from pprint import pprint
+
 class ContactList(list['Contact']):
     """
     Lista z metodą search
@@ -85,3 +87,32 @@ print(c_l)
 print(c_l.search("Radek"))  # [Radek radek@wp.pl]
 print(Contact.all_contacts)
 # [Adam adam@wp.pl, Radek radek@wp.pl, Tomek tomek@wp.pl, Marek marek@o2.pl]
+
+f1 = Friend("Mariusz", "mariusz@wp.pl")
+f2 = Friend("Katarzyna", "katarzyna@wp.pl")
+f3 = Friend("Joachim", "joachim@wp.pl", "09987654321")
+print(f1)  # Friend 'Mariusz' 'mariusz@wp.pl' +48000000000
+print(f2)  # Friend 'Katarzyna' 'katarzyna@wp.pl' +48000000000
+print(f3)  # Friend 'Joachim' 'joachim@wp.pl' +4809987654321
+
+print(f1.all_contacts)
+# ['Adam' 'adam@wp.pl', 'Radek' 'radek@wp.pl', 'Tomek' 'tomek@wp.pl', 'Marek' 'marek@o2.pl', Friend 'Mariusz' 'mariusz@wp.pl' +48000000000,
+# Friend 'Katarzyna' 'katarzyna@wp.pl' +48000000000, Friend 'Joachim' 'joachim@wp.pl' +4809987654321]
+
+print(f1.all_contacts.search("Joachim"))  # [Friend 'Joachim' 'joachim@wp.pl' +4809987654321]
+
+f1.order("herbata")  # herbata zamówiono od Mariusz
+
+print(Friend.__mro__)
+# (<class '__main__.Friend'>, <class '__main__.Suplier'>, <class '__main__.Contact'>, <class 'object'>)
+
+print(Contact.all_contacts)
+
+pprint(Contact.all_contacts)
+# ['Adam' 'adam@wp.pl',
+#  'Radek' 'radek@wp.pl',
+#  'Tomek' 'tomek@wp.pl',
+#  'Marek' 'marek@o2.pl',
+#  Friend 'Mariusz' 'mariusz@wp.pl' +48000000000,
+#  Friend 'Katarzyna' 'katarzyna@wp.pl' +48000000000,
+#  Friend 'Joachim' 'joachim@wp.pl' +4809987654321]
