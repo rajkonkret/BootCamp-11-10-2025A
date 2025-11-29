@@ -19,7 +19,10 @@ class Counter(ABC):
         # zwraca obiekt klasy Counter
         return cls(counter.values)
 
-
+    # ni epotrzebuje obiektu
+    @staticmethod
+    def from_string():
+        print("Metoda statyczna")
 # TypeError: Can't instantiate abstract
 # class Counter without an implementation for abstract method 'drukuj'
 # c1 = Counter()
@@ -64,3 +67,9 @@ bc3 = BoundedCounter.from_counter(bc2)
 bc3.drukuj()  # Drukuje... 6
 bc4 = bc2.from_counter(bc3)
 bc4.drukuj()  # Drukuje... 6
+
+# Uzycie metody statycznej
+# nie tworzy obiektu
+# ie potrzebuje obiektu
+# wywołujemy bezpośrednio w klasie
+Counter.from_string() # Metoda statyczna
