@@ -36,3 +36,20 @@ class Tiger(Cat):
         print(f"Liczba pasków: {self.liczba_paskow}")
 
 
+animal = Animal("Bezimienny")
+animal.wydaj_odglos()
+animal.info()
+
+cat1 = Cat("Filemon", "Biały w ciapy")
+cat1.info()
+cat1.wydaj_odglos()
+# Kolor: Biały w ciapy
+# miau miau
+
+tiger1 = Tiger("Tygrysek", "pomarańczowy", 15)
+tiger1.info()
+tiger1.wydaj_odglos()
+# Imię: Tygrysek
+# Kolor: pomarańczowy
+# Liczba pasków: 15
+# arr arr!!!
