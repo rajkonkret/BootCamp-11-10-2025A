@@ -17,7 +17,7 @@ class Ptak(ABC):
     def latam(self):
         print("Tu", self.gatunek, 'Lecę z szybkością', self.szybkosc)
 
-    @abstractmethod # metoda abstrakcyjna
+    @abstractmethod  # metoda abstrakcyjna
     def wydaj_odglos(self):
         pass
 
@@ -32,6 +32,9 @@ class Kura(Ptak):
     def wydaj_odglos(self):
         print("Ko ko ko ko ko")
 
+    def dziobanie(self):
+        print("Idę sobie podziobać")
+
 
 class Orzel(Ptak):
     """
@@ -41,11 +44,15 @@ class Orzel(Ptak):
     def wydaj_odglos(self):
         print("kier kir kir kier")
 
+    def polowanie(self):
+        print("Rozpoczynam polowanie")
+
+
 # TypeError: Can't instantiate abstract class Sowa without an implementation
 # for abstract method 'wydaj_odglos'
 class Sowa(Ptak):
     """
-    Kalsa Sowa
+    Klasa Sowa
     """
 
 
@@ -66,3 +73,19 @@ or2.latam()  # Tu Bielik Lecę z szybkością 50
 # TypeError: Can't instantiate abstract class Sowa
 # without an implementation for abstract method 'wydaj_odglos'
 # sowa1 = Sowa("Sowa", 25)
+
+or2.polowanie()
+kur2.dziobanie()
+# Rozpoczynam polowanie
+# Idę sobie podziobać
+
+# polimorfizm - obiekty róznych klas mają cechy wspólne (poprzez klasę abstrakcyjną)
+# obiekty różnych klas
+lista = [or2, kur2]
+for i in lista:
+    print(i.__class__.__name__)
+    i.wydaj_odglos()
+# Orzel
+# kier kir kir kier
+# Kura
+# Ko ko ko ko ko
