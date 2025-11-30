@@ -53,4 +53,19 @@ print(next(iterator))
 print(next(iterator))
 print(next(iterator))
 
+
 # print(next(iterator))  # StopIteration
+
+class Count:
+    """
+    Klasa będąca iteratorem
+    """
+
+    def __init__(self, low, high):
+        """
+        Metodda inicjalizująca (konstruktor)
+        :param low:
+        :param high:
+        """
+        self.current = low
+        self.high = high
