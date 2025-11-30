@@ -22,19 +22,21 @@ class Person:
         print(self.last_name)
 
 
-p2 = Person("Jan", 'Kowalski', 1)
-print(p2)  # Person(first_name='Jan', last_name='Kowalski', id=1)
+# zapobiega uruchamianiu tych elementów przy imporcie tego pliku
+if __name__ == '__main__':
+    p2 = Person("Jan", 'Kowalski', 1)
+    print(p2)  # Person(first_name='Jan', last_name='Kowalski', id=1)
 
-p3 = Person("Maciej", "Nowak", 2)
-print(p3)  # Person(first_name='Maciej', last_name='Nowak', id=2)
+    p3 = Person("Maciej", "Nowak", 2)
+    print(p3)  # Person(first_name='Maciej', last_name='Nowak', id=2)
 
-p2.greet()
-p3.greet()
-# Kowalski
-# Nowak
+    p2.greet()
+    p3.greet()
+    # Kowalski
+    # Nowak
 
-people = [p2, p3]
+    people = [p2, p3]
 
-# wb - zapis bajtowo
-with open('dane.pickle', "wb") as stream:
-    pickle.dump(people, stream)
+    # wb - zapis bajtowo
+    with open('dane.pickle', "wb") as stream:
+        pickle.dump(people, stream)
