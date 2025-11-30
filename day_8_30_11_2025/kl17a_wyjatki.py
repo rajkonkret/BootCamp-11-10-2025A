@@ -26,6 +26,17 @@ except MyException as e:
     print("Wystąpił wyjątek MyException:", e)
 except ValueError:
     print("Błąd wartości")
+except Exception as e:  # pozostałę błędy
+    print("Błąd:", e)
+else:  # gdy nie ma błedu
+    print("Wprowadziłęś poprawną odpowiedź")
+finally:  # wypisze zawsze
+    print('Wprowadź kolejne dane')
+
 # Podaj liczbę cąlkowitą dodatnią:-9
 # Liczba ma być większa od zera
 # Wystąpił wyjątek MyException: Liczba musi byc dodatnia
+
+# Podaj liczbę cąlkowitą dodatnią:10
+# Wprowadziłęś poprawną odpowiedź
+# Wprowadź kolejne dane
