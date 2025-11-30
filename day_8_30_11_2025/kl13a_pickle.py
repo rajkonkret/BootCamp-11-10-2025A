@@ -1,4 +1,5 @@
 # pickle - serializacja i deserializacja obiektów
+import pickle
 
 lista = [1, 2, 3, 4, 5]
 
@@ -14,4 +15,7 @@ print(lines[0])  # "["
 l = []
 l.extend(lines)
 print(l)
-# ['[', '1', ',', ' ', '2', ',', ' ', '3', ',', ' ', '4', ',', ' ', '5', ']']
+# ['[', '1', ',', ' ', '2', ',', ' ', '3', ',', ' ', '4', ',', '
+
+with open('lista.pickle', "wb") as f:
+    pickle.dump(lista, f)
