@@ -23,3 +23,19 @@ print(next(g3))
 print(next(g3))
 print(next(g3))
 print(next(g3))
+
+
+def gen4():
+    i = 1
+    while True:
+        yield i * i
+        i += 1
+
+
+g4 = gen4()
+print(next(g4))
+print(next(g4))
+print(next(g4))
+print(next(g4))
+print(next(g4))
+
