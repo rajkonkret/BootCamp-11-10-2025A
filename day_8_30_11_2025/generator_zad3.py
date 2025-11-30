@@ -4,7 +4,19 @@ def count_down(min):
         yield count
         count -= 1
 
+
 def count_up_to(max):
     count = 1
     while count <= max:
         yield
+        count += 1
+
+
+c_u = count_up_to(3)
+c_d = count_down(3)
+
+for n in c_u:
+    print(n)
+
+for n in c_d:
+    print(n)
