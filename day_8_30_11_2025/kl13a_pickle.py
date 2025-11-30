@@ -18,4 +18,10 @@ print(l)
 # ['[', '1', ',', ' ', '2', ',', ' ', '3', ',', ' ', '4', ',', '
 
 with open('lista.pickle', "wb") as f:
-    pickle.dump(lista, f)
+    pickle.dump(lista, f)  # zapis listy do pliku w postaci bajtowej
+
+with open("lista.pickle", 'rb') as fh:
+    p = pickle.load(fh)
+
+print(p)
+print(type(p))
