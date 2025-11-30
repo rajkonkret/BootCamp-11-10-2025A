@@ -1,3 +1,5 @@
+# przeciążanie operatrów
+
 class MyNumber:
     def __init__(self, value):
         self.value = value
@@ -16,3 +18,12 @@ print(num1.value < num2.value)  # True
 class MyNumber2:
     def __init__(self, value):
         self.value = value
+
+    # ta metoda wykona się dla porównania "<"
+    def __lt__(self, other):
+        return self.value < other.value
+
+
+num3 = MyNumber2(5)
+num4 = MyNumber2(15)
+print(num3 < num4)  # True
