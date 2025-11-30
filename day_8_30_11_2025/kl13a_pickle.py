@@ -53,4 +53,6 @@ print(type(lista_eval))  # <class 'list'>
 print(lista_eval)  # [1, 2, 3, 4, 5]
 print(lista_eval[0])  # 1
 
-
+# istnieje mozliwosc przekazania i wykonania złosliwego kodu
+user_input = "print('hacked')"
+eval(user_input)  # hacked, wykona komendę przekazaną tekstem
