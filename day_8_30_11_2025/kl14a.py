@@ -32,4 +32,4 @@ p3.greet()
 # Kowalski
 # Nowak
 
-
+people = [p2, p3]
