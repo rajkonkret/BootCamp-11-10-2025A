@@ -70,3 +70,12 @@ print(next(fib2))  # (2, 2)
 print(next(fib2))  # (3, 3)
 print(next(fib2))  # (4, 5)
 print(next(fib2))  # (5, 8)
+
+fibo3 = fibo_with_index(10)
+print(list(fibo3))
+# [(0, 1), (1, 1), (2, 2), (3, 3), (4, 5), (5, 8), (6, 13), (7, 21), (8, 34), (9, 55)]
+
+print(50 * '-')
+for i in fibo3:
+    print(i)
+    # nie ma danych do odczytania
