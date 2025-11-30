@@ -79,3 +79,27 @@ print(50 * '-')
 for i in fibo3:
     print(i)
     # nie ma danych do odczytania
+
+
+def counter(start=0):
+    n = start
+    while True:
+        result = yield n
+        print(result)  # OK
+        if result == "stop":
+            break
+        n += 1
+
+
+c = counter(20)
+print(next(c))
+print(next(c))
+print(next(c))
+print(next(c))
+print(c.send("OK"))  # OK
+try:
+    c.send("stop")  # StopIteration
+except StopIteration as e:
+    print("Koniec!")
+# stop
+# Koniec!
