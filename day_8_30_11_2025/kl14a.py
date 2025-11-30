@@ -8,6 +8,7 @@
 # p1 = Person("Jan", "Kowalski", 1)
 # print(p1)  # <__main__.Person object at 0x102c3a270>
 
+import pickle
 from dataclasses import dataclass
 
 
@@ -33,3 +34,7 @@ p3.greet()
 # Nowak
 
 people = [p2, p3]
+
+# wb - zapis bajtowo
+with open('dane.pickle', "wb") as stream:
+    pickle.dump(people, stream)
