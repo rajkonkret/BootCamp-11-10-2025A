@@ -39,3 +39,18 @@ print(lista_ser)
 wynik = pickle.loads(lista_ser)
 print("Wynik deserializacji:", wynik)  # Wynik deserializacji: [1, 2, 3, 4, 5]
 print(type((wynik)))  # <class 'list'>
+
+with open('lista.txt', "r") as file:
+    lines = file.read()
+
+print(lines)
+print(type(lines))
+# [1, 2, 3, 4, 5]
+# <class 'str'>
+
+lista_eval = eval(lines)
+print(type(lista_eval))  # <class 'list'>
+print(lista_eval)  # [1, 2, 3, 4, 5]
+print(lista_eval[0])  # 1
+
+
