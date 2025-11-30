@@ -27,13 +27,20 @@ class Validator:
             raise MyValueError(f"{name} cannot be zero")
 
 
+# def my_fuction(x: int, y: int) -> float:
+#     if not isinstance(x, int):
+#         raise MyTypeError("X must be integer")
+#     if not isinstance(y, int):
+#         raise MyTypeError("Y must be integer")
+#     if y == 0:
+#         raise MyValueError("y cannot be zero")
+#
+#     return x / y
+
 def my_fuction(x: int, y: int) -> float:
-    if not isinstance(x, int):
-        raise MyTypeError("X must be integer")
-    if not isinstance(y, int):
-        raise MyTypeError("Y must be integer")
-    if y == 0:
-        raise MyValueError("y cannot be zero")
+    Validator.is_int(x, "x")
+    Validator.is_int(y, "y")
+    Validator.not_zero(y, "y")
 
     return x / y
 
