@@ -23,7 +23,15 @@ class MyNumber2:
     def __lt__(self, other):
         return self.value < other.value
 
+    def __eq__(self, other):
+        return self.value == other.value
+
 
 num3 = MyNumber2(5)
 num4 = MyNumber2(15)
 print(num3 < num4)  # True
+
+num5 = MyNumber2(15)
+print(num4 == num5)  # False - porównał referencje
+# Po nadpisaniu metody __eq__ będzie prawidłowe porównanie
+# True
