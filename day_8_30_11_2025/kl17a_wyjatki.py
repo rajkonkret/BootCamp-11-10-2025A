@@ -17,3 +17,15 @@ class MyException(Exception):
 #     raise MyException("Wyjątek od Radka")
 # MyException: Wyjątek od Radka
 
+try:
+    x = int(input("Podaj liczbę cąlkowitą dodatnią:"))
+    if x < 0:
+        print("Liczba ma być większa od zera")
+        raise MyException("Liczba musi byc dodatnia")
+except MyException as e:
+    print("Wystąpił wyjątek MyException:", e)
+except ValueError:
+    print("Błąd wartości")
+# Podaj liczbę cąlkowitą dodatnią:-9
+# Liczba ma być większa od zera
+# Wystąpił wyjątek MyException: Liczba musi byc dodatnia
