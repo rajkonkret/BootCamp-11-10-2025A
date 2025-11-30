@@ -1,5 +1,6 @@
 # pickle - serializacja i deserializacja obiektów
 import pickle
+import ast
 
 lista = [1, 2, 3, 4, 5]
 
