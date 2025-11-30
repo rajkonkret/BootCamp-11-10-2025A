@@ -79,3 +79,36 @@ class Count:
         else:
             self.current += 1
             return self.current - 1
+
+
+print(25 * "-")
+counter = Count(1, 20)
+print(next(counter))  # 1
+print(next(counter))  # 2
+print(next(counter))  # 3
+print(next(counter))  # 4
+print(next(counter))  # 5
+
+print("----")
+while True:
+    try:
+        number = next(counter)
+        print(number)
+    except StopIteration:
+        break
+
+print("---------")
+counter2 = Count(1,7)
+print(next(counter2))
+print(next(counter2))
+print(next(counter2))
+# ---------
+# 1
+# 2
+# 3
+
+print("-------")
+counter3  = Count(5,39)
+print(next(counter3))
+# -------
+# 5
