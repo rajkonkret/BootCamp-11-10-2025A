@@ -34,3 +34,36 @@ print(response)  # <Response [200]>
 
 print(response.text)
 print(type(response.text))  # <class 'str'>
+
+# zamiana jsona na słownik
+response_data = response.json()
+print(response_data)
+print(type(response_data))  # <class 'dict'>
+
+# wypisanie kluczy ze słownika
+print(response_data.keys())  # dict_keys(['people', 'number', 'message'])
+
+for k in response_data:
+    print(k)
+# people
+# number
+# message
+
+people_list = response_data['people']
+print(people_list)
+print(type(people_list))  # <class 'list'>
+
+for i in people_list:
+    print(i)
+# {'craft': 'ISS', 'name': 'Oleg Kononenko'}
+# {'craft': 'ISS', 'name': 'Nikolai Chub'}
+# {'craft': 'ISS', 'name': 'Tracy Caldwell Dyson'}
+# {'craft': 'ISS', 'name': 'Matthew Dominick'}
+# {'craft': 'ISS', 'name': 'Michael Barratt'}
+# {'craft': 'ISS', 'name': 'Jeanette Epps'}
+# {'craft': 'ISS', 'name': 'Alexander Grebenkin'}
+# {'craft': 'ISS', 'name': 'Butch Wilmore'}
+# {'craft': 'ISS', 'name': 'Sunita Williams'}
+# {'craft': 'Tiangong', 'name': 'Li Guangsu'}
+# {'craft': 'Tiangong', 'name': 'Li Cong'}
+# {'craft': 'Tiangong', 'name': 'Ye Guangfu'}
