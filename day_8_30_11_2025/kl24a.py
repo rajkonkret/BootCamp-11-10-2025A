@@ -27,3 +27,4 @@ print(alice == bob)  # False
 print(alice > bob)  # True
 print(alice >= bob)  # True
 print(alice <= bob)  # False
+print(alice != bob)  # True
