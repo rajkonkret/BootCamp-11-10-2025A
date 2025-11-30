@@ -15,4 +15,5 @@ with open("dickt1.pkl", "rb") as f:
     data = pickle.load(f)
 
 print(data)  # {'name': 'Radek', 'age': 78}
-
+print(type(slownik))  # <class 'dict'>
+print(data['name'])  # Radek
