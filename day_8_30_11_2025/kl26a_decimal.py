@@ -14,7 +14,7 @@ print(0.1 + 0.2)  # 0.30000000000000004
 # the sum 12.345 + 1.0001 = 13.3451 might be rounded to 13.345.
 
 # decimal - pozwala ominąc błąd zaokrąglenia
-from decimal import Decimal
+from decimal import Decimal, ROUND_HALF_UP
 
 # tworzenie liczb
 decimal1 = Decimal("0.1")
@@ -57,3 +57,15 @@ print("Dodawanie:", a)  # Dodawanie: 10.345
 print("Odejmowanie:", substract)  # Odejmowanie: 7.14
 print("Mnożenie:", multiply)  # Mnożenie: 33.10
 print("Dzielenie:", divide)  # Dzielenie: 3.23
+
+# ustawienie zaokrąglenia
+divide = a / b
+print("Zaogrąglenie HALF_UP:", divide.quantize(precyzja, rounding=ROUND_HALF_UP))
+# Zaogrąglenie HALF_UP: 3.23
+
+value = Decimal("5.456")
+rounding_nearest_005 = (value / Decimal("0.05")).quantize(Decimal("1"),
+                                                          rounding=ROUND_HALF_UP) * Decimal("0.05")
+print(rounding_nearest_005)  # 5.45
+
+print(Decimal("1.01") + 9)  # 10.01
