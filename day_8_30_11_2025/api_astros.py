@@ -67,3 +67,8 @@ for i in people_list:
 # {'craft': 'Tiangong', 'name': 'Li Guangsu'}
 # {'craft': 'Tiangong', 'name': 'Li Cong'}
 # {'craft': 'Tiangong', 'name': 'Ye Guangfu'}
+
+epps = people_list[5]  # {'craft': 'ISS', 'name': 'Jeanette Epps'}
+print(epps)
+epps_name = people_list[5]["name"]  # {'craft': 'ISS', 'name': 'Jeanette Epps'}
+print(epps_name)  # Jeanette Epps
