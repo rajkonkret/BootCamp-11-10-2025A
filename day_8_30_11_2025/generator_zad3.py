@@ -8,7 +8,7 @@ def count_down(min):
 def count_up_to(max):
     count = 1
     while count <= max:
-        yield
+        yield count
         count += 1
 
 
