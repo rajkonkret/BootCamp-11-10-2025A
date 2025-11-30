@@ -23,5 +23,7 @@ with open('lista.pickle', "wb") as f:
 with open("lista.pickle", 'rb') as fh:
     p = pickle.load(fh)
 
-print(p)
-print(type(p))
+print(p)  # [1, 2, 3, 4, 5]
+print(type(p))  # <class 'list'>
+print(p[0])
+print(50 * "-")
