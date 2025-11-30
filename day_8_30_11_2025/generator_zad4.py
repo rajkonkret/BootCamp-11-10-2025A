@@ -10,8 +10,8 @@ def measure_time(func):
         start_time = time.perf_counter()
         result = func(*args, **kwargs)
         end_time = time.perf_counter()
-        exexution_time = end_time - start_time
-        print(f"Czas wykonania funkcji: {func.__name__}: {exexution_time}")
+        execution_time = end_time - start_time
+        print(f"Czas wykonania funkcji: {func.__name__}: {execution_time}")
         return result
 
     return wrapper
