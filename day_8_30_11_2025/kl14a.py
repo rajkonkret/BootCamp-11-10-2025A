@@ -26,3 +26,10 @@ print(p2)  # Person(first_name='Jan', last_name='Kowalski', id=1)
 
 p3 = Person("Maciej", "Nowak", 2)
 print(p3)  # Person(first_name='Maciej', last_name='Nowak', id=2)
+
+p2.greet()
+p3.greet()
+# Kowalski
+# Nowak
+
+
