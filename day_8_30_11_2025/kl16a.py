@@ -10,3 +10,9 @@ print(slownik)  # {'name': 'Radek', 'age': 78}
 
 with open("dickt1.pkl", "wb") as f:
     pickle.dump(slownik, f)
+
+with open("dickt1.pkl", "rb") as f:
+    data = pickle.load(f)
+
+print(data)  # {'name': 'Radek', 'age': 78}
+
