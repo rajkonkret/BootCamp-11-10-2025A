@@ -29,9 +29,12 @@ def my_fuction(x: int, y: int) -> float:
 try:
     result = my_fuction(4, 5)
     # result = my_fuction(4, 0)
-    result = my_fuction(4, 0)
+    result = my_fuction("Q", 0)
 except MyValueError as e:
-    print("Caught a MytypeError")
+    print("Caught a MyValueError")
+    print("Error code:", e.err_code)
+except MyTypeError as e:
+    print("Caught MyTypeError")
     print("Error code:", e.err_code)
 except Exception as e:
     print("Error:", e)
@@ -42,6 +45,10 @@ finally:
 # Result is: 0.8
 # Next
 
-# Caught a MytypeError
+# Caught a MyValueError
 # Error code: 100
+# Next
+
+# Caught MyTypeError
+# Error code: 200
 # Next
