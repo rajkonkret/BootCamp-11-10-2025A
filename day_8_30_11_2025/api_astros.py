@@ -112,3 +112,10 @@ print(data.number)  # 12
 print(data.message)  # success
 print(data.people)  # lista
 # name=, craft=
+
+for p in data.people:
+    # print(p)
+    # print(type(p))
+    print(p.__class__.__name__)
+    print(f"{p.name=} {p.craft=}")
+# p.name='Matthew Dominick' p.craft='ISS'
