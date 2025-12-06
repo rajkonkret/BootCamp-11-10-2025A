@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "gender": "female",
+      "name": {
+        "title": "Ms",
+        "first": "Vladislava",
+        "last": "Castro"
+      },
+      "location": {
+        "street": {
+          "number": 2413,
+          "name": "Rua Treze de Maio "
+        },
+        "city": "Santa Maria",
+        "state": "Acre",
+        "country": "Brazil",
+        "postcode": 17173,
+        "coordinates": {
+          "latitude": "-74.0067",
+          "longitude": "26.6725"
+        },
+        "timezone": {
+          "offset": "+11:00",
+          "description": "Magadan, Solomon Islands, New Caledonia"
+        }
+      },
+      "email": "vladislava.castro@example.com",
+      "login": {
+        "uuid": "f2ff3dc0-19b0-4f0d-afc7-79390ee2ff5d",
+        "username": "lazyladybug607",
+        "password": "rusty1",
+        "salt": "MTc9aZy8",
+        "md5": "c8d76f116112b2c53e49f7fec98d6f41",
+        "sha1": "46e952ab7041e94caaf599f4382265909d27bcd1",
+        "sha256": "fb7c05f5232ac9b7bcfd740ed46e734e703ab44cad45f97178ab553bf141340e"
+      },
+      "dob": {
+        "date": "1957-10-22T22:52:38.328Z",
+        "age": 68
+      },
+      "registered": {
+        "date": "2013-11-07T19:57:57.462Z",
+        "age": 12
+      },
+      "phone": "(89) 1993-8932",
+      "cell": "(96) 5533-4602",
+      "id": {
+        "name": "CPF",
+        "value": "504.109.580-25"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/3.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/3.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/3.jpg"
+      },
+      "nat": "BR"
+    }
+  ],
+  "info": {
+    "seed": "bb6d9b31dd7f999a",
+    "results": 1,
+    "page": 1,
+    "version": "1.4"
+  }
+}
