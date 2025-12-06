@@ -17,5 +17,12 @@ async def fetch_data(client, url, index):
     except httpx.HTTPStatusError as e:
         print(f"Request {index}: Failed with status: {response.status_code}:", e)
 
+
 async def multiple_httpx():
     start_time = time.time()
+    async with httpx.AsyncClient() as client:
+        tasks = [fetch_data(client, url, i + 1) for i in range(100)]
+        await asyncio.gather(*tasks)
+
+    elapsed_time = time.time() - start_time
+    print(f"HTTPX total time: {elapsed_time:.4f} s.")
