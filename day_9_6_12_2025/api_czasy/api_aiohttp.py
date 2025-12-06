@@ -27,3 +27,6 @@ async def measure_aiohttp():
 
     overall_elapsed_time = time.time() - overall_start_time
     print(f'Overall time for 100 requests: {overall_elapsed_time:.4f} seconds.')
+
+
+asyncio.run(measure_aiohttp())
