@@ -7,6 +7,7 @@ from typing import List
 
 import requests
 from pydantic import BaseModel
+from datetime import datetime
 
 # https://pl.wikipedia.org/wiki/ISO_4217
 url = "https://api.nbp.pl/api/exchangerates/rates/A/EUR/"
@@ -26,7 +27,8 @@ print(f"{table.get('rates')[0]['mid']}")  # 4.2321
 
 class Rate(BaseModel):
     no: str
-    effectiveDate: str
+    # effectiveDate: str
+    effectiveDate: datetime
     mid: float
 
 
@@ -35,6 +37,7 @@ class CurrencyData(BaseModel):
     currency: str
     code: str
     rates: List[Rate]
+
 
 currency_data = CurrencyData(**table)
 print(currency_data)
@@ -56,3 +59,11 @@ print(currency_data.rates[0].mid)
 # 236/A/NBP/2025
 # 2025-12-05
 # 4.2321
+
+# po zamienie daty str -> datetime
+# no='236/A/NBP/2025' effectiveDate=datetime.datetime(2025, 12, 5, 0, 0) mid=4.2321
+print(type(currency_data.rates[0].effectiveDate))  # <class 'datetime.datetime'>
+
+effectiveDate = currency_data.rates[0].effectiveDate
+formated_date = effectiveDate.strftime("%d/%m/%Y")
+print(f"Data tabeli: {formated_date}")  # Data tabeli: 05/12/2025
