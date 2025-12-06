@@ -1,5 +1,5 @@
 import requests
-from pydantic import BaseModel
+from pydantic import BaseModel, HttpUrl, EmailStr
 
 url = "https://randomuser.me/api/"
 
@@ -35,8 +35,55 @@ print(f"Link do zdjęcia: {photo_url}")
 response_photo = requests.get(photo_url)
 print(response_photo)
 
-filename = f"{user_name.lower()}_{user_last_name.lower()}.jpg"
+filename = f"pictures/{user_name.lower()}_{user_last_name.lower()}.jpg"
 with open(filename, "wb") as f:  # "wb" zapis bajtowy
     f.write(response_photo.content)
+
+print("Zdjęcie zostało zapisane:", filename)
+
+
+class Name(BaseModel):
+    title: str
+    first: str
+    last: str
+
+
+class Picture(BaseModel):
+    large: HttpUrl
+    medium: HttpUrl
+    thumbnail: HttpUrl
+
+
+class UserInfo(BaseModel):
+    name: Name
+    # email: str
+    email: EmailStr
+    picture: Picture
+
+
+user = data['results'][0]
+user_info = UserInfo(**user)
+print(user_info)
+
+print(f"Imię: {user_info.name.first}")
+print(f"Nazwisko: {user_info.name.last}")
+# Imię: Dean
+# Nazwisko: Fernandez
+
+print(f'Email: {user_info.email}')
+# Email: linnea.suomi@example.com
+
+# pip install email-validator
+
+photo_url_pydantic = user_info.picture.large
+print(f"link do zdjęcia: {photo_url_pydantic}")
+
+# str() - rzutowanie na string
+response_photo_pydantic = requests.get(str(photo_url_pydantic))
+print(response_photo_pydantic)
+
+filename = f"pictures/pydantic_{user_name.lower()}_{user_last_name.lower()}.jpg"
+with open(filename, "wb") as f:  # "wb" zapis bajtowy
+    f.write(response_photo_pydantic.content)
 
 print("Zdjęcie zostało zapisane:", filename)
