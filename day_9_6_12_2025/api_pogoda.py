@@ -2,7 +2,7 @@ from datetime import datetime
 
 import requests
 
-API_KEY = ""
+API_KEY = "" # należy pobrać ze strony https://api.openweathermap.org
 
 url = f"https://api.openweathermap.org/data/2.5/weather?q=Warszawa&appid={API_KEY}&lang=pl&units=metric&format=json"
 print(url)
