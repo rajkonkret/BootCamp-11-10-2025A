@@ -9,6 +9,7 @@
 # POST - wysyła dane (tworzy obiekt) (write)
 # PUT/PATCH - aktualizacja obiektu (append)
 # DELETE - kasowane (kasowanie)
+from typing import List
 
 # CRUD
 # Działanie	        Instrukcja SQL      	HTTP	        DDS
@@ -17,7 +18,9 @@
 # Update	        UPDATE	            POST / PUT / PATCH	write
 # Delete (Destroy)	DELETE	            DELETE	            dispose
 import requests  # klient http
+from pydantic import BaseModel
 
+# pip install pydantic
 # pip install requests
 # http://open-notify.org/Open-Notify-API/People-In-Space/
 
@@ -72,3 +75,40 @@ epps = people_list[5]  # {'craft': 'ISS', 'name': 'Jeanette Epps'}
 print(epps)
 epps_name = people_list[5]["name"]  # {'craft': 'ISS', 'name': 'Jeanette Epps'}
 print(epps_name)  # Jeanette Epps
+
+
+class Astros(BaseModel):
+    craft: str
+    name: str
+
+
+class AstroData(BaseModel):
+    # people: list
+    people: List[Astros]
+    # biblioteka sprawdza typy
+    number: int
+    # number: str
+    message: str
+
+
+data = AstroData(**response_data)
+print(data)
+# people=[{'craft': 'ISS', 'name': 'Oleg Kononenko'},
+# {'craft': 'ISS', 'name': 'Nikolai Chub'},
+# {'craft': 'ISS', 'name': 'Tracy Caldwell Dyson'},
+# {'craft': 'ISS', 'name': 'Matthew Dominick'},
+# {'craft': 'ISS', 'name': 'Michael Barratt'},
+# {'craft': 'ISS', 'name': 'Jeanette Epps'},
+# {'craft': 'ISS', 'name': 'Alexander Grebenkin'},
+# {'craft': 'ISS', 'name': 'Butch Wilmore'},
+# {'craft': 'ISS', 'name': 'Sunita Williams'},
+# {'craft': 'Tiangong', 'name': 'Li Guangsu'},
+# {'craft': 'Tiangong', 'name': 'Li Cong'}, {
+# 'craft': 'Tiangong', 'name': 'Ye Guangfu'}]
+# number=12
+# message='success'
+
+print(data.number)  # 12
+print(data.message)  # success
+print(data.people)  # lista
+# name=, craft=
