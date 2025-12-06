@@ -1,4 +1,7 @@
+from typing import List
+
 import requests
+from pydantic import BaseModel
 
 url = "https://restcountries.com/v3.1/name/Poland"
 
@@ -24,3 +27,30 @@ print(f"Stolica kraju: {country['capital']}")  # Stolica kraju: ['Warsaw']
 print(f"Stolica kraju: {country['capital'][0]}")  # Stolica kraju: Warsaw
 
 print(f"Liczba ludności: {country['population']}")  # Liczba ludności: 37392000
+
+
+class Pol(BaseModel):
+    official: str
+    common: str
+
+
+class NativeName(BaseModel):
+    pol: Pol
+
+
+class Name(BaseModel):
+    common: str
+    official: str
+    nativeName: NativeName
+
+
+class CountryInfo(BaseModel):
+    name: Name
+    capital: List[str]
+    population: int
+
+
+country_data = [CountryInfo(**data) for data in response.json()]
+
+for country in country_data:
+    print(country)
