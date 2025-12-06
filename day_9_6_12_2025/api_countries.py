@@ -54,3 +54,32 @@ country_data = [CountryInfo(**data) for data in response.json()]
 
 for country in country_data:
     print(country)
+# name=Name(common='Poland', official='Republic of Poland',
+# nativeName=NativeName(
+# pol=Pol(
+# official='Rzeczpospolita Polska',
+# common='Polska')))
+# capital=['Warsaw'] population=37392000
+
+print(type(country))  # <class '__main__.CountryInfo'>
+print(country.name)
+print(country.name.common)
+print(country.name.official)
+# Poland
+# Republic of Poland
+
+print(country.population)  # 37392000
+
+print(country.capital)
+print(country.capital[0])
+# ['Warsaw']
+# Warsaw
+
+print(country.name.nativeName)
+print(country.name.nativeName.pol)
+# official='Rzeczpospolita Polska' common='Polska'
+
+print(country.name.nativeName.pol.common)
+print(type(country.name.nativeName.pol.common))
+# Polska
+# <class 'str'>
