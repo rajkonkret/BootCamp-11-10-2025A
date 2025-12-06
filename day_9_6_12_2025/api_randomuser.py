@@ -1,3 +1,5 @@
+import os.path
+
 import requests
 from pydantic import BaseModel, HttpUrl, EmailStr
 
@@ -35,7 +37,10 @@ print(f"Link do zdjęcia: {photo_url}")
 response_photo = requests.get(photo_url)
 print(response_photo)
 
-filename = f"pictures/{user_name.lower()}_{user_last_name.lower()}.jpg"
+# filename = f"{user_name.lower()}_{user_last_name.lower()}.jpg"
+filename = os.path.join(
+    "pictures", f"{user_name.lower()}_{user_last_name.lower()}.jpg"
+)
 with open(filename, "wb") as f:  # "wb" zapis bajtowy
     f.write(response_photo.content)
 
@@ -82,7 +87,10 @@ print(f"link do zdjęcia: {photo_url_pydantic}")
 response_photo_pydantic = requests.get(str(photo_url_pydantic))
 print(response_photo_pydantic)
 
-filename = f"pictures/pydantic_{user_name.lower()}_{user_last_name.lower()}.jpg"
+# filename = f"pictures/pydantic_{user_name.lower()}_{user_last_name.lower()}.jpg"
+filename = os.path.join(
+    "pictures", f"pydantic_{user_name.lower()}_{user_last_name.lower()}.jpg"
+)
 with open(filename, "wb") as f:  # "wb" zapis bajtowy
     f.write(response_photo_pydantic.content)
 
