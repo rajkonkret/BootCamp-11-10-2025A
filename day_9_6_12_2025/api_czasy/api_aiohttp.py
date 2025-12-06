@@ -38,3 +38,10 @@ asyncio.run(measure_aiohttp())
 # </body></html>
 #
 # Overall time for 1000 requests: 0.8453 seconds.
+
+# Biblioteka    Asynchroniczność    Wydajność (przy wielu zapytaniach)  Łatwość użycia      HTTP/2
+# requests      Nie                 Średnia                                 Bardzo łatwa     Nie
+# httpx         Tak                 Wysoka                                  Łatwa            Tak
+# aiohttp       Tak                 Wysoka                                  Średnia          Tak
+# urllib3       Nie                 Wysok (w synchronicznym środowisku)     Łatwa            Tak
+# grequests     Nie
