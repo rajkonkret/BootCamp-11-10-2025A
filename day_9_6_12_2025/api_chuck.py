@@ -2,6 +2,7 @@
 # https://api.chucknorris.io/
 
 import requests
+from pydantic import BaseModel, HttpUrl
 
 url = "https://api.chucknorris.io/jokes/random"
 
@@ -13,4 +14,22 @@ data = response.json()
 print(data)
 
 print(data.keys())
+
+
 # dict_keys(['categories', 'created_at', 'icon_url', 'id', 'updated_at', 'url', 'value'])
+
+class Joke(BaseModel):
+    categories: list
+    created_at: str
+    # icon_url: str
+    icon_url: HttpUrl
+    id: str
+    updated_at: str
+    # url: str
+    url: HttpUrl
+    value: str
+
+
+joke = Joke(**data)
+print(joke)
+print(joke.value)
