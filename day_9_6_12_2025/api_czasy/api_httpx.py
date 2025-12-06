@@ -9,7 +9,7 @@ async def fetch_data(client, url, index):
     start_time = time.time()
     response = await client.get(url)
     elapsed_time = time.time() - start_time
-    print(f"Request: {index}: Status {response.status.code}, Time: {elapsed_time}")
+    print(f"Request: {index}: Status {response.status_code}, Time: {elapsed_time}")
 
     try:
         json_data = response.json()
@@ -26,3 +26,8 @@ async def multiple_httpx():
 
     elapsed_time = time.time() - start_time
     print(f"HTTPX total time: {elapsed_time:.4f} s.")
+
+
+# uruchomienie funkcji
+asyncio.run(multiple_httpx())
+# HTTPX total time: 0.2547 s.
