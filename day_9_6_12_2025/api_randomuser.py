@@ -25,3 +25,6 @@ print(f"Numer telefonu: {user['phone']}")  # Numer telefonu: (664) 429 3469
 #         "medium": "https://randomuser.me/api/portraits/med/women/3.jpg",
 #         "thumbnail": "https://randomuser.me/api/portraits/thumb/women/3.jpg"
 #       }
+
+user_name = user['name']['first']
+user_last_name = user['name']['last']
