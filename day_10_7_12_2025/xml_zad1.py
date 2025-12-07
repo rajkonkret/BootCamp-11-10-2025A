@@ -20,3 +20,6 @@ print(xmlStr)
 # <root>
 # 	<product name="Python=to-Python"/>
 # </root>
+
+with open("ptp.xml", "w") as f:
+    f.write(xmlStr)
