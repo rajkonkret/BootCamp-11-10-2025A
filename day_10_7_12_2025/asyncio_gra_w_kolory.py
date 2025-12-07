@@ -33,3 +33,9 @@ async def makerandom(idx: int, threshold: int = 6) -> int:
 async def main():
     res = await asyncio.gather(*(makerandom(i, 9 - i) for i in range(5)))
     return res
+
+
+if __name__ == '__main__':
+    random.seed(444)  # ustawienie ziarna w generatorze
+    r1, r2, r3, r4, r5 = asyncio.run(main())
+    print(f"Wyniki: {r1=}, {r2=}, {r3=}, {r4=},{r5=}")
