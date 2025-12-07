@@ -51,10 +51,12 @@ class ExchangeRatesTable(BaseXmlModel, tag="ExchangeRatesTable"):
     Table: str = element()
     No: str = element()
     EffectiveDate: str = element()
-    Rates: List[Rate] = element(tag="Rate", path="Rates")
+    Rates: List[Rate] = element(tag="Rate>Rates")
 
 
 class NBPResponse(BaseXmlModel, tag="ArrayOfExchangeRatesTable"):
-    ArrayOfExchangeRatesTable: List[ExchangeRatesTable] = element(tag="ExchangeRatesTable")
+    ExchangeRatesTable: List[ExchangeRatesTable] = element(tag="ExchangeRatesTable")
+
 
 # print(response.text)
+parsed = NBPResponse.from_xml(response.text)
