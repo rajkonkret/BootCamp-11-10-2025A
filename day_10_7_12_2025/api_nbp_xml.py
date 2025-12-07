@@ -41,6 +41,12 @@ from pydantic_xml import BaseXmlModel, element
 from typing import List
 
 
+class Rate:
+    Currency: str = element()
+    Code: str = element()
+    Mid: float = element()
+
+
 class ExchangeRatesTable(BaseXmlModel, tag="ExchangeRatesTable"):
     Table: str = element()
     No: str = element()
