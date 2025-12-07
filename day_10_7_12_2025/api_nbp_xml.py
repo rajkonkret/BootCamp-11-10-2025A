@@ -51,7 +51,7 @@ class ExchangeRatesTable(BaseXmlModel, tag="ExchangeRatesTable"):
     Table: str = element()
     No: str = element()
     EffectiveDate: str = element()
-    Rates: List[Rate] = element(tag="Rate>Rates")
+    Rates: List[Rate] = element(tag="Rate", path="Rates")
 
 
 class NBPResponse(BaseXmlModel, tag="ArrayOfExchangeRatesTable"):
@@ -60,3 +60,4 @@ class NBPResponse(BaseXmlModel, tag="ArrayOfExchangeRatesTable"):
 
 # print(response.text)
 parsed = NBPResponse.from_xml(response.text)
+# pip install "pydantic-xml>=2.0.0" "pydantic>=2.0"
