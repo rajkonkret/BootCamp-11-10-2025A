@@ -7,6 +7,19 @@ try:
     sql_connection = sqlite3.connect("sqlite_python.db")  # baza w pliku
     cursor = sql_connection.cursor()
     print("Baza zostałą podłączona")
+
+    query ='''
+    CREATE TABLE IF NOT EXISTS developers (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    email TEXT NOT NULL UNIQUE,
+    joining_date DATETIME,
+    salary REAL NOT NULL);
+    '''
+
+    cursor.execute(query)
+    sql_connection.commit()
+
 except sqlite3.Error as e:
     print("Bład bazy danych", e)
 finally:
