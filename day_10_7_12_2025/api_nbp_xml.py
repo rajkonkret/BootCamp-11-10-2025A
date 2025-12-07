@@ -19,3 +19,34 @@ print(f"Data tabeli: {date}")  # Data tabeli: 2025-12-05
 
 no = root.find(".//No").text
 print(f"Numer tabeli: {no}")  # Numer tabeli: 236/A/NBP/2025
+
+rates = root.findall(".//Rate")
+print(f"Rates: {rates}")  # Rates: [<Element 'Rate' at 0x108f88fe0>, ...
+
+for rate in rates:
+    # print(rate)
+    currency = rate.find("Currency").text
+    code = rate.find("Code").text
+    mid = rate.find("Mid").text
+
+    print(f"{code} : {currency} - {mid}")
+    # THB : bat (Tajlandia) - 0.1140
+    # USD : dolar amerykański - 3.6313
+    # AUD : dolar australijski - 2.4079
+    # HKD : dolar Hongkongu - 0.4665
+    # CAD : dolar kanadyjski - 2.6043
+
+# pip install pydantic-xml
+from pydantic_xml import BaseXmlModel, element
+from typing import List
+
+
+class ExchangeRatesTable(BaseXmlModel, tag="ExchangeRatesTable"):
+    Table: str = element()
+    No: str = element()
+    EffectiveDate: str = element()
+    Rates: List[Rate] = element(tag="Rate", path="Rates")
+
+
+class NBPResponse(BaseXmlModel, tag="ArrayOfExchangeRatesTable"):
+    ExchangeRatesTable: List[ExchangeRatesTable] = element(tag="ExchangeRatesTable")
