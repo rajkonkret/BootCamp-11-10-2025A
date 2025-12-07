@@ -22,6 +22,9 @@ try:
     cursor.execute(delete)
     sql_connection.commit()
 
+    # price ma być większa niż 2000
+
+
 except sqlite3.Error as e:
     print("Bład bazy danych", e)
 finally:
