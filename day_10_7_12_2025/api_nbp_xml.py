@@ -41,7 +41,7 @@ from pydantic_xml import BaseXmlModel, element
 from typing import List
 
 
-class Rate:
+class Rate(BaseXmlModel, tag="Rate"):
     Currency: str = element()
     Code: str = element()
     Mid: float = element()
@@ -55,4 +55,6 @@ class ExchangeRatesTable(BaseXmlModel, tag="ExchangeRatesTable"):
 
 
 class NBPResponse(BaseXmlModel, tag="ArrayOfExchangeRatesTable"):
-    ExchangeRatesTable: List[ExchangeRatesTable] = element(tag="ExchangeRatesTable")
+    ArrayOfExchangeRatesTable: List[ExchangeRatesTable] = element(tag="ExchangeRatesTable")
+
+# print(response.text)
