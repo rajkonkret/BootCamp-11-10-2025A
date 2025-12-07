@@ -12,8 +12,38 @@ try:
     INSERT INTO software (id,name,price) VALUES (1, 'Python',100);
     """
 
-    cursor.execute(insert)
-    sql_connection.commit()
+    insert2 = """
+        INSERT INTO software (id,name,price) VALUES (2, 'Java',1000);
+        """
+
+    insert3 = """
+        INSERT INTO software (id,name,price) VALUES (3, 'C#',10000);
+        """
+
+    # cursor.execute(insert)
+    # cursor.execute(insert2)
+    # cursor.execute(insert3)
+    # sql_connection.commit()
+
+    select = """
+    SELECT * FROM software;
+    """
+
+    # dwa podejscia do select
+    # lepsze przy dużej ilości danych
+    for row in cursor.execute(select):
+        print(row)
+        # Baza zostałą podłączona
+        # (1, 'Python', 100.0)
+        # (2, 'Java', 1000.0)
+        # (3, 'C#', 10000.0)
+        # Baza zostałą zamknięta
+
+    # przy małeej ilości danych
+    cursor.execute(select)
+    rows = cursor.fetchall()
+    print(rows)
+    # [(1, 'Python', 100.0), (2, 'Java', 1000.0), (3, 'C#', 10000.0)]
 
 except sqlite3.Error as e:
     print("Bład bazy danych", e)
