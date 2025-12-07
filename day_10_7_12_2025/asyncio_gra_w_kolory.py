@@ -14,3 +14,22 @@ c = (
     Fore.YELLOW,
     Fore.GREEN,
 )
+
+
+async def makerandom(idx: int, threshold: int = 6) -> int:
+    print(f"{c[idx + 1]} inicjalizacja makerandom({idx})")
+
+    i = random.randint(0, 10)  # od 0 do 10
+    while i <= threshold:
+        print(f"{c[idx + 1]} makerandom({idx}) <= {i} - zbyt niska wartośc. Powtórzenie")
+        await asyncio.sleep(idx + 1)
+        i = random.randint(0, 10)
+
+    print(f"{c[idx + 1]} zakończenie makerandom({idx}) == {i} -> {c[0]}.")
+
+    return i
+
+
+async def main():
+    res = await asyncio.gather(*(makerandom(i, 9 - i) for i in range(5)))
+    return res
