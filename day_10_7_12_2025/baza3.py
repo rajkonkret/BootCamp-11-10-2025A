@@ -20,6 +20,11 @@ try:
     cursor.execute(query)
     sql_connection.commit()
 
+    with open('tables.sql', "r") as file:
+        sql_script = file.read()
+
+    cursor.executescript(sql_script)
+
 except sqlite3.Error as e:
     print("Bład bazy danych", e)
 finally:
