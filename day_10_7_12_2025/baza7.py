@@ -23,7 +23,18 @@ try:
     sql_connection.commit()
 
     # price ma być większa niż 2000
+    select = """
+    SELECT * FROM software WHERE price > 2000;
+    """
 
+    cursor.execute(select)
+    rows = cursor.fetchall()
+    for r in rows:
+        print(r)
+    # Baza zostałą podłączona
+    # (3, 'C#', 10000.0)
+    # (4, 'Scala', 5600.0)
+    # Baza zostałą zamknięta
 
 except sqlite3.Error as e:
     print("Bład bazy danych", e)
