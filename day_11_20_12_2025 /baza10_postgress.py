@@ -27,5 +27,10 @@ cursor = conn.cursor()
 cursor.execute("CREATE TABLE IF NOT EXISTS users(id SERIAL PRIMARY KEY, name TEXT);")
 conn.commit()
 
+cursor.execute("INSERT INTO users (name) VALUES (%s)", ("Jan",))
+cursor.execute("INSERT INTO users (name) VALUES (%s)", ("Alicja",))
+cursor.execute("INSERT INTO users (name) VALUES (%s)", ("Marek",))
+conn.commit()
+
 cursor.close()
 conn.close()
