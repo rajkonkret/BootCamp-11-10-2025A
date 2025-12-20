@@ -9,6 +9,29 @@
 # Wymaga to często dodatkowej tabeli pośredniczącej (tabeli łączącej)
 
 from sqlalchemy import create_engine, Column, Integer, String
-from sqlalchemy.orm import sessionmaker, declarative_base
+from sqlalchemy.orm import sessionmaker, declarative_base, relationship
 
-# DATABASE_URI = "sqlite:///sprawdzenie.db"
+DATABASE_URI = "sqlite:///adress_book.db"
+engine = create_engine(DATABASE_URI, echo=True)
+
+Base = declarative_base()
+
+
+class Person(Base):
+    __tablename__ = 'person'
+    id = Column(Integer, primary_key=True)
+    name = Column(String)
+    age = Column(String)
+
+    addresses = relationship(
+        'Address',
+        back_populates='person',
+        order_by='Address.email',
+        cascade='all, delete-orphan'
+    )
+
+    # jak zmienie w Person to i w adress zmiany pojda automatycznie
+    # delete-orphan - usuwanie sierot
+
+    def __repr__(self):
+        return f"{self.name} (id={self.id})"
