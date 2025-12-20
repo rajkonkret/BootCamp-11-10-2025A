@@ -32,5 +32,18 @@ cursor.execute("INSERT INTO users (name) VALUES (%s)", ("Alicja",))
 cursor.execute("INSERT INTO users (name) VALUES (%s)", ("Marek",))
 conn.commit()
 
+
+cursor.execute("SELECT * FROM users;")
+for row in cursor.fetchall():
+    print(row)
+
 cursor.close()
 conn.close()
+# (1, 'Jan')
+# (2, 'Jan')
+# (3, 'Jan')
+# (4, 'Alicja')
+# (5, 'Marek')
+# (6, 'Jan')
+# (7, 'Alicja')
+# (8, 'Marek')
