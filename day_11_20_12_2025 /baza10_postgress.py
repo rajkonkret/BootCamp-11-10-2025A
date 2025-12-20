@@ -23,3 +23,9 @@ conn = psycopg2.connect(
 )
 
 cursor = conn.cursor()
+
+cursor.execute("CREATE TABLE IF NOT EXISTS users(id SERIAL PRIMARY KEY, name TEXT);")
+conn.commit()
+
+cursor.close()
+conn.close()
