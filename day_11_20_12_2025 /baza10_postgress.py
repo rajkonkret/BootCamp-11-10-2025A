@@ -10,3 +10,6 @@
 
 # pgAdmn - program do zarządzania bazą postgres
 # localhost - 127.0.0.1
+import psycopg2
+# pip install psycopg2
+
