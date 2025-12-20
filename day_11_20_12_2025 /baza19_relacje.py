@@ -8,7 +8,7 @@
 # (np. wiele produktów może występować w wielu zamówieniach).
 # Wymaga to często dodatkowej tabeli pośredniczącej (tabeli łączącej)
 
-from sqlalchemy import create_engine, Column, Integer, String
+from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
 from sqlalchemy.orm import sessionmaker, declarative_base, relationship
 
 DATABASE_URI = "sqlite:///adress_book.db"
@@ -35,3 +35,17 @@ class Person(Base):
 
     def __repr__(self):
         return f"{self.name} (id={self.id})"
+
+
+class Address(Base):
+    __tablename__ = 'address'
+    id = Column(Integer, primary_key=True)
+    email = Column(String)
+    person_id = Column(ForeignKey('person.id'))
+    person = relationship("Person", back_populates="addresses")
+
+    def __repr__(self):
+        return self.email
+
+
+Base.metadata.create_all(engine)  # Stworzenie tabel w bazie danych
