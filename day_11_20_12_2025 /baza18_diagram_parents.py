@@ -4,6 +4,8 @@
 from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
 from sqlalchemy.orm import sessionmaker, declarative_base, relationship
 
+from day_1_11_10_2025.pierwszy import name_info
+
 # DATABASE_URI = "sqlite:///sprawdzenie.db"
 DATABASE_URI = "sqlite:///parents_database.db"
 # DATABASE_URI = "postgresql://myuser:mypassword@localhost/mydatabase"
@@ -36,3 +38,14 @@ Base.metadata.create_all(engine)
 
 Session = sessionmaker(bind=engine)
 session = Session()
+
+parent = Parent(name="Rodzic")
+child1 = Child(name="Dziecko 1", parent=parent)
+child2 = Child(name="Dziecko 2", parent=parent)
+
+session.add_all(
+    [parent, child1, child2]
+)
+
+session.commit()
+session.close()
