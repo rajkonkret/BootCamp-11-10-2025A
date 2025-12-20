@@ -8,3 +8,7 @@
 # (np. wiele produktów może występować w wielu zamówieniach).
 # Wymaga to często dodatkowej tabeli pośredniczącej (tabeli łączącej)
 
+from sqlalchemy import create_engine, Column, Integer, String
+from sqlalchemy.orm import sessionmaker, declarative_base
+
+# DATABASE_URI = "sqlite:///sprawdzenie.db"
