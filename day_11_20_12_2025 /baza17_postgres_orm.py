@@ -6,7 +6,8 @@
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.orm import sessionmaker, declarative_base
 
-DATABASE_URI = "sqlite:///sprawdzenie.db"
+# DATABASE_URI = "sqlite:///sprawdzenie.db"
+DATABASE_URI = "postgresql://myuser:mypassword@localhost/mydatabase"
 
 # engine = create_engine(DATABASE_URI)
 engine = create_engine(DATABASE_URI, echo=True)
@@ -45,7 +46,8 @@ for user in users:
 # id: 6, name: Tomek, age: 35
 
 # update
-user_to_update = session.query(User).filter_by(name="Anna").first() # pierwszy element
+user_to_update = session.query(User).filter_by(name="Anna").first()  # pierwszy element
+# UPDATE new_users SET age=%(age)s WHERE new_users.id = %(new_users_id)s
 user_to_update.age = 27
 session.commit()
 
