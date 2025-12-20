@@ -99,4 +99,29 @@ print(first)  # Anakin (id=1)
 print(type(first))  # <class '__main__.Person'>
 print(first.name, first.age)  # Anakin 38
 
+# SELECT person.id AS person_id, person.name AS person_name, person.age AS person_age
+# FROM person
+# WHERE person.name LIKE ?
+obi_list = session.query(Person).filter(
+    Person.name.like('Obi%')  # WHERE person.name LIKE ?
+).all()
+print(obi_list)
+
+chwee_list = session.query(Person).filter(
+    Person.name.like('Che%')
+).all()
+print(chwee_list)
+# [Chewbacca (id=10), Chewbacca (id=14), Chewbacca (id=18), Chewbacca (id=22),
+# Chewbacca (id=26), Chewbacca (id=30), Chewbacca (id=34)]
+
+for chewee in chwee_list:
+    print(f"{chewee.id=}, {chewee.name=}, {chewee.addresses=}")
 session.close()
+# chewee.id=10, chewee.name='Chewbacca', chewee.addresses=[chewbacca@wp.pl, chewee@wp.pl]
+# chewee.id=14, chewee.name='Chewbacca', chewee.addresses=[chewbacca@wp.pl, chewee@wp.pl]
+# chewee.id=18, chewee.name='Chewbacca', chewee.addresses=[chewbacca@wp.pl, chewee@wp.pl]
+# chewee.id=22, chewee.name='Chewbacca', chewee.addresses=[chewbacca@wp.pl, chewee@wp.pl]
+# chewee.id=26, chewee.name='Chewbacca', chewee.addresses=[chewbacca@wp.pl, chewee@wp.pl]
+# chewee.id=30, chewee.name='Chewbacca', chewee.addresses=[chewbacca@wp.pl, chewee@wp.pl]
+# chewee.id=34, chewee.name='Chewbacca', chewee.addresses=[chewbacca@wp.pl, chewee@wp.pl]
+# chewee.id=38, chewee.name='Chewbacca', chewee.addresses=[chewbacca@wp.pl, chewee@wp.pl]
