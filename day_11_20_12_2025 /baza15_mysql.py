@@ -12,6 +12,7 @@ from mysql.connector import Error
 #   -p 3306:3306 \
 #   mysql:8.0
 
+# docker run -d --name mysql_db1 -e MYSQL_ROOT_PASSWORD=abc123 -e MYSQL_DATABASE=baza -p 3306:3306 mysql:8.0
 try:
     connection = mysql.connector.connect(
         host="localhost",
