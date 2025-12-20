@@ -22,3 +22,11 @@ class SQLiteDBContextManager:
         if self.conn:
             self.conn.commit()
             self.conn.close()
+
+
+db_name = "my_data.db"
+
+with SQLiteDBContextManager(db_name) as conn:
+    cursor = conn.cursor()
+
+    cursor.execute('CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY, name TEXT);')
