@@ -45,6 +45,43 @@ session = Session()
 #     [parent, child1, child2]
 # )
 
+# session.commit()
 
-session.commit()
+our_parent = session.query(Parent).all()
+print(our_parent)  # [<__main__.Parent object at 0x108cbc440>]
+
+our_parent_filtered = session.query(Parent).filter_by(name="Rodzic").first()
+print(f"Rodzic: {our_parent_filtered.name}")  # Rodzic: Rodzic
+# session.close()
+
+children = our_parent_filtered.children
+for child in children:
+    print(f'Dziecko: {child.name}')
+    print(f"Rodzic: {child.parent.name}")
 session.close()
+# 2025-12-20 13:47:30,404 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+# 2025-12-20 13:47:30,405 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("parents")
+# 2025-12-20 13:47:30,405 INFO sqlalchemy.engine.Engine [raw sql] ()
+# 2025-12-20 13:47:30,405 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("children")
+# 2025-12-20 13:47:30,405 INFO sqlalchemy.engine.Engine [raw sql] ()
+# 2025-12-20 13:47:30,405 INFO sqlalchemy.engine.Engine COMMIT
+# 2025-12-20 13:47:30,407 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+# 2025-12-20 13:47:30,407 INFO sqlalchemy.engine.Engine SELECT parents.id AS parents_id, parents.name AS parents_name
+# FROM parents
+# 2025-12-20 13:47:30,407 INFO sqlalchemy.engine.Engine [generated in 0.00005s] ()
+# [<__main__.Parent object at 0x108f20440>]
+# 2025-12-20 13:47:30,408 INFO sqlalchemy.engine.Engine SELECT parents.id AS parents_id, parents.name AS parents_name
+# FROM parents
+# WHERE parents.name = ?
+#  LIMIT ? OFFSET ?
+# 2025-12-20 13:47:30,408 INFO sqlalchemy.engine.Engine [generated in 0.00006s] ('Rodzic', 1, 0)
+# Rodzic: Rodzic
+# 2025-12-20 13:47:30,409 INFO sqlalchemy.engine.Engine SELECT children.id AS children_id, children.name AS children_name, children.parent_id AS children_parent_id
+# FROM children
+# WHERE ? = children.parent_id
+# 2025-12-20 13:47:30,409 INFO sqlalchemy.engine.Engine [generated in 0.00005s] (1,)
+# Dziecko: Dziecko 1
+# Rodzic: Rodzic
+# Dziecko: Dziecko 2
+# Rodzic: Rodzic
+# 2025-12-20 13:47:30,409 INFO sqlalchemy.engine.Engine ROLLBACK
