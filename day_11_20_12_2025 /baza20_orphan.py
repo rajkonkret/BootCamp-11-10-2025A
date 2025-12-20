@@ -11,7 +11,7 @@
 from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
 from sqlalchemy.orm import sessionmaker, declarative_base, relationship
 
-DATABASE_URI = "sqlite:///adress_book.db"
+DATABASE_URI = "sqlite:///adress_book_orphan.db"
 # engine = create_engine(DATABASE_URI, echo=True)
 engine = create_engine(DATABASE_URI, echo=False)
 
@@ -54,4 +54,18 @@ Base.metadata.create_all(engine)  # Stworzenie tabel w bazie danych
 Session = sessionmaker(bind=engine)
 session = Session()
 
+anakin1 = Person(name="Anakin Anakin", age=38)
+anakin1.addresses = [
+    Address(email='anakin@wp.pl'),
+    Address(email='anakin1@wp.pl'),
+]
+
+# dodanie anakin1
+# cascade=all - zapisało i obiekt Person i obiekt Adress przypisane do tego Person
+# session.add(anakin1)
+
+p = session.query(Person).filter(Person.name == "Anakin Anakin").first()
+p.addresses.clear()
+
+session.commit()
 session.close()
