@@ -49,3 +49,12 @@ class Address(Base):
 
 
 Base.metadata.create_all(engine)  # Stworzenie tabel w bazie danych
+
+Session = sessionmaker(bind=engine)
+session = Session()
+
+anakin = Person(name='Anakin', age=38)
+
+session.add(anakin)
+session.commit()
+session.close()
