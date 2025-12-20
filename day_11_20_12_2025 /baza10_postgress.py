@@ -11,5 +11,15 @@
 # pgAdmn - program do zarządzania bazą postgres
 # localhost - 127.0.0.1
 import psycopg2
+
 # pip install psycopg2
 
+conn = psycopg2.connect(
+    host="localhost",
+    port=5432,
+    database="mydatabase",
+    user="myuser",
+    password="mypassword"
+)
+
+cursor = conn.cursor()
