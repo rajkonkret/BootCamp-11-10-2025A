@@ -12,7 +12,8 @@ from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
 from sqlalchemy.orm import sessionmaker, declarative_base, relationship
 
 DATABASE_URI = "sqlite:///adress_book.db"
-engine = create_engine(DATABASE_URI, echo=True)
+# engine = create_engine(DATABASE_URI, echo=True)
+engine = create_engine(DATABASE_URI, echo=False)
 
 Base = declarative_base()
 
@@ -64,5 +65,38 @@ anakin1.addresses = [Address(email='anakin@wp.pl')]
 # cascade=all - zapisało i obiekt Person i obiekt Adress przypisane do tego Person
 session.add(anakin1)
 
+obi = Person(name="Obi Wan Kenobi", age=45)
+obi.addresses = [
+    Address(email='obik@wp.pl'),
+    Address(email='waaka@wp.pl')
+]
+
+# dodanie anakin1
+# cascade=all - zapisało i obiekt Person i obiekt Adress przypisane do tego Person
+session.add(obi)
+
+chewee = Person(name="Chewbacca", age=190)
+chewee.addresses = [
+    Address(email='chewbacca@wp.pl'),
+    Address(email='chewee@wp.pl')
+]
+
+# dodanie anakin1
+# cascade=all - zapisało i obiekt Person i obiekt Adress przypisane do tego Person
+session.add(chewee)
+
 session.commit()
+
+all_ = session.query(Person).all()
+print(all_)
+# [Anakin (id=1), Anakin (id=2), Anakin Anakin (id=3), Anakin (id=4), Anakin Anakin (id=5),
+# Obi Wan Kenobi (id=6), Anakin (id=7), Anakin Anakin (id=8), Obi Wan Kenobi (id=9),
+# Chewbacca (id=10), Anakin (id=11), Anakin Anakin (id=12), Obi Wan Kenobi (id=13),
+# Chewbacca (id=14), Anakin (id=15), Anakin Anakin (id=16), Obi Wan Kenobi (id=17), Chewbacca (id=18)]
+
+first = session.query(Person).first()
+print(first)  # Anakin (id=1)
+print(type(first))  # <class '__main__.Person'>
+print(first.name, first.age)  # Anakin 38
+
 session.close()
