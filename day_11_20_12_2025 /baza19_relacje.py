@@ -56,5 +56,13 @@ session = Session()
 anakin = Person(name='Anakin', age=38)
 
 session.add(anakin)
+
+anakin1 = Person(name="Anakin Anakin", age=38)
+anakin1.addresses = [Address(email='anakin@wp.pl')]
+
+# dodanie anakin1
+# cascade=all - zapisało i obiekt Person i obiekt Adress przypisane do tego Person
+session.add(anakin1)
+
 session.commit()
 session.close()
