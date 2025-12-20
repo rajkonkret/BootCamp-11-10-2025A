@@ -126,3 +126,4 @@ https://pl.altapps.net/soft/hackerrank-com
 https://discord.gg/Jn8URuF9
 
 #  pip freeze > requirements.txt
+# pip install -r requirements.txt
