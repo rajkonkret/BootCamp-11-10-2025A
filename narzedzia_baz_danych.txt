@@ -1,0 +1,12 @@
++----------------+-----------------+---------------------+
+| Narzędzie      | Darmowe         | Płatne              |
+|----------------+-----------------+---------------------|
+| DataGrip       | nie (trial)     | tak                 |
+| DBeaver CE     | tak             | tak (Enterprise)    |
+| HeidiSQL       | tak             | nie                 |
+| Adminer        | tak             | nie                 |
+| phpMyAdmin     | tak             | nie                 |
+| TablePlus      | tak (limit)     | tak (pełna wersja)  |
+| pgAdmin        | tak             | nie                 |
++----------------+-----------------+---------------------+
+
