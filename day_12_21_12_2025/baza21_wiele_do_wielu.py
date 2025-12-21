@@ -35,4 +35,4 @@ class Course(Base):
 
 
 engine = create_engine(DATABASE_URI)
-Base.metadata.create_alll(engine)
+Base.metadata.create_all(engine)
