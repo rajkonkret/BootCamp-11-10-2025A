@@ -30,12 +30,34 @@ client.connect(
 sftp = client.open_sftp()
 print("PWD:", sftp.getcwd())  # PWD: None
 print("LIST:", sftp.listdir("."))  # LIST: ['pub', 'readme.txt']
+print(50 * "-")
+print("LIST:", sftp.listdir("pub"))  # LIST: ['example']
+print("LIST:", sftp.listdir("pub/example"))  #
+# LIST: ['imap-console-client.png',
+# 'KeyGenerator.png',
+# 'KeyGeneratorSmall.png',
+# 'mail-editor.png',
+# 'mail-send-winforms.png',
+# 'mime-explorer.png',
+# 'pocketftp.png',
+# 'pocketftpSmall.png',
+# 'pop3-browser.png',
+# 'pop3-console-client.png',
+# 'readme.txt',
+# 'ResumableTransfer.png',
+# 'winceclient.png',
+# 'winceclientSmall.png',
+# 'WinFormClient.png',
+# 'WinFormClientSmall.png']
 
 # sftp.get('readme.txt', "readme.txt")
 sftp.get('readme.txt', "../readme.txt")
 
 with open('kg.png', 'wb') as local_file:
     sftp.getfo('pub/example/KeyGenerator.png', local_file)
+
+with open('mail-editor.png', 'wb') as local_file:
+    sftp.getfo('pub/example/mail-editor.png', local_file)
 
 sftp.close()
 client.close()
