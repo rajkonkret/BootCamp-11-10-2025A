@@ -29,6 +29,24 @@ class User(Base):
     def __repr__(self):
         return f"user(id={self.id}, name={self.name!r}, email={self.email!r}"
 
+
 # tworzenie tabel
 engine = create_engine(DB_URL, echo=False)
 Base.metadata.create_all(engine)
+
+
+def create_user(session: Session, name: str, email: str):
+    session.add(User(name=name, email=email))
+
+
+def main():
+    with Session(engine) as session:
+        # create
+        create_user(session, "Margaret Hamilton", "margaret@nasa.gov")
+        create_user(session, "Linus Tornvalds", "linus@kernel.org")
+
+        session.commit()
+
+
+if __name__ == '__main__':
+    main()
