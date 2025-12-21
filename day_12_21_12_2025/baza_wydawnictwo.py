@@ -80,4 +80,18 @@ for author in authors:
 # Ksiązka: Pan Tadeusz, Wydawca: Librairie Polonaise
 # Author: Jan Kowalski
 # Ksiązka: Python dla średniozaawansowanych, Wydawca: Wydawnictwo i Spółka
+
+print(50 * "-")
+publishers = session.query(Publisher).all()
+for publisher in publishers:
+    print(f"Wydawca: {publisher.name}")
+    for book in publisher.books:
+        print(f"Ksiązka: {book.title}")
+# --------------------------------------------------
+# Wydawca: Librairie Polonaise
+# Ksiązka: Pan Tadeusz
+# Wydawca: Librairie Polonaise
+# Ksiązka: Pan Tadeusz
+# Wydawca: Wydawnictwo i Spółka
+# Ksiązka: Python dla średniozaawansowanych
 session.close()
