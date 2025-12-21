@@ -1,6 +1,7 @@
 import mysql.connector
 from mysql.connector import Error
 
+# tableplus, phpMyAdmin, Adminer - gui do mysql
 # mariadb  - fork bazy mysql
 
 # pip install mysql-connector-python
