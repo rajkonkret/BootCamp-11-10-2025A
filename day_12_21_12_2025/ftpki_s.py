@@ -31,5 +31,8 @@ sftp = client.open_sftp()
 print("PWD:", sftp.getcwd())  # PWD: None
 print("LIST:", sftp.listdir("."))  # LIST: ['pub', 'readme.txt']
 
+# sftp.get('readme.txt', "readme.txt")
+sftp.get('readme.txt', "../readme.txt")
+
 sftp.close()
 client.close()
