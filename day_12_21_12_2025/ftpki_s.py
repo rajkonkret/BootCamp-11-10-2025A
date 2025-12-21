@@ -22,3 +22,10 @@ client.connect(
     allow_agent=False,
     timeout=15
 )
+
+sftp = client.open_sftp()
+print("PWD:", sftp.getcwd())  # PWD: None
+print("LIST:", sftp.listdir("."))  # LIST: ['pub', 'readme.txt']
+
+sftp.close()
+client.close()
