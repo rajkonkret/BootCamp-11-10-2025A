@@ -23,6 +23,10 @@ client.connect(
     timeout=15
 )
 
+# moze byc wymagana na linux/unix
+# look_for_keys=False,
+#     allow_agent=False,
+
 sftp = client.open_sftp()
 print("PWD:", sftp.getcwd())  # PWD: None
 print("LIST:", sftp.listdir("."))  # LIST: ['pub', 'readme.txt']
