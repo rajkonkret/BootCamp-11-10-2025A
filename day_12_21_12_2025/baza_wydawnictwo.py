@@ -59,6 +59,11 @@ session.add_all(
     [new_author, new_publisher, new_book]
 )
 
+# odczytac z bazy authorów i publisherów
+# z auyora odczytac jego ksiazki
+# z wydawcy odczytac ksiazki
+# z ksiązek autora
+
 session.commit()
 
 session.close()
