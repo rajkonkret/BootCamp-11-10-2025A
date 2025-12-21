@@ -46,10 +46,17 @@ def get_users(session: Session):
 
 
 # update
-def update_email(session: Session, user_id: id, new_email: str):
+def update_email(session: Session, user_id: int, new_email: str):
     user = session.get(User, user_id)
     if user:
         user.email = new_email
+
+
+# delete
+def delete_user(session: Session, user_id: int):
+    user = session.get(User, user_id)
+    if user:
+        session.delete(user)
 
 
 def main():
@@ -70,6 +77,20 @@ def main():
         print("\n== After email update ==")
         print(get_users(session))
 
+        #delete
+        delete_user(session, 2)
+        session.commit()
+        print("\n== After delete ==")
+        print(get_users(session))
+
 
 if __name__ == '__main__':
     main()
+# == All users ==
+# [user(id=1, name='Margaret Hamilton', email='margaret@pollo.guide'), user(id=2, name='Linus Tornvalds', email='linus@kernel.org')]
+#
+# == After email update ==
+# [user(id=1, name='Margaret Hamilton', email='margaret@pollo.guide'), user(id=2, name='Linus Tornvalds', email='linus@kernel.org')]
+#
+# == After delete ==
+# [user(id=1, name='Margaret Hamilton', email='margaret@pollo.guide')]
