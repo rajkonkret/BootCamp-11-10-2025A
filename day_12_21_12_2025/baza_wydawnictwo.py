@@ -1,7 +1,8 @@
 from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
 from sqlalchemy.orm import sessionmaker, declarative_base, relationship
 
-DATABASE_URI = "sqlite:///publishers.db"
+# DATABASE_URI = "sqlite:///publishers.db"
+DATABASE_URI = "postgresql://myuser:mypassword@localhost/mydatabase"
 Base = declarative_base()
 
 
@@ -42,22 +43,23 @@ Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-# new_author = Author(name="Adam Mickiewicz")
-# new_publisher = Publisher(name="Librairie Polonaise")
-# new_book = Book(title="Pan Tadeusz", author=new_author, publisher=new_publisher)
-#
-# session.add_all(
-#     [new_author,new_publisher,new_book]
-# )
+new_author = Author(name="Adam Mickiewicz")
+new_publisher = Publisher(name="Librairie Polonaise")
+new_book = Book(title="Pan Tadeusz", author=new_author, publisher=new_publisher)
 
+session.add_all(
+    [new_author,new_publisher,new_book]
+)
 
-# new_author = Author(name="Jan Kowalski")
-# new_publisher = Publisher(name="Wydawnictwo i Spółka")
-# new_book = Book(title="Python dla średniozaawansowanych", author=new_author, publisher=new_publisher)
-#
-# session.add_all(
-#     [new_author, new_publisher, new_book]
-# )
+session.commit()
+
+new_author = Author(name="Jan Kowalski")
+new_publisher = Publisher(name="Wydawnictwo i Spółka")
+new_book = Book(title="Python dla średniozaawansowanych", author=new_author, publisher=new_publisher)
+
+session.add_all(
+    [new_author, new_publisher, new_book]
+)
 
 # odczytac z bazy authorów i publisherów
 # z auyora odczytac jego ksiazki
@@ -65,7 +67,7 @@ session = Session()
 # z ksiązek autora
 
 
-# session.commit()
+session.commit()
 
 authors = session.query(Author).all()
 print(authors)
