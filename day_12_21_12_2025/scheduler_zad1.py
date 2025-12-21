@@ -20,17 +20,13 @@ scheduler.add_job(job, 'interval', seconds=5)
 
 # uruchomienie
 scheduler.start()
-# Parametr
-# Znaczenie
-# id
-# unikalny identyfikator
-# name
-# opisowy label
-# max_instances
-# limit równoległych uruchomień
-# coalesce
-# nadrabia opóźnienia jednym runem
-# misfire_grace_time
-# tolerancja spóźnienia
-# replace_existing
-# nadpisuje job o tym samym ID
+# +-----------------------+----------------------------------------------+
+# | Parametr              | Znaczenie                                    |
+# +-----------------------+----------------------------------------------+
+# | id                    | Unikalny identyfikator joba                  |
+# | name                  | Opisowy label / nazwa joba                  |
+# | max_instances         | Maksymalna liczba równoległych uruchomień   |
+# | coalesce              | Nadrabia opóźnienia jednym wykonaniem       |
+# | misfire_grace_time    | Tolerancja spóźnienia (w sekundach)         |
+# | replace_existing      | Nadpisuje job o tym samym ID                |
+# +-----------------------+----------------------------------------------+
