@@ -1,6 +1,6 @@
-from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
-from sqlalchemy.orm import sessionmaker, declarative_base, relationship
-from baza_krok1 import User, Post
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, declarative_base
+from day_12_21_12_2025.baza_dodatkowe.baza_krok1 import User, Post
 
 # docker run -d --name mysql_db1 -e MYSQL_ROOT_PASSWORD=abc123 -e MYSQL_DATABASE=baza -p 3306:3306 mysql:8.0
 
