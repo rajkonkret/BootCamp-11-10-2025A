@@ -44,6 +44,8 @@ scheduler.add_job(my_job, 'interval', minutes=1, id="interval_job")
 scheduler.start()
 
 # podtrzymywanie procesu (demo)
+# podtrzymywanie procesu (demo) - tak aby głowny wątek nadal istniał
+# koniec głównego wątku oznacza koniec wątku schedulera
 try:
     while True:
         time.sleep(5)

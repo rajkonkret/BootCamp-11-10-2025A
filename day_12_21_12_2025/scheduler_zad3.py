@@ -41,3 +41,23 @@ def job_listener(event):
 def my_job():
     time.sleep(1)
     return "wynik"
+
+
+scheduler = BackgroundScheduler()
+scheduler.add_listener(
+    job_listener,
+    EVENT_JOB_ERROR | EVENT_JOB_EXECUTED
+)
+
+# dodanie zadania do schedulera
+scheduler.add_job(my_job, 'interval', minutes=1, id="interval_job")
+
+scheduler.start()
+
+# podtrzymywanie procesu (demo) - tak aby głowny wątek nadal istniał
+# koniec głównego wątku oznacza koniec wątku schedulera
+try:
+    while True:
+        time.sleep(5)
+except (KeyboardInterrupt, SystemExit):
+    scheduler.shutdown()
