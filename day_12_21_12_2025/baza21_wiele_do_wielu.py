@@ -36,3 +36,23 @@ class Course(Base):
 
 engine = create_engine(DATABASE_URI)
 Base.metadata.create_all(engine)
+
+Session = sessionmaker(bind=engine)
+session = Session()
+
+student1 = Student(name="Anna Kowalska")
+student2 = Student(name="Jan Nowak")
+
+course1 = Course(title="Programowanie w Pythonie dla zaawansowanych")
+course2 = Course(title="Wprowadzenie do SQL")
+
+student1.courses.append(course1)
+student1.courses.append(course2)
+student2.courses.append(course1)
+
+session.add(student1)
+session.add(student2)
+session.commit()
+session.close()
+
+
