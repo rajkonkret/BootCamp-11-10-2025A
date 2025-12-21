@@ -50,9 +50,29 @@ student1.courses.append(course1)
 student1.courses.append(course2)
 student2.courses.append(course1)
 
-session.add(student1)
-session.add(student2)
-session.commit()
+# session.add(student1)
+# session.add(student2)
+# session.commit()
+
+our_student = session.query(Student).filter_by(name='Anna Kowalska').first()
+print(f"Student: {our_student.name}")
+
+for course in our_student.courses:
+    print(f"Zapisany na kurs: {course.title}")
+# Student: Anna Kowalska
+# Zapisany na kurs: Programowanie w Pythonie dla zaawansowanych
+# Zapisany na kurs: Wprowadzenie do SQL
+
+print(50 * "-")
+our_course = session.query(Course).first()
+print(our_course.title)
+
+for student in our_course.students:
+    print(f"Uczeń: {student.name}")
+
+# --------------------------------------------------
+# Programowanie w Pythonie dla zaawansowanych
+# Uczeń: Anna Kowalska
+# Uczeń: Jan Nowak
+
 session.close()
-
-
