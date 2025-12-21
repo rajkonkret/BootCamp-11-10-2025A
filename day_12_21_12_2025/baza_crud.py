@@ -27,7 +27,7 @@ class User(Base):
     email: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
 
     def __repr__(self):
-        return f"user(id={self.id}, name={self.name!r}, email={self.email!r}"
+        return f"user(id={self.id}, name={self.name!r}, email={self.email!r})"
 
 
 # tworzenie tabel
@@ -35,17 +35,40 @@ engine = create_engine(DB_URL, echo=False)
 Base.metadata.create_all(engine)
 
 
+# create
 def create_user(session: Session, name: str, email: str):
     session.add(User(name=name, email=email))
+
+
+# read
+def get_users(session: Session):
+    return session.query(User).all()
+
+
+# update
+def update_email(session: Session, user_id: id, new_email: str):
+    user = session.get(User, user_id)
+    if user:
+        user.email = new_email
 
 
 def main():
     with Session(engine) as session:
         # create
-        create_user(session, "Margaret Hamilton", "margaret@nasa.gov")
-        create_user(session, "Linus Tornvalds", "linus@kernel.org")
+        # create_user(session, "Margaret Hamilton", "margaret@nasa.gov")
+        # create_user(session, "Linus Tornvalds", "linus@kernel.org")
+        #
+        # session.commit()
 
+        # read
+        print("== All users ==")
+        print(get_users(session))
+
+        # update
+        update_email(session, 1, "margaret@pollo.guide")
         session.commit()
+        print("\n== After email update ==")
+        print(get_users(session))
 
 
 if __name__ == '__main__':
