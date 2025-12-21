@@ -20,3 +20,11 @@ Base.metadata.create_all(engine)
 with Session(engine) as session:
     session.add_all([User(name="Ala"), User(name="Ola")])
     session.commit()
+
+    result = session.execute(select(User))
+    for user in result.scalars():
+        print(f"[SYNC] Użytkownik: {user.name}")
+# [SYNC] Użytkownik: Ala
+# [SYNC] Użytkownik: Ola
+# [SYNC] Użytkownik: Ala
+# [SYNC] Użytkownik: Ola
