@@ -34,5 +34,8 @@ print("LIST:", sftp.listdir("."))  # LIST: ['pub', 'readme.txt']
 # sftp.get('readme.txt', "readme.txt")
 sftp.get('readme.txt', "../readme.txt")
 
+with open('kg.png', 'wb') as local_file:
+    sftp.getfo('pub/example/KeyGenerator.png', local_file)
+
 sftp.close()
 client.close()
