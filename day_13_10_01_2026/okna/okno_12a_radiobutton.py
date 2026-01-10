@@ -22,7 +22,9 @@ class MyGui:
         self.radio_var = tk.IntVar()
         self.radio_var.set(1)  # ustawiamy jako aktywny pierwszy wybór
 
-        self.label1 = tk.Label(self.top_frame, text="Start")
+        my_font = tkfont.Font(family="Helvetica", size=18, weight="bold")
+
+        self.label1 = tk.Label(self.top_frame, text="Start", font=my_font)
 
         self.rb1 = tk.Radiobutton(self.top_frame, text="Opcja 1", variable=self.radio_var, value=1)
 
