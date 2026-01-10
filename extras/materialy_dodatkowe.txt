@@ -133,4 +133,7 @@ pyinstaller --onefile --noconsole okno_21_srednia_ocen.py
 pyinstaller --onefile --windowed okno_21_srednia_ocen.py
 
 # https://nuitka.net/ - prawdziwe exe
-#  pip install nuitka
+pip install nuitka
+nuitka --standalone --onefile --follow-imports --enable-plugin=tk-inter okno_21_srednia_ocen.py
+chmod +x okno_21_srednia_ocen.bin
+./okno_21_srednia_ocen.bin
