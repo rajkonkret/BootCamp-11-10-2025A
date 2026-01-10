@@ -16,7 +16,7 @@ class GradeCalculator:
         self.grade_entry = tk.Entry(master, width=10)
         self.grade_entry.pack()
 
-        self.button = tk.Button(master, text="dodaj Ocenę", command=self.add_grade)
+        self.button = tk.Button(master, text="Dodaj Ocenę", command=self.add_grade)
         self.button.pack()
 
         self.grade_label = tk.Label(master, text='Dotychczasowe oceny: ')
@@ -28,7 +28,14 @@ class GradeCalculator:
         self.grades_dict = {"Uczeń 1": [], "Uczeń 2": [], "Uczeń 3": []}
 
     def add_grade(self):
-        pass
+        grade = self.grade_entry.get()
+        grade = float(grade)
+        student = self.student_var.get()
+        self.grades_dict[student].append(grade)
+
+        self.grade_entry.delete(0, tk.END)
+
+        self.grade_label.config(text="Dotychczasowe oceny: " + str(self.grades_dict[student]))
 
 
 calculator = GradeCalculator(root)
