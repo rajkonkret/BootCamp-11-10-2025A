@@ -7,6 +7,7 @@ anyio==4.12.0
 APScheduler==3.11.1
 asyncpg==0.31.0
 attrs==25.4.0
+babel==2.17.0
 bcrypt==5.0.0
 certifi==2025.11.12
 cffi==2.0.0
@@ -44,9 +45,11 @@ PyMySQL==1.1.2
 PyNaCl==1.6.1
 python-dateutil==2.9.0.post0
 pytz==2025.2
+redis==7.1.0
 requests==2.32.5
 six==1.17.0
 SQLAlchemy==2.0.44
+tkcalendar==1.6.1
 typing-inspection==0.4.2
 typing_extensions==4.15.0
 tzdata==2025.2
