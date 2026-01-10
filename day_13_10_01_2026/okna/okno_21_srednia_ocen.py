@@ -37,6 +37,9 @@ class GradeCalculator:
 
         self.grade_label.config(text="Dotychczasowe oceny: " + str(self.grades_dict[student]))
 
+        average = sum(self.grades_dict[student]) / len(self.grades_dict[student])
+        self.average_label.config(text="Srednia: " + str(average))
+
 
 calculator = GradeCalculator(root)
 root.mainloop()
