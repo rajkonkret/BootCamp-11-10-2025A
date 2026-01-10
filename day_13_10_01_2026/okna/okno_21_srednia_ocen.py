@@ -22,6 +22,11 @@ class GradeCalculator:
         self.grade_label = tk.Label(master, text='Dotychczasowe oceny: ')
         self.grade_label.pack()
 
+        self.average_label = tk.Label(master, text="Średnia")
+        self.average_label.pack()
+
+        self.grades_dict = {"Uczeń 1": [], "Uczeń 2": [], "Uczeń 3": []}
+
     def add_grade(self):
         pass
 
