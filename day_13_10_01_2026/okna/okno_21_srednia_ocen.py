@@ -13,6 +13,18 @@ class GradeCalculator:
         self.student_dropdown = tk.OptionMenu(master, self.student_var, "Uczęń 1", "Uczeń 2", "Uczeń 3")
         self.student_dropdown.pack()
 
+        self.grade_entry = tk.Entry(master, width=10)
+        self.grade_entry.pack()
+
+        self.button = tk.Button(master, text="dodaj Ocenę", command=self.add_grade)
+        self.button.pack()
+
+        self.grade_label = tk.Label(master, text='Dotychczasowe oceny: ')
+        self.grade_label.pack()
+
+    def add_grade(self):
+        pass
+
 
 calculator = GradeCalculator(root)
 root.mainloop()
