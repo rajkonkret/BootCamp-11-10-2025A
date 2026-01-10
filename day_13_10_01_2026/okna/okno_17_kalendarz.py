@@ -9,7 +9,7 @@ class CustomEntry(ttk.Frame):
     def __init__(self, master=None, **kwargs):
         super().__init__(master)
 
-        style = ttk.Style
+        style = ttk.Style()
         style.configure("Custom.TEntry", fieldbackground="#ffffff", foreground="#333333")
         style.configure("Custom.TButton", fieldbackground="#dddddd", foreground="#333333")
 
@@ -39,7 +39,7 @@ class CustomEntry(ttk.Frame):
         self.calendar_win.geometry(f'+{x}+{y}')
 
         cal = Calendar(self.calendar_win,
-                       date_pattern='yyyy=mm-dd',
+                       date_pattern='yyyy-mm-dd',
                        background='#f8f8f8',
                        foreground='#333333',
                        selectbackground='#1976d2',
@@ -61,3 +61,31 @@ class CustomEntry(ttk.Frame):
 
     def get_date(self):
         return self.var.get()
+
+
+root = tk.Tk()
+root.title("Wybór daty")
+
+date_entry = CustomEntry(root)
+date_entry.pack(padx=10, pady=10)
+
+result_label = ttk.Label(root, text="Wybrana data: brak")
+result_label.pack(pady=5)
+
+
+def show_result():
+    date_str = date_entry.get_date()
+    try:
+        dt = datetime.strptime(date_str, "%Y-%m-%d")
+        weekday = dt.strftime("%A")  # nazwa dznia tygodnia
+        formated = f"Wybrana data: {date_str} - {weekday}"
+    except ValueError:
+        formated = "Niepoprawna data"
+
+    result_label.config(text=formated)
+
+
+action_btn = ttk.Button(root, text="Pokaż w Labelce", command=show_result)
+action_btn.pack(pady=5)
+
+root.mainloop()
