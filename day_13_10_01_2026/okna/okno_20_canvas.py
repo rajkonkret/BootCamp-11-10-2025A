@@ -19,4 +19,7 @@ text_id = c.create_text(
 # gdy kliknięto tekst
 c.tag_bind(text_id, '<Button-1>', on_text_click)
 
+c.tag_bind(text_id, "<Enter>", lambda e: c.itemconfig(text_id, fill="red"))
+c.tag_bind(text_id, "<Leave>", lambda e: c.itemconfig(text_id, fill="darkblue"))
+
 root.mainloop()
