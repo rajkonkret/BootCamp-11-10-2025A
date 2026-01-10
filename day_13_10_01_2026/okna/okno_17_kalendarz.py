@@ -22,6 +22,10 @@ class CustomEntry(ttk.Frame):
                               style="Custom.TButton", width=2)
         self.btn.pack(side="left")
 
+        self.entry.bind('<Button-1>', lambda e: self.show_calendar())
+
+        self.calendar_win = None
+
     def show_calendar(self):
         if self.calendar_win:
             return
@@ -54,3 +58,6 @@ class CustomEntry(ttk.Frame):
                                    lambda: self.calendar_win.destroy())
 
         self.calendar_win.focus_force()
+
+    def get_date(self):
+        return self.var.get()
