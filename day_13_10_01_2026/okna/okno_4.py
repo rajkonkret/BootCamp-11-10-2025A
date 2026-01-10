@@ -18,3 +18,6 @@ button = tk.Button(app, text="Pokaż tekst", command=show_text)
 button.pack()
 
 app.mainloop()
+# Wprowadzony tekst: tekst2
+# Wprowadzony tekst: tekst3
+# Wprowadzony tekst: nowy tekst
