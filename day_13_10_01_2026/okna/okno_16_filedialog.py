@@ -13,7 +13,11 @@ def wybierz_plik():
     plik = filedialog.askopenfilename(
         title="Wybierz plik",
         initialdir=start_dir,
-        filetypes=[("Wszystkie pliki", "*.*")]
+        # filetypes=[("Wszystkie pliki", "*.*")]
+        filetypes=[
+            ("Pliki tekstowe", "*.txt"),
+            ("Wszystkie pliki", "*")
+        ]
     )
     root.deiconify()  # powrót do okienka
     if plik:
