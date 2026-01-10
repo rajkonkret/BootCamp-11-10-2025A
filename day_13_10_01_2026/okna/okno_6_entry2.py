@@ -22,3 +22,4 @@ button = tk.Button(root, text="Get Text", command=get_entry_value)
 button.pack(pady=5)
 
 root.mainloop()
+# przerwa 10:10
