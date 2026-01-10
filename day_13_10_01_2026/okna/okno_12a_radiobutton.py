@@ -19,6 +19,7 @@ class MyGui:
 
         self.top_frame = tk.Frame(self.main_window)
         # bottom_frame -> button -> OK
+        self.bottom_frame = tk.Frame(self.main_window)
 
         self.radio_var = tk.IntVar()
         self.radio_var.set(1)  # ustawiamy jako aktywny pierwszy wybór
@@ -42,9 +43,19 @@ class MyGui:
         self.rb3.pack()
         self.rb4.pack()
 
+        self.ok_button = tk.Button(self.bottom_frame, text="OK", command=self.show_choice)
+
+        self.ok_button.pack()
+
         self.top_frame.pack()
+        self.bottom_frame.pack()
 
         tk.mainloop()
+
+    def show_choice(self):
+        tk.messagebox.showinfo('Wybór', "Wybrałeś opcję: " + str(self.radio_var.get()))
+        if self.cb_var.get() == 1:
+            tk.messagebox.showinfo("Wybór", "Zaznaczyłęś kwadracik")
 
 
 gui = MyGui()
