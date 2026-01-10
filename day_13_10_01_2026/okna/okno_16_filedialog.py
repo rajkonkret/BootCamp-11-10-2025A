@@ -2,6 +2,10 @@ import os.path
 import tkinter as tk
 from tkinter import filedialog
 
+# wyłączenia natywnego okna w macos
+os.environ['TK_SILENCE_DEPRECATION'] = '1'
+os.environ['TK_USE_NATIVE_DIALOG'] = '0'
+
 
 def wybierz_plik():
     # start_dir = os.path.expanduser("~/Documents")
@@ -14,6 +18,9 @@ def wybierz_plik():
     root.deiconify()  # powrót do okienka
     if plik:
         print(f"Wybrano plik: {plik}")
+        label_path.config(text=f"Wybrano: {plik}")
+    else:
+        label_path.config(text="Nie wybrano pliku")
 
 
 root = tk.Tk()
