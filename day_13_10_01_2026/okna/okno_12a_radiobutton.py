@@ -18,6 +18,7 @@ class MyGui:
         self.main_window.geometry("400x400")
 
         self.top_frame = tk.Frame(self.main_window)
+        # bottom_frame -> button -> OK
 
         self.radio_var = tk.IntVar()
         self.radio_var.set(1)  # ustawiamy jako aktywny pierwszy wybór
