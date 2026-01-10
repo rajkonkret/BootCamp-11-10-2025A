@@ -27,10 +27,14 @@ class MyGui:
         self.label1 = tk.Label(self.top_frame, text="Start", font=my_font)
 
         self.rb1 = tk.Radiobutton(self.top_frame, text="Opcja 1", variable=self.radio_var, value=1)
+        self.rb2 = tk.Radiobutton(self.top_frame, text="Opcja 2", variable=self.radio_var, value=2)
+        self.rb3 = tk.Radiobutton(self.top_frame, text="Opcja 3", variable=self.radio_var, value=3)
 
         self.label1.pack()
 
         self.rb1.pack()
+        self.rb2.pack()
+        self.rb3.pack()
 
         self.top_frame.pack()
 
