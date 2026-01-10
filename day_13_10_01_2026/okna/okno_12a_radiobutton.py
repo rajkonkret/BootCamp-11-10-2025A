@@ -17,6 +17,9 @@ class MyGui:
         self.main_window.title("Okno wyboru")
         self.main_window.geometry("400x400")
 
+        # canvas - przestrzen graficzna
+        self.canvas = tk.Canvas(self.main_window, width=200, height=200)
+
         self.top_frame = tk.Frame(self.main_window)
         # bottom_frame -> button -> OK
         self.bottom_frame = tk.Frame(self.main_window)
@@ -28,6 +31,8 @@ class MyGui:
         self.cb_var.set(0)
 
         my_font = tkfont.Font(family="Helvetica", size=18, weight="bold")
+
+        self.canvas.create_text(100, 100, text="Testowy", anchor=tkinter.SW, font=my_font)
 
         self.label1 = tk.Label(self.top_frame, text="Start", font=my_font)
 
@@ -49,6 +54,8 @@ class MyGui:
 
         self.top_frame.pack()
         self.bottom_frame.pack()
+
+        self.canvas.pack()
 
         tk.mainloop()
 
