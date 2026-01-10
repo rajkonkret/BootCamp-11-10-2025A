@@ -43,3 +43,5 @@ class GradeCalculator:
 
 calculator = GradeCalculator(root)
 root.mainloop()
+# pip install pyinstaller
+# pyinstaller --onefile --noconsole okno_21_srednia_ocen.py

@@ -127,3 +127,10 @@ https://discord.gg/Jn8URuF9
 
 #  pip freeze > requirements.txt
 # pip install -r requirements.txt
+
+pip install pyinstaller # wrapper exe
+pyinstaller --onefile --noconsole okno_21_srednia_ocen.py
+pyinstaller --onefile --windowed okno_21_srednia_ocen.py
+
+# https://nuitka.net/ - prawdziwe exe
+#  pip install nuitka
