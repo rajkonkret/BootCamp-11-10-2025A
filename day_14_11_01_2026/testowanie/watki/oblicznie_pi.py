@@ -9,17 +9,29 @@ import numpy as np
 total_points_inside_circle = 0
 
 
-def monte_carlo_pi(n):
-    points_inside_circle = 0
+# def monte_carlo_pi(n):
+#     points_inside_circle = 0
+#
+#     for _ in range(n):
+#         x = random.uniform(-1, 1)
+#         y = random.uniform(-1, 1)
+#
+#         if x ** 2 + y ** 2 <= 1:
+#             points_inside_circle += 1
+#
+#     return 4 * (points_inside_circle / n)
+#
 
-    for _ in range(n):
-        x = random.uniform(-1, 1)
-        y = random.uniform(-1, 1)
+#  z wykorzystaniem numpy
+def monte_carlo_pi(num_sample):
+    x = np.random.uniform(-1, 1, num_sample).astype(np.float32)
+    y = np.random.uniform(-1, 1, num_sample).astype(np.float32)
 
-        if x ** 2 + y ** 2 <= 1:
-            points_inside_circle += 1
+    inside_circle = x ** 2 + y ** 2 <= 1
+    num_inside_circle = np.sum(inside_circle)
+    pi_estimate = 4 * num_inside_circle / num_sample
 
-    return 4 * (points_inside_circle / n)
+    return pi_estimate
 
 
 def no_threads(iterations):
