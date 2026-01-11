@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import patch
 from app import get_user_email
-
+# mock - symulownie danych
 
 def test_get_user_email_ok():
     fake_user = {
