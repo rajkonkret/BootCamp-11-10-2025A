@@ -14,6 +14,14 @@ window.setWindowTitle("HBOX Layout")
 layout = QHBoxLayout()
 
 layout.addWidget(QPushButton('Lewy'))
+layout.addWidget(QPushButton('Środkowy'))
+layout.addWidget(QPushButton('Prawy'))
+layout.addWidget(QPushButton('Prawy'))
+layout.addWidget(QPushButton('Prawy'))
+layout.addWidget(QPushButton('Prawy'))
+layout.addWidget(QPushButton('Prawy'))
+layout.addWidget(QPushButton('Prawy'))
+layout.addWidget(QPushButton('Prawy'))
 
 window.setLayout(layout)
 
