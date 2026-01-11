@@ -21,3 +21,5 @@ def test_filter_transactions_income():
         {"id": 7, "type": "income", "amount": 100, "currency": "EUR"},
     ]
 
+    assert ft.filter_transactions(ft.transactions, "income") == expected_list
+    # test_fun_transactions.py::test_filter_transactions_income PASSED
