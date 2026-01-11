@@ -31,3 +31,15 @@ button = QPushButton("Wyświetl tekst")
 
 # podłaczenie przycisku z funkcją
 button.clicked.connect(show_text)  # przekazujemy referencję
+
+# budujemy Layout
+layout = QVBoxLayout()
+
+layout.addWidget(textbox)
+layout.addWidget(button)
+layout.addWidget(label)
+
+dialog.setLayout(layout)
+
+dialog.show()
+sys.exit(app.exec())
