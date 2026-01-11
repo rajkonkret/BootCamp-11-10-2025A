@@ -20,6 +20,8 @@ layout.addWidget(QPushButton("Przycisk (1,1)"), 1, 1)
 layout.addWidget(QPushButton("Przycisk (1,2)"), 1, 2)
 layout.addWidget(QPushButton("Przycisk (2,0)"), 2, 0)
 
+# przycisk umieszczony w wierszu 2, kolumna 1
+# zajmuje jeden wiersz i dwie kloumny
 layout.addWidget(
     QPushButton("Przycisk (2,1) + 2 kolumny span"), 2, 1, 1, 2
 )
