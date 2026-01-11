@@ -99,7 +99,8 @@ class Calculator(QWidget):
 
     def calculate(self):
         try:
-            result = eval(self.result_felds.text())  # wykona działnie, zwróci wynik, niebezpieczne
+            # result = eval(self.result_felds.text())  # wykona działnie, zwróci wynik, niebezpieczne
+            result = safe_calc(self.result_felds.text())
             self.result_felds.setText(str(result))
         except:
             self.result_felds.setText("Error !!!")
