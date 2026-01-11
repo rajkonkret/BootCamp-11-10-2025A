@@ -137,3 +137,7 @@ pip install nuitka
 nuitka --standalone --onefile --follow-imports --enable-plugin=tk-inter okno_21_srednia_ocen.py
 chmod +x okno_21_srednia_ocen.bin
 ./okno_21_srednia_ocen.bin
+
+---------
+https://www.figma.com/design/
+https://www.youtube.com/watch?v=bD3rx1tCRGQ
