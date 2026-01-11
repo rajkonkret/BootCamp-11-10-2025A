@@ -141,3 +141,6 @@ chmod +x okno_21_srednia_ocen.bin
 ---------
 https://www.figma.com/design/
 https://www.youtube.com/watch?v=bD3rx1tCRGQ
+
+https://pypi.org/project/PySide6/
+https://www.pythonguis.com/pyside6/
