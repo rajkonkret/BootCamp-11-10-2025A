@@ -7,11 +7,13 @@ from PySide6.QtWidgets import (
     QWidget
 )
 
-app = QApplication()
+app = QApplication(sys.argv)
 window = QWidget()
 window.setWindowTitle("HBOX Layout")
 
 layout = QHBoxLayout()
+
+layout.addWidget(QPushButton('Lewy'))
 
 window.setLayout(layout)
 
