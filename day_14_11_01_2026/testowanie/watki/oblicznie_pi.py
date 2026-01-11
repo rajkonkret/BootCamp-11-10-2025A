@@ -99,3 +99,16 @@ if __name__ == '__main__':
     with_threads(iterations)
     with_processes(iterations)
     with_thread_pool_executor(iterations)
+
+# bez numpy
+# Bez wątków: 3.1419448, czas: 3.4347798824310303
+# Z wątkami: 3.1415864, czas 3.2730109691619873
+# Z procesami: 3.1418223999999997, czas 0.8339979648590088
+# Z ThreadPoolExecutor: 3.1413352, czas 3.2519681453704834
+
+# z numpy
+# Bez wątków: 3.1411896, czas: 0.38230204582214355
+# Z wątkami: 3.1415856000000004, czas 0.10786271095275879
+# Z procesami: 3.1410412, czas 0.29815006256103516
+# Z ThreadPoolExecutor: 3.142298, czas 0.09321308135986328
+
