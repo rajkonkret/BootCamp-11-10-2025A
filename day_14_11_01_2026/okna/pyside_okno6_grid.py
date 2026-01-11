@@ -20,6 +20,10 @@ layout.addWidget(QPushButton("Przycisk (1,1)"), 1, 1)
 layout.addWidget(QPushButton("Przycisk (1,2)"), 1, 2)
 layout.addWidget(QPushButton("Przycisk (2,0)"), 2, 0)
 
+layout.addWidget(
+    QPushButton("Przycisk (2,1) + 2 kolumny span"), 2, 1, 1, 2
+)
+
 window.setLayout(layout)
 
 window.show()
