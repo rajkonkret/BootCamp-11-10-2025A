@@ -6,8 +6,6 @@ from concurrent.futures import ThreadPoolExecutor
 
 import numpy as np
 
-from day_14_11_01_2026.okna.zad_eval import result
-
 total_points_inside_circle = 0
 
 
@@ -70,7 +68,22 @@ def with_processes(iterations):
         print(f"Z procesami: {pi}, czas {end - start}")
 
 
-iterations = 5_000_000
+def with_thread_pool_executor(iterations):
+    num_threads = 8
+    iterations_per_thread = iterations // num_threads
+
+    start = time.time()
+    with ThreadPoolExecutor(max_workers=num_threads) as executor:
+        result = list(executor.map(monte_carlo_pi, [iterations_per_thread] * num_threads))
+        pi = sum(result) / num_threads
+
+    end = time.time()
+    print(f"Z ThreadPoolExecutor: {pi}, czas {end - start}")
+
+
+iterations = 10_000_000
 if __name__ == '__main__':
     no_threads(iterations)
     with_threads(iterations)
+    with_processes(iterations)
+    with_thread_pool_executor(iterations)
