@@ -7,7 +7,7 @@ from PySide6.QtWidgets import (
 
 # funkcja uruchamiana po nacisnięciu buttona
 def show_text():
-    pass
+    label.setText(textbox.text())
 
 
 app = QApplication(sys.argv)
