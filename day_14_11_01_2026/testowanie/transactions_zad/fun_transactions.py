@@ -1,4 +1,5 @@
 # filtrowanie, mapowanie, sumowanie (reduce)
+from functools import reduce
 
 transactions = [
     {"id": 1, "type": "income", "amount": 1000, "currency": "USD"},
@@ -12,15 +13,15 @@ transactions = [
 
 
 def filter_transactions(transactions, transaction_type):
-    pass
+    return list(filter(lambda x: x["type"] == transaction_type, transactions))
 
 
 def map_transactions(transactions, currency):
-    pass
+    return list(map(lambda x: x['amount'] if x['currency'] == currency else 0, transactions))
 
 
 def reduce_transactions(transactions):
-    pass
+    return reduce(lambda x, y: x + y, transactions, 0)
 
 
 def process_transactions(transactions, transaction_type, currency):
@@ -32,4 +33,4 @@ def process_transactions(transactions, transaction_type, currency):
 
 
 if __name__ == '__main__':
-    print(process_transactions(transactions, "expense", "EUR"))
+    print(process_transactions(transactions, "expense", "EUR"))  # 400
