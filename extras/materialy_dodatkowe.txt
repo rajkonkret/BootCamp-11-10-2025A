@@ -144,3 +144,10 @@ https://www.youtube.com/watch?v=bD3rx1tCRGQ
 
 https://pypi.org/project/PySide6/
 https://www.pythonguis.com/pyside6/
+
+Alembic - lekki system migracji baz danych dla używających SQLAlchemy aplikacji Pythonowych.
+Co robi Alembic (punkt odniesienia)
+	•	migracje DB (upgrade / downgrade)
+	•	wersjonowanie schematu
+	•	tight integration z SQLAlchemy
+	•	Python-first
