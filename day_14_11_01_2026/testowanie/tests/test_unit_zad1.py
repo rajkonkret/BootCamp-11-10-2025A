@@ -4,6 +4,7 @@
 # pytest szuka plików/funkcji  z nazwą test_* lub *_test
 # pytest pytest_zad3_param2.py -vvv
 # pytest tests/ - katalog z testami, pliki spełniające warunek nazwy zostaną uruchomione
+#  pytest tests/ -vvv
 
 import unittest
 
